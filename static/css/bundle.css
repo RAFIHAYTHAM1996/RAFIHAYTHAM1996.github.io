@@ -11676,7 +11676,7 @@ template {
  */
 @font-face {
   font-family: 'uni-sans-heavy-italic';
-  src: url(/../../static/fonts/_compiled/uni-sans-heavy-italic.otf), url(/../../static/fonts/_compiled/uni-sans-heavy-italic.otf) format("OpenType");
+  src: url(/../../static/fonts/compiled/uni-sans-heavy-italic.otf), url(/../../static/fonts/compiled/uni-sans-heavy-italic.otf) format("OpenType");
   font-style: normal; }
 
 .UniSansHeavyItalic {
@@ -11684,7 +11684,7 @@ template {
 
 @font-face {
   font-family: 'uni-sans-heavy';
-  src: url(/../../static/fonts/_compiled/uni-sans-heavy.otf), url(/../../static/fonts/_compiled/uni-sans-heavy.otf) format("OpenType");
+  src: url(/../../static/fonts/compiled/uni-sans-heavy.otf), url(/../../static/fonts/compiled/uni-sans-heavy.otf) format("OpenType");
   font-style: normal; }
 
 .UniSansHeavy, .MenuContainer ul.MenuLinkList li {
@@ -11692,7 +11692,7 @@ template {
 
 @font-face {
   font-family: 'uni-sans-thin-italic';
-  src: url(/../../static/fonts/_compiled/uni-sans-thin-italic.otf), url(/../../static/fonts/_compiled/uni-sans-thin-italic.otf) format("OpenType");
+  src: url(/../../static/fonts/compiled/uni-sans-thin-italic.otf), url(/../../static/fonts/compiled/uni-sans-thin-italic.otf) format("OpenType");
   font-style: normal; }
 
 .UniSansItalic {
@@ -11700,7 +11700,7 @@ template {
 
 @font-face {
   font-family: 'lato-light';
-  src: url(/../../static/fonts/_compiled/Lato-Light.ttf), url(/../../static/fonts/_compiled/Lato-Light.ttf) format("truetype");
+  src: url(/../../static/fonts/compiled/Lato-Light.ttf), url(/../../static/fonts/compiled/Lato-Light.ttf) format("truetype");
   font-style: normal; }
 
 .LatoLight {
@@ -11708,7 +11708,7 @@ template {
 
 @font-face {
   font-family: 'lato-hairline';
-  src: url(/../../static/fonts/_compiled/Lato-Hairline.ttf), url(/../../static/fonts/_compiled/Lato-Hairline.ttf) format("truetype");
+  src: url(/../../static/fonts/compiled/Lato-Hairline.ttf), url(/../../static/fonts/compiled/Lato-Hairline.ttf) format("truetype");
   font-style: normal; }
 
 .LatoHairline {
@@ -11716,7 +11716,7 @@ template {
 
 @font-face {
   font-family: 'rajdhani-regular';
-  src: url(/../../static/fonts/_compiled/Rajdhani-regular.ttf), url(/../../static/fonts/_compiled/Rajdhani-regular.ttf) format("truetype");
+  src: url(/../../static/fonts/compiled/Rajdhani-regular.ttf), url(/../../static/fonts/compiled/Rajdhani-regular.ttf) format("truetype");
   font-style: normal; }
 
 .Rajdhani, .Feature .feature-content, .InputField .Label, #Landing #intro-svg svg text {
@@ -11724,7 +11724,7 @@ template {
 
 @font-face {
   font-family: 'rajdhani-bold';
-  src: url(/../../static/fonts/_compiled/Rajdhani-bold.ttf), url(/../../static/fonts/_compiled/Rajdhani-bold.ttf) format("truetype");
+  src: url(/../../static/fonts/compiled/Rajdhani-bold.ttf), url(/../../static/fonts/compiled/Rajdhani-bold.ttf) format("truetype");
   font-style: normal; }
 
 .RajdhaniBold, h1, .InputField .TextField, #Landing .anchored-text, .snippet-container .snippet-info .snippet-title, .snippet-container .snippet-info .snippet-body {
@@ -11732,7 +11732,7 @@ template {
 
 @font-face {
   font-family: 'rajdhani-light';
-  src: url(/../../static/fonts/_compiled/Rajdhani-light.ttf), url(/../../static/fonts/_compiled/Rajdhani-light.ttf) format("truetype");
+  src: url(/../../static/fonts/compiled/Rajdhani-light.ttf), url(/../../static/fonts/compiled/Rajdhani-light.ttf) format("truetype");
   font-style: normal; }
 
 .RajdhaniLight {
@@ -11740,7 +11740,7 @@ template {
 
 @font-face {
   font-family: 'thewoodlands';
-  src: url(/../../static/fonts/_compiled/TheWoodlands-Regular.otf), url(/../../static/fonts/_compiled/TheWoodlands-Regular.otf) format("opentype");
+  src: url(/../../static/fonts/compiled/TheWoodlands-Regular.otf), url(/../../static/fonts/compiled/TheWoodlands-Regular.otf) format("opentype");
   font-style: normal; }
 
 .TheWoodlands {
