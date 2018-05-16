@@ -1,0 +1,50 @@
+{
+  "projects": [
+    {
+      "images": [
+        "f6.jpg"
+      ],
+      "info": [
+        { "title": "project type",
+          "body": "Business Website, Brand Identity and Logo Design"
+        },
+        { "title": "client",
+          "body": "Vaughan Auto Center"
+        },
+        { "title": "Technology",
+          "body": "Wordpress"
+        }
+      ]
+    }, {
+      "images": [
+        "f3.jpg"
+      ],
+      "info": [
+        { "title": "project type",
+          "body": "Staff Attendance System"
+        },
+        { "title": "client",
+          "body": "Lorem Ipsum"
+        },
+        { "title": "Technology",
+          "body": "HTML, CSS, JAVASCRIPT & XML"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "icon": ["fab", "react"],
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },{
+      "icon": ["fab", "node"],
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+    },{
+      "icon": ["fab", "apple"],
+      "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+    },{
+      "icon": "object-group",
+      "text": "Etiam accumsan consectetur purus, ac eleifend dolor accumsan vel. Donec cursus ornare lacinia. Suspendisse id turpis eget turpis accumsan dapibus."
+    }
+  ]
+}
