@@ -7042,12 +7042,12 @@ _regenerator.default.mark(function _callee() {
           }
 
           _context.next = 4;
-          return pageLoader.loadPage('/_error');
+          return pageLoader.loadPage('/error');
 
         case 4:
           exports.ErrorComponent = ErrorComponent = _context.sent;
           _context.next = 7;
-          return pageLoader.loadPage('/_app');
+          return pageLoader.loadPage('/app');
 
         case 7:
           App = _context.sent;
@@ -7638,11 +7638,11 @@ var handlers = {
   reload: function reload(route) {
     // If the App component changes we have to reload the current route, this is handled by hot-self-accept-loader
     // So we just return
-    if (route === '/_app') {
+    if (route === '/app') {
       return;
     }
 
-    if (route === '/_error') {
+    if (route === '/error') {
       var _arr = (0, _keys.default)(_router.default.components);
 
       for (var _i = 0; _i < _arr.length; _i++) {
@@ -7651,7 +7651,7 @@ var handlers = {
 
         if (err) {
           // reload all error routes
-          // which are expected to be errors of '/_error' routes
+          // which are expected to be errors of '/error' routes
           _router.default.reload(r);
         }
       }
@@ -7670,7 +7670,7 @@ var handlers = {
   change: function change(route) {
     // If the App component changes we have to reload the current route, this is handled by hot-self-accept-loader
     // So we just return
-    if (route === '/_app') {
+    if (route === '/app') {
       return;
     }
 
@@ -8903,7 +8903,7 @@ function () {
       };
     }
 
-    this.components['/_app'] = {
+    this.components['/app'] = {
       Component: App // Backwards compat for Router.router.events
       // TODO: Should be remove the following major version as it was never documented
 
@@ -8947,9 +8947,9 @@ function () {
       var newData = (0, _objectSpread2.default)({}, data, {
         Component: Component
       });
-      this.components[route] = newData; // pages/_app.js updated
+      this.components[route] = newData; // pages/app.js updated
 
-      if (route === '/_app') {
+      if (route === '/app') {
         this.notify(this.components[this.route]);
         return;
       }
@@ -9505,7 +9505,7 @@ function () {
                 };
 
                 this.componentLoadCancel = cancel;
-                App = this.components['/_app'].Component;
+                App = this.components['/app'].Component;
                 _context6.next = 6;
                 return (0, _utils.loadGetInitialProps)(App, {
                   Component: Component,
@@ -9580,7 +9580,7 @@ function () {
   }, {
     key: "notify",
     value: function notify(data) {
-      var App = this.components['/_app'].Component;
+      var App = this.components['/app'].Component;
       this.subscriptions.forEach(function (fn) {
         return fn((0, _objectSpread2.default)({}, data, {
           App: App

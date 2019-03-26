@@ -21087,7 +21087,7 @@ function () {
       };
     }
 
-    this.components['/_app'] = {
+    this.components['/app'] = {
       Component: App // Backwards compat for Router.router.events
       // TODO: Should be remove the following major version as it was never documented
 
@@ -21131,9 +21131,9 @@ function () {
       var newData = (0, _objectSpread2.default)({}, data, {
         Component: Component
       });
-      this.components[route] = newData; // pages/_app.js updated
+      this.components[route] = newData; // pages/app.js updated
 
-      if (route === '/_app') {
+      if (route === '/app') {
         this.notify(this.components[this.route]);
         return;
       }
@@ -21689,7 +21689,7 @@ function () {
                 };
 
                 this.componentLoadCancel = cancel;
-                App = this.components['/_app'].Component;
+                App = this.components['/app'].Component;
                 _context6.next = 6;
                 return (0, _utils.loadGetInitialProps)(App, {
                   Component: Component,
@@ -21764,7 +21764,7 @@ function () {
   }, {
     key: "notify",
     value: function notify(data) {
-      var App = this.components['/_app'].Component;
+      var App = this.components['/app'].Component;
       this.subscriptions.forEach(function (fn) {
         return fn((0, _objectSpread2.default)({}, data, {
           App: App
