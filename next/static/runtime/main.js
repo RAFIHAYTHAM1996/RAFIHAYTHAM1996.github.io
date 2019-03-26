@@ -6424,7 +6424,7 @@ function connect(options) {
         colNumber = _ref.colNumber;
     // Resolve invalid paths coming from react-error-overlay
     var resolvedFilename = fileName.replace(/^webpack:\/\//, '');
-    (0, _unfetch.default)('/_next/development/open-stack-frame-in-editor' + "?fileName=".concat(window.encodeURIComponent(resolvedFilename)) + "&lineNumber=".concat(lineNumber || 1) + "&colNumber=".concat(colNumber || 1));
+    (0, _unfetch.default)('/next/development/open-stack-frame-in-editor' + "?fileName=".concat(window.encodeURIComponent(resolvedFilename)) + "&lineNumber=".concat(lineNumber || 1) + "&colNumber=".concat(colNumber || 1));
   }); // We need to keep track of if there has been a runtime error.
   // Essentially, we cannot guarantee application state was not corrupted by the
   // runtime error. To prevent confusing behavior, we forcibly reload the entire
@@ -6985,7 +6985,7 @@ var _window = window,
 var prefix = assetPrefix || ''; // With dynamic assetPrefix it's no longer possible to set assetPrefix at the build time
 // So, this is how we do it in the client side at runtime
 
-__webpack_require__.p = "".concat(prefix, "/_next/"); //eslint-disable-line
+__webpack_require__.p = "".concat(prefix, "/next/"); //eslint-disable-line
 // Initialize next/asset with the assetPrefix
 
 asset.setAssetPrefix(prefix); // Initialize next/config with the environment configuration
@@ -7454,7 +7454,7 @@ var _default = function _default(_ref) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.prev = 0;
-              url = "".concat(assetPrefix || '', "/_next/on-demand-entries-ping?page=").concat(_router.default.pathname);
+              url = "".concat(assetPrefix || '', "/next/on-demand-entries-ping?page=").concat(_router.default.pathname);
               _context.next = 4;
               return (0, _unfetch.default)(url, {
                 credentials: 'same-origin'
@@ -7600,7 +7600,7 @@ function rewriteTraceLine(trace, distDir) {
   }
 
   var filename = m[1];
-  var filenameLink = filename.replace(distDir, '/_next/development').replace(/\\/g, '/');
+  var filenameLink = filename.replace(distDir, '/next/development').replace(/\\/g, '/');
   trace = trace.replace(filename, filenameLink);
   return trace;
 }
@@ -7701,7 +7701,7 @@ var handlers = {
 var _default = function _default(_ref2) {
   var assetPrefix = _ref2.assetPrefix;
   var options = {
-    path: "".concat(assetPrefix, "/_next/webpack-hmr")
+    path: "".concat(assetPrefix, "/next/webpack-hmr")
   };
   var devClient = (0, _hotDevClient.default)(options);
   devClient.subscribeToHmrEvent(function (obj) {
@@ -8481,7 +8481,7 @@ function () {
       route = this.normalizeRoute(route);
       var scriptRoute = route === '/' ? '/index.js' : "".concat(route, ".js");
       var script = document.createElement('script');
-      var url = "".concat(this.assetPrefix, "/_next/static/").concat(encodeURIComponent(this.buildId), "/pages").concat(scriptRoute);
+      var url = "".concat(this.assetPrefix, "/next/static/").concat(encodeURIComponent(this.buildId), "/pages").concat(scriptRoute);
       script.src = url;
 
       script.onerror = function () {
