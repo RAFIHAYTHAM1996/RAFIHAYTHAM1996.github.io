@@ -1,50 +1,117 @@
 {
-  "projects": [
-    {
-      "images": [
-        "f6.jpg"
-      ],
-      "info": [
-        { "title": "project type",
-          "body": "Business Website, Brand Identity and Logo Design"
-        },
-        { "title": "client",
-          "body": "Vaughan Auto Center"
-        },
-        { "title": "Technology",
-          "body": "Wordpress"
-        }
+  "services": [
+    { "name": "Personalized Private Homecare",
+      "description": [
+        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
+        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
       ]
     }, {
-      "images": [
-        "f3.jpg"
-      ],
-      "info": [
-        { "title": "project type",
-          "body": "Staff Attendance System"
-        },
-        { "title": "client",
-          "body": "Lorem Ipsum"
-        },
-        { "title": "Technology",
-          "body": "HTML, CSS, JAVASCRIPT & XML"
-        }
+      "name": "Failure to Thrive (FTT)",
+      "description": [
+        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital.",
+        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients."
+      ]
+    }, {
+      "name": "Home & Medical Services",
+      "description": [
+        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
+        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
+      ]
+    }, {
+      "name": "Respite Care",
+      "description": [
+        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
+        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
+      ]
+    }, {
+      "name": "End of Life & Palliative Care",
+      "description": [
+        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
+        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
+      ]
+    }, {
+      "name": "Short-term Postoperative Care",
+      "description": [
+        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
+        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
       ]
     }
   ],
-  "features": [
-    {
-      "icon": ["fab", "react"],
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },{
-      "icon": ["fab", "node"],
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
-    },{
-      "icon": ["fab", "apple"],
-      "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
-    },{
-      "icon": "object-group",
-      "text": "Etiam accumsan consectetur purus, ac eleifend dolor accumsan vel. Donec cursus ornare lacinia. Suspendisse id turpis eget turpis accumsan dapibus."
+  "benefits": [
+    { "name": "Family-Centric Evolving Care",
+      "description": "Our clients are the center of what we do, and our team integrates seamlessly into your family. We can be with you and your loved ones as often as needed, working together on what is best for the client today and tomorrow. We build personal rapport with every client while respecting their privacy."
+    },
+    { "name": "Breadth of Expertise",
+      "description": "Our team is comprised of caring registered nurses, personal support workers, registered massage therapists, nail technicians, companions, chefs, housekeepers, and activity planners. They are bonded and have appropriate certifications."
+    },
+    { "name": "Improving Quality of Life",
+      "description": "We are determined to create quality experiences that help our clients enjoy their lives to the fullest. Some activities include: casual or fine dining, ballet and theatre, beauty care, transportation, exercise programs/personal training, and daily activities to allow clients to maintain their interests."
+    }
+  ],
+  "testimonials": [
+    { "name": "Greg & Alison",
+      "relationship": "Son and Daughter of Michael",
+      "review": "I cannot put into words how fortunate my sister and I are to have Hospall in our lives. My dad was diagnosed with pancreatic cancer and the disease took control of his life. Hospall was brought on near the end of my dad’s life and they were so caring, gentle and compassionate with my dad.",
+      "url": "greg-alison",
+      "image": "mildred.jpg"
+    },
+    { "name": "Becky",
+      "relationship": "Daughter of Ivan",
+      "review": "We never had to worry what caregiver would come, if his care would be thoughtful and caring, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. I would recommend Hospall to anyone who requires palliative care for a loved one.",
+      "url": "becky",
+      "image": "mildred.jpg"
+    }
+  ],
+  "about": {
+    "values": [
+      { "name": "Integrity",
+        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+      },
+      { "name": "Communication",
+        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+      },
+      { "name": "Professionalism",
+        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+      },
+      { "name": "Client Centricity",
+        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+      },
+      { "name": "Balance",
+        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+      },
+      { "name": "Quality",
+        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+      }
+    ],
+    "team": [
+      { "name": "Michelle Frauley",
+        "title": "CEO/Founder",
+        "image": "michelle-frauley.jpg",
+        "bio": [
+          "Michelle has over 3 decades of nursing experience, Her many years of experience have included a background in family medicine, palliative/end of life care, operating room nursing, women’s health, complex long term care and community nursing. Her experience has taught her that providing quality healthcare are built from caring and compassion",
+          "Michelle is committed and caring, someone whose attention to detail fuels her passion and her success. She is highly respected by her patients and peers.",
+          "Michelle has over 3 decades of nursing experience, Her many years of experience have included a background in family medicine, palliative/end of life care, operating room nursing, women’s health, complex long term care and community nursing. Her experience has taught her that providing quality healthcare are built from caring and compassion"
+        ]
+      },
+      { "name": "Erwin Delemos",
+        "title": "Home Care Manager",
+        "image": "erwin-delemos.jpg",
+        "bio": [
+          "Erwin Delemos has been a Registered Nurse for two decades. Prior to becoming a nurse he built his experience as a live in personal support worker. His nursing experience has primarily been in family medicine, palliative and long term complex care. Erwin was also a flight nurse, as a member of a critical care team he has experience caring for critically ill patients in an unstable environment.",
+          "We are fortunate that he has been the Home Care Manager with Hospall since 2014. Erwin has a strong passion for helping others and making a difference in our clients lives. Erwin’s other passions include traveling and spending time with his family."
+        ]
+      }
+    ]
+  },
+  "careers": [
+    { "position": "Personal Support Worker",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante. semper diam molestie, et"
+    },
+    { "position": "Companion",
+      "description": "Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi. consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis"
+    },
+    { "position": "Homecare Supervisor",
+      "description": "Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna."
     }
   ]
 }
