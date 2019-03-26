@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\_error.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\error.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
 /*!*******************************************************************!*\
@@ -6142,7 +6142,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_78b63e6e9b9fc7e50dfb
 /***/ (function(module, exports, __webpack_require__) {
 
 __NEXT_REGISTER_PAGE('/error', function() {
-module.exports = __webpack_require__(/*! C:\Users\s1950208\Desktop\projects\playground\hospall\node_modules\next\dist\pages\_error.js */"./node_modules/next/dist/pages/error.js");
+module.exports = __webpack_require__(/*! C:\Users\s1950208\Desktop\projects\playground\hospall\node_modules\next\dist\pages\error.js */"./node_modules/next/dist/pages/error.js");
 
 return { page: module.exports.default }});
 
@@ -6160,4 +6160,4 @@ module.exports = dll_78b63e6e9b9fc7e50dfb;
 /***/ })
 
 },[[2,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=_error.js.map
+//# sourceMappingURL=error.js.map
