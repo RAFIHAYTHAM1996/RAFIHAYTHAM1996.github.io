@@ -113,5 +113,22 @@
     { "position": "Homecare Supervisor",
       "description": "Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna."
     }
+  ],
+  "FAQ": [
+    { "question": "What are the benefits of my loved one staying at home versus LTC?",
+      "answer": ["We are a privately owned and operated company. Just like our company we want the care to be personalized to each individual not generic. We strive to help our clients lead safe, balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer all while living their own homes."]
+    },
+    { "question": "What services does Hospall provide?",
+      "answer": [
+        "We specialize but are not limited to provide live in support including palliative care. We can assist with short term postoperative care for clients of all ages. We provide medial and personal home care services by skilled professionals in our clients home. Home care services include helping with bathing, washing their hair and getting dressed. Medical services include bloodwork, medication administration, nail and foot care. We are also insured to accompany clients to appointments.",
+        "We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients."
+      ]
+    },
+    { "question": "What area do your provide care?"
+    },
+    { "question": "Will I have the same caregiver? What if I do not like my assigned caregiver?"
+    },
+    { "question": "Is there flexibility around hours I need and time?"
+    }
   ]
 }

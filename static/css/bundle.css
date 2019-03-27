@@ -11828,7 +11828,7 @@ template {
   font-weight: normal;
   font-style: normal; }
 
-.Lato, h5, .cta-button a.cta, .cta-text a.cta::after, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, #Menu a.mainlink, .section-contact .contact-details h6, .job-application .contact-details h6, #Home .intro-content {
+.Lato, h5, .cta-button a.cta, .cta-text a.cta::after, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, .InlineQuestion .chevron, #Menu a.mainlink, .section-contact .contact-details h6, .job-application .contact-details h6, #Home .intro-content, #Privacy > .ContentContainer > div > ol {
   font-family: 'lato'; }
 
 @font-face {
@@ -11917,12 +11917,12 @@ body, html {
   display: block; }
   @media only screen and (max-width: 767px) {
     .ContentContainer {
-      width: 80%; } }
+      width: 90%; } }
 
 h1 {
   color: #ffffff;
   font-size: 3rem; }
-  h1.dark, #About h1.values-list-name {
+  h1.dark, #About h1.values-list-name, #FAQ h1.extra-help, #Privacy > .ContentContainer > div h1.extra-help {
     color: #4473b3; }
   @media only screen and (max-width: 991px) {
     h1 {
@@ -11934,7 +11934,7 @@ h1 {
 h2 {
   color: #ffffff;
   font-size: 2.5rem; }
-  h2.dark, #About h2.values-list-name {
+  h2.dark, #About h2.values-list-name, #FAQ h2.extra-help, #Privacy > .ContentContainer > div h2.extra-help {
     color: #4473b3; }
   @media only screen and (max-width: 991px) {
     h2 {
@@ -11946,7 +11946,7 @@ h2 {
 h3 {
   color: #ffffff;
   font-size: 2rem; }
-  h3.dark, #About h3.values-list-name {
+  h3.dark, #About h3.values-list-name, #FAQ h3.extra-help, #Privacy > .ContentContainer > div h3.extra-help {
     color: #4473b3; }
   @media only screen and (max-width: 767px) {
     h3 {
@@ -11955,7 +11955,7 @@ h3 {
 h4 {
   color: #ffffff;
   font-size: 1.6rem; }
-  h4.dark, #About h4.values-list-name {
+  h4.dark, #About h4.values-list-name, #FAQ h4.extra-help, #Privacy > .ContentContainer > div h4.extra-help {
     color: #4473b3; }
   @media only screen and (max-width: 767px) {
     h4 {
@@ -11964,7 +11964,7 @@ h4 {
 h5 {
   color: #ffffff;
   font-size: 1.3rem; }
-  h5.dark, #About h5.values-list-name {
+  h5.dark, #About h5.values-list-name, #FAQ h5.extra-help, #Privacy > .ContentContainer > div h5.extra-help {
     color: #4473b3; }
   @media only screen and (max-width: 767px) {
     h5 {
@@ -11973,7 +11973,7 @@ h5 {
 h6 {
   color: #ffffff;
   font-size: 1rem; }
-  h6.dark, .section-contact .contact-details h6, .job-application .contact-details h6, #About h6.values-list-name {
+  h6.dark, .section-contact .contact-details h6, .job-application .contact-details h6, #About h6.values-list-name, #FAQ h6.extra-help, #Privacy > .ContentContainer > div h6.extra-help {
     color: #4473b3; }
   @media only screen and (max-width: 767px) {
     h6 {
@@ -11982,16 +11982,16 @@ h6 {
 p {
   color: #ffffff;
   line-height: 1.6rem; }
-  p.dark, .section-contact .contact-details p, .job-application .contact-details p, #About p.values-list-name {
+  p.dark, .section-contact .contact-details p, .job-application .contact-details p, #About p.values-list-name, #FAQ p.extra-help, #Privacy > .ContentContainer > div > ol li p, #Privacy > .ContentContainer > div p.extra-help {
     color: #494849; }
   p.cta {
     font-size: 1rem;
     color: #ffffff;
     cursor: pointer; }
-    p.cta.dark, .section-contact .contact-details p.cta, .job-application .contact-details p.cta, #About p.cta.values-list-name {
+    p.cta.dark, .section-contact .contact-details p.cta, .job-application .contact-details p.cta, #About p.cta.values-list-name, #FAQ p.cta.extra-help, #Privacy > .ContentContainer > div > ol li p.cta, #Privacy > .ContentContainer > div p.cta.extra-help {
       color: #4473b3; }
 
-.mini, .section-contact .contact-details p, .section-contact .contact-details p a, .section-contact .delivery-info > p, .job-application .contact-details p, .job-application .contact-details p a, .job-application .delivery-info > p {
+.mini, .InlineQuestion .answer, .section-contact .contact-details p, .section-contact .contact-details p a, .section-contact .delivery-info > p, .job-application .contact-details p, .job-application .contact-details p a, .job-application .delivery-info > p, #FAQ .extra-help, #Privacy > .ContentContainer > div .extra-help {
   font-size: 0.8rem;
   opacity: 0.7; }
 
@@ -12014,10 +12014,10 @@ p {
     background-color: #ffffff;
     color: #4473b3;
     text-decoration: none; }
-  .cta-button a.cta.dark, .cta-button #About a.cta.values-list-name, #About .cta-button a.cta.values-list-name {
+  .cta-button a.cta.dark, .cta-button #About a.cta.values-list-name, #About .cta-button a.cta.values-list-name, .cta-button #FAQ a.cta.extra-help, #FAQ .cta-button a.cta.extra-help, .cta-button #Privacy > .ContentContainer > div a.cta.extra-help, #Privacy > .ContentContainer > div .cta-button a.cta.extra-help {
     color: #4473b3;
     border-color: #4473b3; }
-    .cta-button a.cta.dark:hover, .cta-button #About a.cta.values-list-name:hover, #About .cta-button a.cta.values-list-name:hover {
+    .cta-button a.cta.dark:hover, .cta-button #About a.cta.values-list-name:hover, #About .cta-button a.cta.values-list-name:hover, .cta-button #FAQ a.cta.extra-help:hover, #FAQ .cta-button a.cta.extra-help:hover, .cta-button #Privacy > .ContentContainer > div a.cta.extra-help:hover, #Privacy > .ContentContainer > div .cta-button a.cta.extra-help:hover {
       background-color: #4473b3;
       color: #ffffff; }
 
@@ -12047,14 +12047,14 @@ p {
     text-decoration: none; }
     .cta-text a.cta:hover::before {
       width: 100%; }
-  .cta-text a.cta.dark, .cta-text #About a.cta.values-list-name, #About .cta-text a.cta.values-list-name {
+  .cta-text a.cta.dark, .cta-text #About a.cta.values-list-name, #About .cta-text a.cta.values-list-name, .cta-text #FAQ a.cta.extra-help, #FAQ .cta-text a.cta.extra-help, .cta-text #Privacy > .ContentContainer > div a.cta.extra-help, #Privacy > .ContentContainer > div .cta-text a.cta.extra-help {
     color: #4473b3; }
-    .cta-text a.cta.dark:hover, .cta-text #About a.cta.values-list-name:hover, #About .cta-text a.cta.values-list-name:hover {
+    .cta-text a.cta.dark:hover, .cta-text #About a.cta.values-list-name:hover, #About .cta-text a.cta.values-list-name:hover, .cta-text #FAQ a.cta.extra-help:hover, #FAQ .cta-text a.cta.extra-help:hover, .cta-text #Privacy > .ContentContainer > div a.cta.extra-help:hover, #Privacy > .ContentContainer > div .cta-text a.cta.extra-help:hover {
       color: #4473b3; }
-    .cta-text a.cta.dark::before, .cta-text #About a.cta.values-list-name::before, #About .cta-text a.cta.values-list-name::before {
+    .cta-text a.cta.dark::before, .cta-text #About a.cta.values-list-name::before, #About .cta-text a.cta.values-list-name::before, .cta-text #FAQ a.cta.extra-help::before, #FAQ .cta-text a.cta.extra-help::before, .cta-text #Privacy > .ContentContainer > div a.cta.extra-help::before, #Privacy > .ContentContainer > div .cta-text a.cta.extra-help::before {
       border-color: #4473b3; }
 
-div.dark, #About div.values-list-name {
+div.dark, #About div.values-list-name, #FAQ div.extra-help, #Privacy > .ContentContainer > div div.extra-help {
   background-color: #305691; }
 
 .disable-selection, #Services .benefits-of-hospall > .ContentContainer .benefit-container .benefit-number {
@@ -12267,6 +12267,44 @@ div.dark, #About div.values-list-name {
   line-height: 1.8rem; }
   .TextArea textarea:focus {
     outline: none; }
+
+.InlineQuestion {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px; }
+  .InlineQuestion .question {
+    color: #4473b3;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 50px;
+    transition: all 0.5s cubic-bezier(0.17, 0.67, 0.23, 0.98);
+    cursor: pointer;
+    max-width: calc(100% - 20px); }
+  .InlineQuestion .chevron {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    cursor: pointer; }
+    .InlineQuestion .chevron > svg line {
+      stroke-width: 4px;
+      stroke: #4473b3;
+      transition: all 0.5s cubic-bezier(0.17, 0.67, 0.23, 0.98);
+      transform-origin: center center; }
+      .InlineQuestion .chevron > svg line:first-child {
+        transform: rotateZ(90deg); }
+      .InlineQuestion .chevron > svg line:last-child {
+        transform: rotateZ(180deg); }
+    .InlineQuestion .chevron.expanded > svg line {
+      transform: none; }
+  .InlineQuestion .answer {
+    color: #494849;
+    line-height: 2;
+    margin-top: 0 !important;
+    padding-left: 50px; }
 
 .react-toggle .react-toggle-thumb {
   border: none;
@@ -12653,6 +12691,24 @@ div.dark, #About div.values-list-name {
   #Contact .map-image {
     max-width: 100%; }
 
+#FAQ > .ContentContainer {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media only screen and (max-width: 767px) {
+    #FAQ > .ContentContainer {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+
+#FAQ .extra-help {
+  margin-top: 30px;
+  margin-bottom: 50px; }
+  #FAQ .extra-help > a {
+    color: #4473b3;
+    font-weight: 400; }
+    #FAQ .extra-help > a:hover {
+      color: #284469;
+      text-decoration: none; }
+
 #Home {
   position: relative;
   width: 100%; }
@@ -12719,6 +12775,42 @@ div.dark, #About div.values-list-name {
           margin-bottom: 2rem; }
         #Home .services-briefly-intro-info {
           order: 0; } }
+
+#Privacy {
+  counter-reset: list-counter; }
+  #Privacy > .ContentContainer {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    @media only screen and (max-width: 767px) {
+      #Privacy > .ContentContainer {
+        padding-top: 50px;
+        padding-bottom: 50px; } }
+    #Privacy > .ContentContainer > div h5.padding {
+      margin-bottom: 20px; }
+    #Privacy > .ContentContainer > div h2.padding, #Privacy > .ContentContainer > div p.padding, #Privacy > .ContentContainer > div ol.padding {
+      margin-bottom: 50px; }
+    #Privacy > .ContentContainer > div > ol {
+      padding: 0;
+      list-style: none; }
+      #Privacy > .ContentContainer > div > ol li:before {
+        counter-increment: list-counter;
+        content: counter(list-counter) ". ";
+        margin-right: 10px;
+        font-size: 90%; }
+      #Privacy > .ContentContainer > div > ol li p {
+        display: inline-block;
+        max-width: calc(100% - 30px);
+        vertical-align: text-top;
+        font-size: 90%; }
+    #Privacy > .ContentContainer > div .extra-help {
+      margin-top: 30px;
+      margin-bottom: 50px; }
+      #Privacy > .ContentContainer > div .extra-help > a {
+        color: #4473b3;
+        font-weight: 400; }
+        #Privacy > .ContentContainer > div .extra-help > a:hover {
+          color: #284469;
+          text-decoration: none; }
 
 #Services > .ContentContainer {
   padding-top: 100px;
