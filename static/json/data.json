@@ -48,20 +48,76 @@
       "description": "We are determined to create quality experiences that help our clients enjoy their lives to the fullest. Some activities include: casual or fine dining, ballet and theatre, beauty care, transportation, exercise programs/personal training, and daily activities to allow clients to maintain their interests."
     }
   ],
-  "testimonials": [
-    { "name": "Greg & Alison",
-      "relationship": "Son and Daughter of Michael",
-      "review": "I cannot put into words how fortunate my sister and I are to have Hospall in our lives. My dad was diagnosed with pancreatic cancer and the disease took control of his life. Hospall was brought on near the end of my dad’s life and they were so caring, gentle and compassionate with my dad.",
-      "url": "greg-alison",
-      "image": "mildred.jpg"
-    },
-    { "name": "Becky",
-      "relationship": "Daughter of Ivan",
-      "review": "We never had to worry what caregiver would come, if his care would be thoughtful and caring, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. I would recommend Hospall to anyone who requires palliative care for a loved one.",
-      "url": "becky",
-      "image": "mildred.jpg"
-    }
-  ],
+  "testimonials": {
+    "widget": [
+      { "name": "Greg & Alison",
+        "relationship": "Son and Daughter of Michael",
+        "review": "I cannot put into words how fortunate my sister and I are to have Hospall in our lives. My dad was diagnosed with pancreatic cancer and the disease took control of his life. Hospall was brought on near the end of my dad’s life and they were so caring, gentle and compassionate with my dad.",
+        "url": "greg-alison",
+        "image": "mildred.jpg"
+      },
+      { "name": "Becky",
+        "relationship": "Daughter of Ivan",
+        "review": "We never had to worry what caregiver would come, if his care would be thoughtful and caring, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. I would recommend Hospall to anyone who requires palliative care for a loved one.",
+        "url": "becky",
+        "image": "mildred.jpg"
+      }
+    ],
+    "page": [
+      {
+        "content": "I cannot put into words how fortunate my sister and I are to have Hospall in our lives. My dad was diagnosed with pancreatic cancer and the disease took control of his life. Hospall was brought on near the end of my dads life and they were so caring, gentle and compassionate with my dad. When we received the phone call from Hospall saying dad was not doing well and to get there, the call was made right from Michelle and was very caring. We did not make it there in time, but Hospall was there and did not leave my dads side until he passed. I cannot put into words how comforting that was that there was someone that we know with him as he left is Hospall has been great working with my mom as she recovers from some health problems. We have been very lucky to have such kind and compassionate people from Hospall in my familes life. Hospall staff and Michelle and Erwin are now part of our family and will always be",
+        "client": "Greg and Alison"
+      },
+      {
+        "content": "As soon as my husband received the diagnosis 'Terminal, incurable', we arranged for Hospall to care for him. He was in the comfort of our home and the care that he received was excellent. We never had to worry what caregiver would come, when that person would come, if his care would be thoughtful and caring, if he and the family would be respected, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. At a stressful time of life, we appreciated that we did not have the burden of worrying about the care that my husband was receiving. I would recommend Hospall to anyone who requires palliative care for a loved one.",
+        "client": "Becky Haggith"
+      },
+      {
+        "content": "We knew from the first interview that we had found the right agency. Michelle questioned our parents with sensitivity and insight about their needs and wishes. The assigned caregiver, Elviz, is an excellent fit for our father. Yes, it did take several months for Dad to be completely comfortable but his personal hygiene and safety were always in capable and gentle hands. With Elviz now part of the family, our father has an advocate and our mother has a part-time driver and time to enjoy her pursuits. Erwin, the nursing supervisor, visits several times a month to check Dad's health and does his INR which is much easier than going to the clinic. As their children, we are very pleased that our parents have such honest and cheerful people to help care for them. Thank you, Hospall!",
+        "client": "The Harris Family"
+      },
+      {
+        "content": "Hospall Private Home Care has been a blessing for my family, and especially for our elderly parents. From the beginning the team has been professional, skillful, compassionate and consistent. Hospall allows our parents to remain in their home. Assistance is provided with bathing/dressing, home-made meals are prepared daily, and there is time for fun activities and shopping excursions. Hospall can escort them to medical appointments, provide in –home blood tests, and administer medication. Each team member has become part of our family. All this makes Hospall quite unique and provides quality time that has given our parents a new vitality. The Hospall management team is always available and accountable. We feel very supported with the plans in place as our parents age and their needs change. Hospall is a source of security and comfort for everyone.",
+        "client": "Christine S"
+      },
+      {
+        "content": "My mother is suffering with alzheimer’s and dementia and she seems to be very happy with the care giver from Hospall and all that she does for her. My father also requires care as he is suffering from the symptoms of a stroke, prostrate cancer, a hip replacement, diabetes and parkinson's. Since my mother is no longer able to make meals, do daily washing of clothes and look after her personal cleanliness, Hospall has been a godsend. I cannot say enough good things about the trustworthiness, kindness and dedication shown with the personal care provided. It makes it an awful lot easier for me to sleep at night, knowing that they are being very well looked after. I am sure for that very same reason my parents are also able to sleep easier. Thank you once again Hospall for everything that you have and are doing for us.",
+        "client": "The McGuire Family"
+      },
+      {
+        "content": "The Hospall team is a group of extremely dedicated and professional individuals who go above and beyond to help in any situation. We were so grateful for their service. We would not hesitate to recommend this wonderful team!",
+        "client": "The McCarthy Family"
+      },
+      {
+        "content": "Hospall Private Home Care has been a blessing for my family, and especially for our elderly parents. From the beginning the team has been professional, skillful, compassionate and consistent. Hospall allows our parents to remain in their home. Assistance is provided with bathing/dressing, home-made meals are prepared daily, and there is time for fun activities and shopping excursions. Hospall can escort them to medical appointments, provide in –home blood tests, and administer medication. Each team member has become part of our family. All this makes Hospall quite unique and provides quality time that has given our parents a new vitality.",
+        "client": "The Arnold Family"
+      },
+      {
+        "content": "My mother has lived with my husband and I for the past ten years. In the last year there has been a noticeable decrease in her ability to walk on her own. She is 95 and dementia is also a big concern for us. We did not want her to go into a nursing home but rather to stay with us, her family and her beloved cat. I had to find a service that would give her the loving care her deserves and along with that, peace of mind for us. I find I get both with Hospall Private Homecare. The staff is kind and attentive to my mother. She smiles when they arrive and the conversations flow eagerly. I feel confident enough to do my errands while they are with her but most of all, my mother can stay in our home and live out her days with dignity.",
+        "client": "Betty D"
+      },
+      {
+        "content": "HosPall has been a godsend…. not only do they provide our mother with the care and compassion that we expect for her, but they also provide us with the peace of mind in knowing that she is happy and in good hands. In turn, it provides us with worry-free time with our families.",
+        "client": "The Bianchi Family"
+      },
+      {
+        "content": "I have had the opportunit<wbr>y to watch staff in action and without exception I have been impressed with the safe quality of life they provide to their clients.",
+        "client": "Marti M.C."
+      },
+      {
+        "content": "Michelle and her team took on managing the palliative care of my father and since have undertaken the complete care of my mother who has advanced dementia and requires around the clock care. They have taken the load fully from the children, have provided timely reporting, my mother’s physical health couldn’t be better and in consideration of her state is as happy and comfortable as we could possibly wish for. Highly recommended.",
+        "client": "David H. Y."
+      },
+      {
+        "content": "I had the good fortune of being with Michelle and her colleagues for a period of a month when she nursed my critically ill husband in the hospital. They showed me what compassion was and their caring for me and my family was outstanding. It made bearing my burden so much easier. I would highly recommend her and her staff as competent and totally reliable.",
+        "client": "Maxine O."
+      },
+      {
+        "content": "Michelle is an expert in all things related to healthcare and nursing. She is a great judge of character her staff and colleagues are all first class. I would recommend Michelle or any service she chooses to provide to anyone.",
+        "client": "Bob Y."
+      }
+    ]
+  },
   "about": {
     "values": [
       { "name": "Integrity",

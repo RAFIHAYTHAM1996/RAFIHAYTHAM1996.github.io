@@ -12815,6 +12815,10 @@ div.dark, #About div.values-list-name, #FAQ div.extra-help, #Privacy > .ContentC
 #Services > .ContentContainer {
   padding-top: 100px;
   padding-bottom: 100px; }
+  @media only screen and (max-width: 575px) {
+    #Services > .ContentContainer.service-summaries {
+      padding: 0;
+      width: 100%; } }
 
 #Services .service-name {
   color: #969496;
@@ -12826,6 +12830,20 @@ div.dark, #About div.values-list-name, #FAQ div.extra-help, #Privacy > .ContentC
     margin-top: 0; }
   #Services .service-name:hover, #Services .service-name.active {
     color: #4473b3; }
+  @media only screen and (max-width: 575px) {
+    #Services .service-name {
+      text-align: center;
+      color: #4473b3;
+      padding: 30px 0;
+      margin: 0; }
+      #Services .service-name span {
+        font-size: 0.9rem;
+        color: #7c7b7c;
+        display: block; }
+      #Services .service-name:nth-child(even) {
+        background-color: #ffffff; }
+      #Services .service-name:nth-child(odd) {
+        background-color: #fafafa; } }
 
 #Services .service-title {
   margin-bottom: 2rem; }
@@ -12868,6 +12886,20 @@ div.dark, #About div.values-list-name, #FAQ div.extra-help, #Privacy > .ContentC
           #Services .benefits-of-hospall > .ContentContainer .benefit-container .benefit-number {
             right: 0;
             font-size: 120px; } }
+
+#Testimonials {
+  counter-reset: list-counter; }
+  #Testimonials > .ContentContainer {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    @media only screen and (max-width: 767px) {
+      #Testimonials > .ContentContainer {
+        padding-top: 50px;
+        padding-bottom: 50px; } }
+    #Testimonials > .ContentContainer > div h5.padding {
+      margin-bottom: 20px; }
+    #Testimonials > .ContentContainer > div h2.padding, #Testimonials > .ContentContainer > div p.padding, #Testimonials > .ContentContainer > div ol.padding {
+      margin-bottom: 50px; }
 
 
 /*# sourceMappingURL=bundle.css.map*/
