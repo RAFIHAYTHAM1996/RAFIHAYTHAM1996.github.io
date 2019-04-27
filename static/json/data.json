@@ -8,32 +8,50 @@
     }, {
       "name": "Failure to Thrive (FTT)",
       "description": [
-        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital.",
-        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients."
+        "Clients with failure to thrive commonly have decreased appetite, poor nutrition, physical inactivity and depression. These symptoms combined have significant increase risk of falls.",
+        "The consistent and compassionate care provided by our multi-disciplinary team has a focus on improving our clients frailty, medical and nutritional concerns. We organize and help clients implement activities of daily living to stimulate their mind and enrich their interests. We grocery shop, prepare nutritional meals and when required assist in feeding our clients. We will keep them company during meal times to support their social and nutritional needs. We strive to elevate and enrich their health and overall wellbeing. From our experience this helps them over come FTT and keep them safe."
       ]
     }, {
       "name": "Home & Medical Services",
       "description": [
-        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
-        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
+        "We provide medical and personal home care services by skilled professionals, including help with personal hygiene and daily routine, as well as medical services such as bloodwork, medication administration, nail and foot care. We are also insured to accompany clients to appointments.",
+        [
+          "Assistance with activities of daily living",
+          "Medication administration",
+          "Assistance with feeding, meal preparation and grocery shopping",
+          "Toileting",
+          "Companionship",
+          "Light housekeeping",
+          "Laundry care",
+          "Running errands",
+          "Escort and support our clients to their medical appointments",
+          "Accompanying and supporting our clients to social outings"
+        ]
       ]
     }, {
       "name": "Respite Care",
       "description": [
-        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
-        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
+        "Caring for loved ones can be a full-time job. We recognize that often you have your own life responsibilities that also need your attention. Being a caregiver can be exhausting. When you need a reprieve, we are here to assist.",
+        "Medical conditions such as Alzheimer’s and Dementia can be very physical and mentally challenging. You can be guaranteed that we will be there to help you navigate those challenges and help keep your loved ones safe. When you need a rest, we are here to relieve you to help prevent caregiver burnout, and help you maintain a healthy balance with your own life. We can provide a few hours of respite care up to 24-hour care in the comfort of our client’s own home or supplement the care if your loved one is admitted to hospital or other place of residence."
       ]
     }, {
       "name": "End of Life & Palliative Care",
       "description": [
-        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
-        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
+        "End of Life Care includes Palliative Care. If our clients have been diagnosed with an illness or ailment that cannot be cured. Our goal is to make them as comfortable as possible and maintain their dignity. We also aim to improve quality of life.",
+        "If you or your loved one(s) are facing a life-limiting illness that requires care and emotional support. An integrated Palliative Care approach can help you achieve the best possible quality of life from diagnosis to the end of life. Palliative care can:",
+        [
+          "Help improve and maintain quality of life",
+          "Reduce or relieve physical and psychological symptoms",
+          "Help you have a more peaceful and dignified death",
+          "Provide support for your family"
+        ],
+        "In the early stages of illness trajectory, focusing on open and honest communication on goals of care, psychosocial, spiritual support, and pain and symptom management, palliative care offers you and your family a greater sense of control as you are actively involved in your own care. Identifying your needs early, can help to anticipate, prevent and relieve suffering."
       ]
     }, {
       "name": "Short-term Postoperative Care",
       "description": [
-        "We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.",
-        "Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."
+        "Short term post operative care or convalescent care in the comfort of your own home. We believe our clients will retain better cognitive function, stay healthier, and be able to live in-dependently longer within their own homes.",
+        "It can be overwhelming transitioning from hospital to home. We believe with the proper supports our clients will retain better cognitive function, stay healthier, and be able to live in-dependently longer. Our goal is to assist our clients to safely build strength and independence in the comfort of their own home. We are insured to transport and escort our clients to rehab and follow up medical appointments as needed. Our staff will assist with nutritious meal preparation, bathing and dressing. Falls are a common reality post operatively and we want to ensure your loved ones are safe. Our registered staff provide post operative wound care to help prevent infections."
       ]
     }
   ],
@@ -121,22 +139,22 @@
   "about": {
     "values": [
       { "name": "Integrity",
-        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+        "description": ["At Hospall, we believe integrity is honesty, sincerity and our strong ethics. Our word is our promise, and our goal is to earn your trust. Our team is comprised of dedicated caring individuals that want only the best for our clients. It is a common challenge that elderly clients have a difficult time adjusting to change. We will schedule consistency of caregivers for all our clients. This will provide the continuity of care."]
       },
       { "name": "Communication",
-        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+        "description": ["We strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs."]
       },
       { "name": "Professionalism",
-        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+        "description": ["We provide a high level of professionalism that allows for positive interactions with our clientele. Our team will integrate seamlessly into your family to work together on what is best for the client. All team members are bonded and maintain updated with current certifications."]
       },
       { "name": "Client Centricity",
-        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+        "description": ["We believe life is a gift. We are committed to create quality experiences that help our clients enjoy their lives to the fullest. Our clients are at the centre of what we do, and how we provide our services reflects this philosophy. We will build strong relationships, while respecting clients’ privacy and values."]
       },
       { "name": "Balance",
-        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+        "description": ["We help our clients and their loved ones navigate their health needs to create balance. We will include them in decisions and their goals of care. Our goal is to respect their wishes and support them in having quality of life. With consent, we will work with family physicians, specialty doctors and other health care providers to provide the best care possible."]
       },
       { "name": "Quality",
-        "description": "Where appropriate, we strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs"
+        "description": ["As a small private company, we will provide a higher standard of care which is reflected by positive client experiences. Our goal is to keep our clients living safely at home as long as possible. If our clients are admitted to hospital or a long term care facility we can provide additional care to help with the transition. With the proper supports our clients will have quality of life, peace of mind and body."]
       }
     ],
     "team": [
@@ -144,9 +162,12 @@
         "title": "CEO/Founder",
         "image": "michelle-frauley.jpg",
         "bio": [
-          "Michelle has over 3 decades of nursing experience, Her many years of experience have included a background in family medicine, palliative/end of life care, operating room nursing, women’s health, complex long term care and community nursing. Her experience has taught her that providing quality healthcare are built from caring and compassion",
-          "Michelle is committed and caring, someone whose attention to detail fuels her passion and her success. She is highly respected by her patients and peers.",
-          "Michelle has over 3 decades of nursing experience, Her many years of experience have included a background in family medicine, palliative/end of life care, operating room nursing, women’s health, complex long term care and community nursing. Her experience has taught her that providing quality healthcare are built from caring and compassion"
+          "Michelle has over 3 decades of nursing experience, including in family medicine, palliative/end-of-life care, operating room nursing, women’s health, complex long-term care, and community nursing. Her experience has taught her that providing quality healthcare is built from a foundation of care and compassion.",
+          "Michelle is committed and caring, someone whose attention to detail fuels her passion and her success. In 2016 she received an award from the International Nurses Association as a Worldwide Leader in Healthcare for her overall achievements with Hospall and her position at King City Medical Associates Nurse Manager. She is highly respected by patients and colleagues, nominated 3x for the Toronto Star Florence Nightingale Award for Ontario nurses.",
+          "Michelle has loved King City from the moment she was asked to join the team at King City Medical Associates. She has never looked back at the relationships that she has gained and the ability to nurse in ways she could never have imagined. She is a member of the King Chamber of Commerce and Home Care Ontario.",
+          "Michelle founded Hospall Private Home Care in 2013 with the belief that she could lead an amazing group of caregivers into building something remarkable for residents in King and surrounding areas. Michelle has experience showing that interactive caregiving is a method of caring for seniors that promotes physical, mental, social, and emotional well-being.",
+          "Her group of caregivers all share Hospall’s vision and mission. They believe that trust and compassion are very important part of entrusting one’s healthcare needs into hiring care. The Hospall team that she has built provides caring and dependable assistance and reliability 24 hours a day, offering total peace of mind. Their objective never changes, providing the highest degree of care to all their patients and the utmost focus on quality of life for all.",
+          "She wants everyone to try our service and believe in the Hospall mission as much as she and her team. Michelle looks forward to meeting you and make a difference in you or your loved one’s life."
         ]
       },
       { "name": "Erwin Delemos",
@@ -161,13 +182,84 @@
   },
   "careers": [
     { "position": "Personal Support Worker",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante. semper diam molestie, et"
+      "description": "Personal Support Worker (PSW)",
+      "image": "personal-support-worker.jpg",
+      "responsibilities": [
+        "Assist clients with:",
+        [
+          "personal and hygiene care",
+          "activities of daily living",
+          "transferring",
+          "feeding",
+          "standing, walking, and sitting"
+        ],
+        "Meal Preparation",
+        "Light Housekeeping",
+        "Shopping for clients (grocery and errands)",
+        "Medication Reminders",
+        "Provide companionship to clients",
+        "Ability to follow established care plan, document and chart"
+      ],
+      "requirements": [
+        [
+          "PSW Certificate",
+          "Current CPR/First Aid training",
+          "Current Police Record Check or be willing to obtain one",
+          "Ability to travel throughout York Region and surrounding area",
+          "Access to internet/mobile phone",
+          "Ability to communicate verbally and in writing in English",
+          "Able to independently lift 23 kilograms",
+          "Able to assist clients with standing, walking, sitting and rolling in bed",
+          "Demonstrated ability to follow written and verbal instructions"
+        ]
+      ]
     },
     { "position": "Companion",
-      "description": "Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi. consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis"
+      "image": "companion.jpg",
+      "responsibilities": [
+        [
+          "Companionship and conversation with clients",
+          "Light housekeeping tasks",
+          "Meal preparation",
+          "Medication reminders",
+          "Laundry",
+          "Grocery Shopping/Errands"
+        ]
+      ],
+      "requirements": [
+        "Current CPR/First Aid training",
+        "Current Police Record Check or be willing to obtain one",
+        "Ability to travel throughout York Region and surrounding area",
+        "Access to internet/mobile phone"
+      ]
     },
-    { "position": "Homecare Supervisor",
-      "description": "Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna."
+    { "position": "Home Care Supervisor",
+      "image": "home-care-supervisor.jpg",
+      "responsibilities": [
+        [
+          "Respond to patient referrals within an appropriate timeline",
+          "Develop and document care plan for client",
+          "Ensure Patient and Care Providers are safe",
+          "Reassess patients at regular visits to ensure the care plan is appropriate",
+          "Be responsible for investigation, resolution and reporting of all customer related complaints",
+          "Ensure accurate and timely completion of appropriate documentation, including client charting",
+          "Actively identify and prevent potential risks with clients",
+          "Ensure policies and procedures are enforced and reflect best practices"
+        ]
+      ],
+      "requirements": [
+        [
+          "Current CPR/First Aid training",
+          "Current Police Record Check or be willing to obtain one",
+          "Ability to travel throughout York Region and surrounding area",
+          "Access to internet/mobile phone",
+          "Current registration with College of Nurses of Ontario (CNO) as a Registered Nurse or Registered Practical Nurse",
+          "2 years experience in the home health care",
+          "Be able to establish, build and maintain rapport with clients, their families and other members of our team",
+          "Reliable & self-motivated",
+          "Ability to work both independently and as a member of a team"
+        ]
+      ]
     }
   ],
   "FAQ": [
@@ -180,11 +272,26 @@
         "We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients."
       ]
     },
-    { "question": "What area do your provide care?"
+    { "question": "What area do you provide care?",
+      "answer": [
+        "Hospall Private Homecare provides peace of mind to families with the health and care needs of their loved ones in King Township, City of Vaughan, and the surrounding GTA."
+      ]
     },
-    { "question": "Will I have the same caregiver? What if I do not like my assigned caregiver?"
+    { "question": "Will I have the same caregiver? What if I do not like my assigned caregiver?",
+      "answer": [
+        "We will schedule consistency of caregivers for all our clients. This will provide the continuity of care they need and build trustful relationships. As a small private company, we will provide a higher standard of care which is reflected by positive client experiences. We provide a high level of professionalism that allows for positive interactions with our clientele. Our team will integrate seamlessly into your family to work together on what is best for the client."
+      ]
     },
-    { "question": "Is there flexibility around hours I need and time?"
+    { "question": "Is there flexibility around hours I need and time?",
+      "answer": [
+        "Yes we are very flexible. Our caregivers live out but can provide up to 24 hour a day coverage offering total peace of mind. Just like our company we want the care to be personalized to each individual not generic."
+      ]
+    },
+    { "question": "What are the costs of homecare provided by Hospall?"
+    },
+    { "question": "Is the cost for services covered by my health plan or government program?"
+    },
+    { "question": "Are your employees insured?"
     }
   ]
 }
