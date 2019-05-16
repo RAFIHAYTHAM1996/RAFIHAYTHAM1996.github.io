@@ -287,11 +287,26 @@
         "Yes we are very flexible. Our caregivers live out but can provide up to 24 hour a day coverage offering total peace of mind. Just like our company we want the care to be personalized to each individual not generic."
       ]
     },
-    { "question": "What are the costs of homecare provided by Hospall?"
+    { "question": "What are the costs of homecare provided by Hospall?",
+      "answer": [
+        "The hourly rate depends on the caregiver’s skills, experience and location. We will present you with several caregiver options to choose from. Each care plan is customized to suit your needs. Rates differ based on the type of care required and the city where you live. Call us at <a href='tel:+18002088480' class='inline'>1 800 208 8480</a> to determine your needs, and we will be happy to provide all the details. We will help you determine the right care for you or your aging loved ones."
+      ]
     },
-    { "question": "Is the cost for services covered by my health plan or government program?"
+    { "question": "Is there a minimum number of hours per visit?",
+      "answer": [
+        "Yes, we have a minimum visit time of four hours."
+      ]
     },
-    { "question": "Are your employees insured?"
+    { "question": "Is the cost for services covered by my health plan or government program?",
+      "answer": [
+        "Under certain conditions, home care services are tax deductible. We recommend you check with your tax advisor or Revenue Canada to determine if you qualify for a tax deduction.",
+        "Every insurance policy is different, but we can help you to determine if our services are covered under your current plan. For more information, <a href='/contact' class='inline'>click here</a> or call our team at <a href='tel:+18002088480' class='inline'>1 800 208 8480</a>"
+      ]
+    },
+    { "question": "Are your employees insured?",
+      "answer": [
+        "To help ensure the safety and wellbeing of our clients, we perform a criminal history background clearance and then cover each caregiver with general liability and workers' compensation insurance."
+      ]
     }
   ]
 }

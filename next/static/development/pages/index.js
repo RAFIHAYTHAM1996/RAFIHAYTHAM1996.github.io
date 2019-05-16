@@ -1486,8 +1486,6 @@ var _data = _interopRequireDefault(__webpack_require__(/*! ../../static/json/dat
 
 var _makePath = _interopRequireDefault(__webpack_require__(/*! ../../util/make-path */ "./util/make-path.js"));
 
-var _reactToggle = _interopRequireDefault(__webpack_require__(/*! react-toggle */ "./node_modules/react-toggle/dist/component/index.js"));
-
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
     default: obj
@@ -1531,28 +1529,6 @@ function _typeof(obj) {
   }
 
   return _typeof(obj);
-}
-
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
-}
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
-}
-
-function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
-
-    return arr2;
-  }
 }
 
 function _classCallCheck(instance, Constructor) {
@@ -1637,7 +1613,8 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
-}
+} // import Toggle from 'react-toggle';
+
 
 var Menu =
 /*#__PURE__*/
@@ -1858,13 +1835,6 @@ function (_Component) {
       }
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "toggleCTA", function (e) {
-      document.body.className = document.body.className.replace(/\s{2,}/, '');
-      document.body.className = document.body.className.replace(/cta-button/ig, '');
-      document.body.className = document.body.className.replace(/cta-text/ig, '');
-      document.body.className = [e.target.checked ? 'cta-button' : 'cta-text'].concat(_toConsumableArray(document.body.className.split(' '))).join(' ');
-    });
-
     _this.state = {
       collapsed: true,
       responsive: false
@@ -1903,8 +1873,7 @@ function (_Component) {
       document.addEventListener("scroll", this.handleScroll);
       window.addEventListener("resize", this.checkResponsive);
       this.checkResponsive();
-      setTimeout(this.handleScroll, 200);
-      document.body.className += ' cta-button';
+      setTimeout(this.handleScroll, 200); // document.body.className += ' cta-button';
 
       if (!this.state.responsive) {
         _gsap.default.fromTo(this.links, 1, {
@@ -1926,6 +1895,12 @@ function (_Component) {
     }
   }, {
     key: "render",
+    // toggleCTA = e => {
+    //   document.body.className = document.body.className.replace(/\s{2,}/, '');
+    //   document.body.className = document.body.className.replace(/cta-button/ig, '');
+    //   document.body.className = document.body.className.replace(/cta-text/ig, '');
+    //   document.body.className = [e.target.checked ? 'cta-button' : 'cta-text', ...document.body.className.split(' ')].join(' ');
+    // }
     value: function render() {
       var _this2 = this;
 
@@ -1958,15 +1933,7 @@ function (_Component) {
           padding: 0,
           minHeight: 40
         }
-      }, _react.default.createElement("div", {
-        style: {
-          marginRight: 50,
-          float: 'right'
-        }
-      }, _react.default.createElement(_reactToggle.default, {
-        defaultChecked: true,
-        onChange: this.toggleCTA
-      })), _react.default.createElement("svg", {
+      }, _react.default.createElement("svg", {
         viewBox: "0 0 70 56",
         id: "hamburger-menu",
         ref: function ref(el) {
@@ -2020,13 +1987,6 @@ function (_Component) {
           key: index
         }, _this2.getLink(item, index));
       }))) : _react.default.createElement(_react.Fragment, null, _react.default.createElement("div", {
-        style: {
-          marginLeft: 100
-        }
-      }, _react.default.createElement(_reactToggle.default, {
-        defaultChecked: true,
-        onChange: this.toggleCTA
-      })), _react.default.createElement("div", {
         id: "subcontainer",
         className: "row" + (this.state.responsive ? " responsive" : "")
       }, _react.default.createElement("div", {
@@ -2411,6 +2371,7 @@ function (_Component) {
           key: index
         }, _react.default.createElement("a", {
           target: "_blank",
+          ref: "noreferrer",
           key: index,
           className: "icon",
           dangerouslySetInnerHTML: {
@@ -8237,68 +8198,6 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 } : function (obj) {
   return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
 };
-
-/***/ }),
-
-/***/ "./node_modules/classnames/index.js":
-/*!******************************************!*\
-  !*** ./node_modules/classnames/index.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if (typeof module !== 'undefined' && module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return classNames;
-		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-}());
-
 
 /***/ }),
 
@@ -42876,381 +42775,6 @@ ReCAPTCHA.defaultProps = {
 
 /***/ }),
 
-/***/ "./node_modules/react-toggle/dist/component/check.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-toggle/dist/component/check.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-  return _react2.default.createElement(
-    'svg',
-    { width: '14', height: '11', viewBox: '0 0 14 11' },
-    _react2.default.createElement(
-      'title',
-      null,
-      'switch-check'
-    ),
-    _react2.default.createElement('path', { d: 'M11.264 0L5.26 6.004 2.103 2.847 0 4.95l5.26 5.26 8.108-8.107L11.264 0', fill: '#fff', fillRule: 'evenodd' })
-  );
-};
-
-/***/ }),
-
-/***/ "./node_modules/react-toggle/dist/component/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-toggle/dist/component/index.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _classnames = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/next/node_modules/prop-types/index.js");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _check = __webpack_require__(/*! ./check */ "./node_modules/react-toggle/dist/component/check.js");
-
-var _check2 = _interopRequireDefault(_check);
-
-var _x = __webpack_require__(/*! ./x */ "./node_modules/react-toggle/dist/component/x.js");
-
-var _x2 = _interopRequireDefault(_x);
-
-var _util = __webpack_require__(/*! ./util */ "./node_modules/react-toggle/dist/component/util.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Toggle = function (_PureComponent) {
-  _inherits(Toggle, _PureComponent);
-
-  function Toggle(props) {
-    _classCallCheck(this, Toggle);
-
-    var _this = _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).call(this, props));
-
-    _this.handleClick = _this.handleClick.bind(_this);
-    _this.handleTouchStart = _this.handleTouchStart.bind(_this);
-    _this.handleTouchMove = _this.handleTouchMove.bind(_this);
-    _this.handleTouchEnd = _this.handleTouchEnd.bind(_this);
-    _this.handleFocus = _this.handleFocus.bind(_this);
-    _this.handleBlur = _this.handleBlur.bind(_this);
-    _this.previouslyChecked = !!(props.checked || props.defaultChecked);
-    _this.state = {
-      checked: !!(props.checked || props.defaultChecked),
-      hasFocus: false
-    };
-    return _this;
-  }
-
-  _createClass(Toggle, [{
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      if ('checked' in nextProps) {
-        this.setState({ checked: !!nextProps.checked });
-      }
-    }
-  }, {
-    key: 'handleClick',
-    value: function handleClick(event) {
-      var checkbox = this.input;
-      if (event.target !== checkbox && !this.moved) {
-        this.previouslyChecked = checkbox.checked;
-        event.preventDefault();
-        checkbox.focus();
-        checkbox.click();
-        return;
-      }
-
-      var checked = this.props.hasOwnProperty('checked') ? this.props.checked : checkbox.checked;
-
-      this.setState({ checked: checked });
-    }
-  }, {
-    key: 'handleTouchStart',
-    value: function handleTouchStart(event) {
-      this.startX = (0, _util.pointerCoord)(event).x;
-      this.activated = true;
-    }
-  }, {
-    key: 'handleTouchMove',
-    value: function handleTouchMove(event) {
-      if (!this.activated) return;
-      this.moved = true;
-
-      if (this.startX) {
-        var currentX = (0, _util.pointerCoord)(event).x;
-        if (this.state.checked && currentX + 15 < this.startX) {
-          this.setState({ checked: false });
-          this.startX = currentX;
-          this.activated = true;
-        } else if (currentX - 15 > this.startX) {
-          this.setState({ checked: true });
-          this.startX = currentX;
-          this.activated = currentX < this.startX + 5;
-        }
-      }
-    }
-  }, {
-    key: 'handleTouchEnd',
-    value: function handleTouchEnd(event) {
-      if (!this.moved) return;
-      var checkbox = this.input;
-      event.preventDefault();
-
-      if (this.startX) {
-        var endX = (0, _util.pointerCoord)(event).x;
-        if (this.previouslyChecked === true && this.startX + 4 > endX) {
-          if (this.previouslyChecked !== this.state.checked) {
-            this.setState({ checked: false });
-            this.previouslyChecked = this.state.checked;
-            checkbox.click();
-          }
-        } else if (this.startX - 4 < endX) {
-          if (this.previouslyChecked !== this.state.checked) {
-            this.setState({ checked: true });
-            this.previouslyChecked = this.state.checked;
-            checkbox.click();
-          }
-        }
-
-        this.activated = false;
-        this.startX = null;
-        this.moved = false;
-      }
-    }
-  }, {
-    key: 'handleFocus',
-    value: function handleFocus(event) {
-      var onFocus = this.props.onFocus;
-
-
-      if (onFocus) {
-        onFocus(event);
-      }
-
-      this.setState({ hasFocus: true });
-    }
-  }, {
-    key: 'handleBlur',
-    value: function handleBlur(event) {
-      var onBlur = this.props.onBlur;
-
-
-      if (onBlur) {
-        onBlur(event);
-      }
-
-      this.setState({ hasFocus: false });
-    }
-  }, {
-    key: 'getIcon',
-    value: function getIcon(type) {
-      var icons = this.props.icons;
-
-      if (!icons) {
-        return null;
-      }
-      return icons[type] === undefined ? Toggle.defaultProps.icons[type] : icons[type];
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var _props = this.props,
-          className = _props.className,
-          _icons = _props.icons,
-          inputProps = _objectWithoutProperties(_props, ['className', 'icons']);
-
-      var classes = (0, _classnames2.default)('react-toggle', {
-        'react-toggle--checked': this.state.checked,
-        'react-toggle--focus': this.state.hasFocus,
-        'react-toggle--disabled': this.props.disabled
-      }, className);
-
-      return _react2.default.createElement(
-        'div',
-        { className: classes,
-          onClick: this.handleClick,
-          onTouchStart: this.handleTouchStart,
-          onTouchMove: this.handleTouchMove,
-          onTouchEnd: this.handleTouchEnd },
-        _react2.default.createElement(
-          'div',
-          { className: 'react-toggle-track' },
-          _react2.default.createElement(
-            'div',
-            { className: 'react-toggle-track-check' },
-            this.getIcon('checked')
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'react-toggle-track-x' },
-            this.getIcon('unchecked')
-          )
-        ),
-        _react2.default.createElement('div', { className: 'react-toggle-thumb' }),
-        _react2.default.createElement('input', _extends({}, inputProps, {
-          ref: function ref(_ref) {
-            _this2.input = _ref;
-          },
-          onFocus: this.handleFocus,
-          onBlur: this.handleBlur,
-          className: 'react-toggle-screenreader-only',
-          type: 'checkbox' }))
-      );
-    }
-  }]);
-
-  return Toggle;
-}(_react.PureComponent);
-
-exports.default = Toggle;
-
-
-Toggle.displayName = 'Toggle';
-
-Toggle.defaultProps = {
-  icons: {
-    checked: _react2.default.createElement(_check2.default, null),
-    unchecked: _react2.default.createElement(_x2.default, null)
-  }
-};
-
-Toggle.propTypes = {
-  checked: _propTypes2.default.bool,
-  disabled: _propTypes2.default.bool,
-  defaultChecked: _propTypes2.default.bool,
-  onChange: _propTypes2.default.func,
-  onFocus: _propTypes2.default.func,
-  onBlur: _propTypes2.default.func,
-  className: _propTypes2.default.string,
-  name: _propTypes2.default.string,
-  value: _propTypes2.default.string,
-  id: _propTypes2.default.string,
-  'aria-labelledby': _propTypes2.default.string,
-  'aria-label': _propTypes2.default.string,
-  icons: _propTypes2.default.oneOfType([_propTypes2.default.bool, _propTypes2.default.shape({
-    checked: _propTypes2.default.node,
-    unchecked: _propTypes2.default.node
-  })])
-};
-
-/***/ }),
-
-/***/ "./node_modules/react-toggle/dist/component/util.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/react-toggle/dist/component/util.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.pointerCoord = pointerCoord;
-// Copyright 2015-present Drifty Co.
-// http://drifty.com/
-// from: https://github.com/driftyco/ionic/blob/master/src/util/dom.ts
-
-function pointerCoord(event) {
-  // get coordinates for either a mouse click
-  // or a touch depending on the given event
-  if (event) {
-    var changedTouches = event.changedTouches;
-    if (changedTouches && changedTouches.length > 0) {
-      var touch = changedTouches[0];
-      return { x: touch.clientX, y: touch.clientY };
-    }
-    var pageX = event.pageX;
-    if (pageX !== undefined) {
-      return { x: pageX, y: event.pageY };
-    }
-  }
-  return { x: 0, y: 0 };
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-toggle/dist/component/x.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/react-toggle/dist/component/x.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-  return _react2.default.createElement(
-    'svg',
-    { width: '10', height: '10', viewBox: '0 0 10 10' },
-    _react2.default.createElement(
-      'title',
-      null,
-      'switch-x'
-    ),
-    _react2.default.createElement('path', { d: 'M9.9 2.12L7.78 0 4.95 2.828 2.12 0 0 2.12l2.83 2.83L0 7.776 2.123 9.9 4.95 7.07 7.78 9.9 9.9 7.776 7.072 4.95 9.9 2.12', fill: '#fff', fillRule: 'evenodd' })
-  );
-};
-
-/***/ }),
-
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
   !*** delegated ./node_modules/react/index.js from dll-reference dll_78b63e6e9b9fc7e50dfb ***!
@@ -44562,6 +44086,8 @@ var _care = _interopRequireDefault(__webpack_require__(/*! ../static/svg/care.sv
 
 var _home = _interopRequireDefault(__webpack_require__(/*! ../static/svg/home.svg?include */ "./static/svg/home.svg?include"));
 
+var _logo = _interopRequireDefault(__webpack_require__(/*! ../static/svg/logo.svg?include */ "./static/svg/logo.svg?include"));
+
 var _head = _interopRequireDefault(__webpack_require__(/*! next/head */ "./node_modules/next/head.js"));
 
 var _reactGa = _interopRequireDefault(__webpack_require__(/*! react-ga */ "./node_modules/react-ga/dist/react-ga.js"));
@@ -44771,6 +44297,11 @@ function (_Component) {
       }, _react.default.createElement("img", {
         id: "landing-image",
         src: this.ASSET_PATH + "intro.png"
+      }), _react.default.createElement("div", {
+        className: "offset-2 col-8 offset-sm-1 col-sm-4 logo-over-image",
+        dangerouslySetInnerHTML: {
+          __html: _logo.default
+        }
       }), _react.default.createElement("div", {
         className: "row intro-content"
       }, _react.default.createElement("div", {
@@ -45791,7 +45322,7 @@ exports.default = _default;
 /*! exports provided: services, benefits, testimonials, about, careers, FAQ, default */
 /***/ (function(module) {
 
-module.exports = {"services":[{"name":"Personalized Private Homecare","description":["We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.","Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."]},{"name":"Failure to Thrive (FTT)","description":["Clients with failure to thrive commonly have decreased appetite, poor nutrition, physical inactivity and depression. These symptoms combined have significant increase risk of falls.","The consistent and compassionate care provided by our multi-disciplinary team has a focus on improving our clients frailty, medical and nutritional concerns. We organize and help clients implement activities of daily living to stimulate their mind and enrich their interests. We grocery shop, prepare nutritional meals and when required assist in feeding our clients. We will keep them company during meal times to support their social and nutritional needs. We strive to elevate and enrich their health and overall wellbeing. From our experience this helps them over come FTT and keep them safe."]},{"name":"Home & Medical Services","description":["We provide medical and personal home care services by skilled professionals, including help with personal hygiene and daily routine, as well as medical services such as bloodwork, medication administration, nail and foot care. We are also insured to accompany clients to appointments.",["Assistance with activities of daily living","Medication administration","Assistance with feeding, meal preparation and grocery shopping","Toileting","Companionship","Light housekeeping","Laundry care","Running errands","Escort and support our clients to their medical appointments","Accompanying and supporting our clients to social outings"]]},{"name":"Respite Care","description":["Caring for loved ones can be a full-time job. We recognize that often you have your own life responsibilities that also need your attention. Being a caregiver can be exhausting. When you need a reprieve, we are here to assist.","Medical conditions such as Alzheimer’s and Dementia can be very physical and mentally challenging. You can be guaranteed that we will be there to help you navigate those challenges and help keep your loved ones safe. When you need a rest, we are here to relieve you to help prevent caregiver burnout, and help you maintain a healthy balance with your own life. We can provide a few hours of respite care up to 24-hour care in the comfort of our client’s own home or supplement the care if your loved one is admitted to hospital or other place of residence."]},{"name":"End of Life & Palliative Care","description":["End of Life Care includes Palliative Care. If our clients have been diagnosed with an illness or ailment that cannot be cured. Our goal is to make them as comfortable as possible and maintain their dignity. We also aim to improve quality of life.","If you or your loved one(s) are facing a life-limiting illness that requires care and emotional support. An integrated Palliative Care approach can help you achieve the best possible quality of life from diagnosis to the end of life. Palliative care can:",["Help improve and maintain quality of life","Reduce or relieve physical and psychological symptoms","Help you have a more peaceful and dignified death","Provide support for your family"],"In the early stages of illness trajectory, focusing on open and honest communication on goals of care, psychosocial, spiritual support, and pain and symptom management, palliative care offers you and your family a greater sense of control as you are actively involved in your own care. Identifying your needs early, can help to anticipate, prevent and relieve suffering."]},{"name":"Short-term Postoperative Care","description":["Short term post operative care or convalescent care in the comfort of your own home. We believe our clients will retain better cognitive function, stay healthier, and be able to live in-dependently longer within their own homes.","It can be overwhelming transitioning from hospital to home. We believe with the proper supports our clients will retain better cognitive function, stay healthier, and be able to live in-dependently longer. Our goal is to assist our clients to safely build strength and independence in the comfort of their own home. We are insured to transport and escort our clients to rehab and follow up medical appointments as needed. Our staff will assist with nutritious meal preparation, bathing and dressing. Falls are a common reality post operatively and we want to ensure your loved ones are safe. Our registered staff provide post operative wound care to help prevent infections."]}],"benefits":[{"name":"Family-Centric Evolving Care","description":"Our clients are the center of what we do, and our team integrates seamlessly into your family. We can be with you and your loved ones as often as needed, working together on what is best for the client today and tomorrow. We build personal rapport with every client while respecting their privacy."},{"name":"Breadth of Expertise","description":"Our team is comprised of caring registered nurses, personal support workers, registered massage therapists, nail technicians, companions, chefs, housekeepers, and activity planners. They are bonded and have appropriate certifications."},{"name":"Improving Quality of Life","description":"We are determined to create quality experiences that help our clients enjoy their lives to the fullest. Some activities include: casual or fine dining, ballet and theatre, beauty care, transportation, exercise programs/personal training, and daily activities to allow clients to maintain their interests."}],"testimonials":{"widget":[{"name":"Greg & Alison","relationship":"Son and Daughter of Michael","review":"I cannot put into words how fortunate my sister and I are to have Hospall in our lives. My dad was diagnosed with pancreatic cancer and the disease took control of his life. Hospall was brought on near the end of my dad’s life and they were so caring, gentle and compassionate with my dad.","url":"greg-alison","image":"mildred.jpg"},{"name":"Becky","relationship":"Daughter of Ivan","review":"We never had to worry what caregiver would come, if his care would be thoughtful and caring, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. I would recommend Hospall to anyone who requires palliative care for a loved one.","url":"becky","image":"mildred.jpg"}],"page":[{"content":"I cannot put into words how fortunate my sister and I are to have Hospall in our lives. My dad was diagnosed with pancreatic cancer and the disease took control of his life. Hospall was brought on near the end of my dads life and they were so caring, gentle and compassionate with my dad. When we received the phone call from Hospall saying dad was not doing well and to get there, the call was made right from Michelle and was very caring. We did not make it there in time, but Hospall was there and did not leave my dads side until he passed. I cannot put into words how comforting that was that there was someone that we know with him as he left is Hospall has been great working with my mom as she recovers from some health problems. We have been very lucky to have such kind and compassionate people from Hospall in my familes life. Hospall staff and Michelle and Erwin are now part of our family and will always be","client":"Greg and Alison"},{"content":"As soon as my husband received the diagnosis 'Terminal, incurable', we arranged for Hospall to care for him. He was in the comfort of our home and the care that he received was excellent. We never had to worry what caregiver would come, when that person would come, if his care would be thoughtful and caring, if he and the family would be respected, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. At a stressful time of life, we appreciated that we did not have the burden of worrying about the care that my husband was receiving. I would recommend Hospall to anyone who requires palliative care for a loved one.","client":"Becky Haggith"},{"content":"We knew from the first interview that we had found the right agency. Michelle questioned our parents with sensitivity and insight about their needs and wishes. The assigned caregiver, Elviz, is an excellent fit for our father. Yes, it did take several months for Dad to be completely comfortable but his personal hygiene and safety were always in capable and gentle hands. With Elviz now part of the family, our father has an advocate and our mother has a part-time driver and time to enjoy her pursuits. Erwin, the nursing supervisor, visits several times a month to check Dad's health and does his INR which is much easier than going to the clinic. As their children, we are very pleased that our parents have such honest and cheerful people to help care for them. Thank you, Hospall!","client":"The Harris Family"},{"content":"Hospall Private Home Care has been a blessing for my family, and especially for our elderly parents. From the beginning the team has been professional, skillful, compassionate and consistent. Hospall allows our parents to remain in their home. Assistance is provided with bathing/dressing, home-made meals are prepared daily, and there is time for fun activities and shopping excursions. Hospall can escort them to medical appointments, provide in –home blood tests, and administer medication. Each team member has become part of our family. All this makes Hospall quite unique and provides quality time that has given our parents a new vitality. The Hospall management team is always available and accountable. We feel very supported with the plans in place as our parents age and their needs change. Hospall is a source of security and comfort for everyone.","client":"Christine S"},{"content":"My mother is suffering with alzheimer’s and dementia and she seems to be very happy with the care giver from Hospall and all that she does for her. My father also requires care as he is suffering from the symptoms of a stroke, prostrate cancer, a hip replacement, diabetes and parkinson's. Since my mother is no longer able to make meals, do daily washing of clothes and look after her personal cleanliness, Hospall has been a godsend. I cannot say enough good things about the trustworthiness, kindness and dedication shown with the personal care provided. It makes it an awful lot easier for me to sleep at night, knowing that they are being very well looked after. I am sure for that very same reason my parents are also able to sleep easier. Thank you once again Hospall for everything that you have and are doing for us.","client":"The McGuire Family"},{"content":"The Hospall team is a group of extremely dedicated and professional individuals who go above and beyond to help in any situation. We were so grateful for their service. We would not hesitate to recommend this wonderful team!","client":"The McCarthy Family"},{"content":"Hospall Private Home Care has been a blessing for my family, and especially for our elderly parents. From the beginning the team has been professional, skillful, compassionate and consistent. Hospall allows our parents to remain in their home. Assistance is provided with bathing/dressing, home-made meals are prepared daily, and there is time for fun activities and shopping excursions. Hospall can escort them to medical appointments, provide in –home blood tests, and administer medication. Each team member has become part of our family. All this makes Hospall quite unique and provides quality time that has given our parents a new vitality.","client":"The Arnold Family"},{"content":"My mother has lived with my husband and I for the past ten years. In the last year there has been a noticeable decrease in her ability to walk on her own. She is 95 and dementia is also a big concern for us. We did not want her to go into a nursing home but rather to stay with us, her family and her beloved cat. I had to find a service that would give her the loving care her deserves and along with that, peace of mind for us. I find I get both with Hospall Private Homecare. The staff is kind and attentive to my mother. She smiles when they arrive and the conversations flow eagerly. I feel confident enough to do my errands while they are with her but most of all, my mother can stay in our home and live out her days with dignity.","client":"Betty D"},{"content":"HosPall has been a godsend…. not only do they provide our mother with the care and compassion that we expect for her, but they also provide us with the peace of mind in knowing that she is happy and in good hands. In turn, it provides us with worry-free time with our families.","client":"The Bianchi Family"},{"content":"I have had the opportunit<wbr>y to watch staff in action and without exception I have been impressed with the safe quality of life they provide to their clients.","client":"Marti M.C."},{"content":"Michelle and her team took on managing the palliative care of my father and since have undertaken the complete care of my mother who has advanced dementia and requires around the clock care. They have taken the load fully from the children, have provided timely reporting, my mother’s physical health couldn’t be better and in consideration of her state is as happy and comfortable as we could possibly wish for. Highly recommended.","client":"David H. Y."},{"content":"I had the good fortune of being with Michelle and her colleagues for a period of a month when she nursed my critically ill husband in the hospital. They showed me what compassion was and their caring for me and my family was outstanding. It made bearing my burden so much easier. I would highly recommend her and her staff as competent and totally reliable.","client":"Maxine O."},{"content":"Michelle is an expert in all things related to healthcare and nursing. She is a great judge of character her staff and colleagues are all first class. I would recommend Michelle or any service she chooses to provide to anyone.","client":"Bob Y."}]},"about":{"values":[{"name":"Integrity","description":["At Hospall, we believe integrity is honesty, sincerity and our strong ethics. Our word is our promise, and our goal is to earn your trust. Our team is comprised of dedicated caring individuals that want only the best for our clients. It is a common challenge that elderly clients have a difficult time adjusting to change. We will schedule consistency of caregivers for all our clients. This will provide the continuity of care."]},{"name":"Communication","description":["We strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs."]},{"name":"Professionalism","description":["We provide a high level of professionalism that allows for positive interactions with our clientele. Our team will integrate seamlessly into your family to work together on what is best for the client. All team members are bonded and maintain updated with current certifications."]},{"name":"Client Centricity","description":["We believe life is a gift. We are committed to create quality experiences that help our clients enjoy their lives to the fullest. Our clients are at the centre of what we do, and how we provide our services reflects this philosophy. We will build strong relationships, while respecting clients’ privacy and values."]},{"name":"Balance","description":["We help our clients and their loved ones navigate their health needs to create balance. We will include them in decisions and their goals of care. Our goal is to respect their wishes and support them in having quality of life. With consent, we will work with family physicians, specialty doctors and other health care providers to provide the best care possible."]},{"name":"Quality","description":["As a small private company, we will provide a higher standard of care which is reflected by positive client experiences. Our goal is to keep our clients living safely at home as long as possible. If our clients are admitted to hospital or a long term care facility we can provide additional care to help with the transition. With the proper supports our clients will have quality of life, peace of mind and body."]}],"team":[{"name":"Michelle Frauley","title":"CEO/Founder","image":"michelle-frauley.jpg","bio":["Michelle has over 3 decades of nursing experience, including in family medicine, palliative/end-of-life care, operating room nursing, women’s health, complex long-term care, and community nursing. Her experience has taught her that providing quality healthcare is built from a foundation of care and compassion.","Michelle is committed and caring, someone whose attention to detail fuels her passion and her success. In 2016 she received an award from the International Nurses Association as a Worldwide Leader in Healthcare for her overall achievements with Hospall and her position at King City Medical Associates Nurse Manager. She is highly respected by patients and colleagues, nominated 3x for the Toronto Star Florence Nightingale Award for Ontario nurses.","Michelle has loved King City from the moment she was asked to join the team at King City Medical Associates. She has never looked back at the relationships that she has gained and the ability to nurse in ways she could never have imagined. She is a member of the King Chamber of Commerce and Home Care Ontario.","Michelle founded Hospall Private Home Care in 2013 with the belief that she could lead an amazing group of caregivers into building something remarkable for residents in King and surrounding areas. Michelle has experience showing that interactive caregiving is a method of caring for seniors that promotes physical, mental, social, and emotional well-being.","Her group of caregivers all share Hospall’s vision and mission. They believe that trust and compassion are very important part of entrusting one’s healthcare needs into hiring care. The Hospall team that she has built provides caring and dependable assistance and reliability 24 hours a day, offering total peace of mind. Their objective never changes, providing the highest degree of care to all their patients and the utmost focus on quality of life for all.","She wants everyone to try our service and believe in the Hospall mission as much as she and her team. Michelle looks forward to meeting you and make a difference in you or your loved one’s life."]},{"name":"Erwin Delemos","title":"Home Care Manager","image":"erwin-delemos.jpg","bio":["Erwin Delemos has been a Registered Nurse for two decades. Prior to becoming a nurse he built his experience as a live in personal support worker. His nursing experience has primarily been in family medicine, palliative and long term complex care. Erwin was also a flight nurse, as a member of a critical care team he has experience caring for critically ill patients in an unstable environment.","We are fortunate that he has been the Home Care Manager with Hospall since 2014. Erwin has a strong passion for helping others and making a difference in our clients lives. Erwin’s other passions include traveling and spending time with his family."]}]},"careers":[{"position":"Personal Support Worker","description":"Personal Support Worker (PSW)","image":"personal-support-worker.jpg","responsibilities":["Assist clients with:",["personal and hygiene care","activities of daily living","transferring","feeding","standing, walking, and sitting"],"Meal Preparation","Light Housekeeping","Shopping for clients (grocery and errands)","Medication Reminders","Provide companionship to clients","Ability to follow established care plan, document and chart"],"requirements":[["PSW Certificate","Current CPR/First Aid training","Current Police Record Check or be willing to obtain one","Ability to travel throughout York Region and surrounding area","Access to internet/mobile phone","Ability to communicate verbally and in writing in English","Able to independently lift 23 kilograms","Able to assist clients with standing, walking, sitting and rolling in bed","Demonstrated ability to follow written and verbal instructions"]]},{"position":"Companion","image":"companion.jpg","responsibilities":[["Companionship and conversation with clients","Light housekeeping tasks","Meal preparation","Medication reminders","Laundry","Grocery Shopping/Errands"]],"requirements":["Current CPR/First Aid training","Current Police Record Check or be willing to obtain one","Ability to travel throughout York Region and surrounding area","Access to internet/mobile phone"]},{"position":"Home Care Supervisor","image":"home-care-supervisor.jpg","responsibilities":[["Respond to patient referrals within an appropriate timeline","Develop and document care plan for client","Ensure Patient and Care Providers are safe","Reassess patients at regular visits to ensure the care plan is appropriate","Be responsible for investigation, resolution and reporting of all customer related complaints","Ensure accurate and timely completion of appropriate documentation, including client charting","Actively identify and prevent potential risks with clients","Ensure policies and procedures are enforced and reflect best practices"]],"requirements":[["Current CPR/First Aid training","Current Police Record Check or be willing to obtain one","Ability to travel throughout York Region and surrounding area","Access to internet/mobile phone","Current registration with College of Nurses of Ontario (CNO) as a Registered Nurse or Registered Practical Nurse","2 years experience in the home health care","Be able to establish, build and maintain rapport with clients, their families and other members of our team","Reliable & self-motivated","Ability to work both independently and as a member of a team"]]}],"FAQ":[{"question":"What are the benefits of my loved one staying at home versus LTC?","answer":["We are a privately owned and operated company. Just like our company we want the care to be personalized to each individual not generic. We strive to help our clients lead safe, balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer all while living their own homes."]},{"question":"What services does Hospall provide?","answer":["We specialize but are not limited to provide live in support including palliative care. We can assist with short term postoperative care for clients of all ages. We provide medial and personal home care services by skilled professionals in our clients home. Home care services include helping with bathing, washing their hair and getting dressed. Medical services include bloodwork, medication administration, nail and foot care. We are also insured to accompany clients to appointments.","We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients."]},{"question":"What area do you provide care?","answer":["Hospall Private Homecare provides peace of mind to families with the health and care needs of their loved ones in King Township, City of Vaughan, and the surrounding GTA."]},{"question":"Will I have the same caregiver? What if I do not like my assigned caregiver?","answer":["We will schedule consistency of caregivers for all our clients. This will provide the continuity of care they need and build trustful relationships. As a small private company, we will provide a higher standard of care which is reflected by positive client experiences. We provide a high level of professionalism that allows for positive interactions with our clientele. Our team will integrate seamlessly into your family to work together on what is best for the client."]},{"question":"Is there flexibility around hours I need and time?","answer":["Yes we are very flexible. Our caregivers live out but can provide up to 24 hour a day coverage offering total peace of mind. Just like our company we want the care to be personalized to each individual not generic."]},{"question":"What are the costs of homecare provided by Hospall?"},{"question":"Is the cost for services covered by my health plan or government program?"},{"question":"Are your employees insured?"}]};
+module.exports = {"services":[{"name":"Personalized Private Homecare","description":["We specialize but are not limited to provide live-out support including palliative and postoperative care. We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients.","Our care services our personalized and flexible to the changing needs of our clients. The needs may differ between clients but our goal is always consistent to help our clients lead safe, independent and balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer within their own homes. When needed we can supplement the care our clients receive while they are admitted to a hospital."]},{"name":"Failure to Thrive (FTT)","description":["Clients with failure to thrive commonly have decreased appetite, poor nutrition, physical inactivity and depression. These symptoms combined have significant increase risk of falls.","The consistent and compassionate care provided by our multi-disciplinary team has a focus on improving our clients frailty, medical and nutritional concerns. We organize and help clients implement activities of daily living to stimulate their mind and enrich their interests. We grocery shop, prepare nutritional meals and when required assist in feeding our clients. We will keep them company during meal times to support their social and nutritional needs. We strive to elevate and enrich their health and overall wellbeing. From our experience this helps them over come FTT and keep them safe."]},{"name":"Home & Medical Services","description":["We provide medical and personal home care services by skilled professionals, including help with personal hygiene and daily routine, as well as medical services such as bloodwork, medication administration, nail and foot care. We are also insured to accompany clients to appointments.",["Assistance with activities of daily living","Medication administration","Assistance with feeding, meal preparation and grocery shopping","Toileting","Companionship","Light housekeeping","Laundry care","Running errands","Escort and support our clients to their medical appointments","Accompanying and supporting our clients to social outings"]]},{"name":"Respite Care","description":["Caring for loved ones can be a full-time job. We recognize that often you have your own life responsibilities that also need your attention. Being a caregiver can be exhausting. When you need a reprieve, we are here to assist.","Medical conditions such as Alzheimer’s and Dementia can be very physical and mentally challenging. You can be guaranteed that we will be there to help you navigate those challenges and help keep your loved ones safe. When you need a rest, we are here to relieve you to help prevent caregiver burnout, and help you maintain a healthy balance with your own life. We can provide a few hours of respite care up to 24-hour care in the comfort of our client’s own home or supplement the care if your loved one is admitted to hospital or other place of residence."]},{"name":"End of Life & Palliative Care","description":["End of Life Care includes Palliative Care. If our clients have been diagnosed with an illness or ailment that cannot be cured. Our goal is to make them as comfortable as possible and maintain their dignity. We also aim to improve quality of life.","If you or your loved one(s) are facing a life-limiting illness that requires care and emotional support. An integrated Palliative Care approach can help you achieve the best possible quality of life from diagnosis to the end of life. Palliative care can:",["Help improve and maintain quality of life","Reduce or relieve physical and psychological symptoms","Help you have a more peaceful and dignified death","Provide support for your family"],"In the early stages of illness trajectory, focusing on open and honest communication on goals of care, psychosocial, spiritual support, and pain and symptom management, palliative care offers you and your family a greater sense of control as you are actively involved in your own care. Identifying your needs early, can help to anticipate, prevent and relieve suffering."]},{"name":"Short-term Postoperative Care","description":["Short term post operative care or convalescent care in the comfort of your own home. We believe our clients will retain better cognitive function, stay healthier, and be able to live in-dependently longer within their own homes.","It can be overwhelming transitioning from hospital to home. We believe with the proper supports our clients will retain better cognitive function, stay healthier, and be able to live in-dependently longer. Our goal is to assist our clients to safely build strength and independence in the comfort of their own home. We are insured to transport and escort our clients to rehab and follow up medical appointments as needed. Our staff will assist with nutritious meal preparation, bathing and dressing. Falls are a common reality post operatively and we want to ensure your loved ones are safe. Our registered staff provide post operative wound care to help prevent infections."]}],"benefits":[{"name":"Family-Centric Evolving Care","description":"Our clients are the center of what we do, and our team integrates seamlessly into your family. We can be with you and your loved ones as often as needed, working together on what is best for the client today and tomorrow. We build personal rapport with every client while respecting their privacy."},{"name":"Breadth of Expertise","description":"Our team is comprised of caring registered nurses, personal support workers, registered massage therapists, nail technicians, companions, chefs, housekeepers, and activity planners. They are bonded and have appropriate certifications."},{"name":"Improving Quality of Life","description":"We are determined to create quality experiences that help our clients enjoy their lives to the fullest. Some activities include: casual or fine dining, ballet and theatre, beauty care, transportation, exercise programs/personal training, and daily activities to allow clients to maintain their interests."}],"testimonials":{"widget":[{"name":"Greg & Alison","relationship":"Son and Daughter of Michael","review":"I cannot put into words how fortunate my sister and I are to have Hospall in our lives. My dad was diagnosed with pancreatic cancer and the disease took control of his life. Hospall was brought on near the end of my dad’s life and they were so caring, gentle and compassionate with my dad.","url":"greg-alison","image":"mildred.jpg"},{"name":"Becky","relationship":"Daughter of Ivan","review":"We never had to worry what caregiver would come, if his care would be thoughtful and caring, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. I would recommend Hospall to anyone who requires palliative care for a loved one.","url":"becky","image":"mildred.jpg"}],"page":[{"content":"I cannot put into words how fortunate my sister and I are to have Hospall in our lives. My dad was diagnosed with pancreatic cancer and the disease took control of his life. Hospall was brought on near the end of my dads life and they were so caring, gentle and compassionate with my dad. When we received the phone call from Hospall saying dad was not doing well and to get there, the call was made right from Michelle and was very caring. We did not make it there in time, but Hospall was there and did not leave my dads side until he passed. I cannot put into words how comforting that was that there was someone that we know with him as he left is Hospall has been great working with my mom as she recovers from some health problems. We have been very lucky to have such kind and compassionate people from Hospall in my familes life. Hospall staff and Michelle and Erwin are now part of our family and will always be","client":"Greg and Alison"},{"content":"As soon as my husband received the diagnosis 'Terminal, incurable', we arranged for Hospall to care for him. He was in the comfort of our home and the care that he received was excellent. We never had to worry what caregiver would come, when that person would come, if his care would be thoughtful and caring, if he and the family would be respected, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. At a stressful time of life, we appreciated that we did not have the burden of worrying about the care that my husband was receiving. I would recommend Hospall to anyone who requires palliative care for a loved one.","client":"Becky Haggith"},{"content":"We knew from the first interview that we had found the right agency. Michelle questioned our parents with sensitivity and insight about their needs and wishes. The assigned caregiver, Elviz, is an excellent fit for our father. Yes, it did take several months for Dad to be completely comfortable but his personal hygiene and safety were always in capable and gentle hands. With Elviz now part of the family, our father has an advocate and our mother has a part-time driver and time to enjoy her pursuits. Erwin, the nursing supervisor, visits several times a month to check Dad's health and does his INR which is much easier than going to the clinic. As their children, we are very pleased that our parents have such honest and cheerful people to help care for them. Thank you, Hospall!","client":"The Harris Family"},{"content":"Hospall Private Home Care has been a blessing for my family, and especially for our elderly parents. From the beginning the team has been professional, skillful, compassionate and consistent. Hospall allows our parents to remain in their home. Assistance is provided with bathing/dressing, home-made meals are prepared daily, and there is time for fun activities and shopping excursions. Hospall can escort them to medical appointments, provide in –home blood tests, and administer medication. Each team member has become part of our family. All this makes Hospall quite unique and provides quality time that has given our parents a new vitality. The Hospall management team is always available and accountable. We feel very supported with the plans in place as our parents age and their needs change. Hospall is a source of security and comfort for everyone.","client":"Christine S"},{"content":"My mother is suffering with alzheimer’s and dementia and she seems to be very happy with the care giver from Hospall and all that she does for her. My father also requires care as he is suffering from the symptoms of a stroke, prostrate cancer, a hip replacement, diabetes and parkinson's. Since my mother is no longer able to make meals, do daily washing of clothes and look after her personal cleanliness, Hospall has been a godsend. I cannot say enough good things about the trustworthiness, kindness and dedication shown with the personal care provided. It makes it an awful lot easier for me to sleep at night, knowing that they are being very well looked after. I am sure for that very same reason my parents are also able to sleep easier. Thank you once again Hospall for everything that you have and are doing for us.","client":"The McGuire Family"},{"content":"The Hospall team is a group of extremely dedicated and professional individuals who go above and beyond to help in any situation. We were so grateful for their service. We would not hesitate to recommend this wonderful team!","client":"The McCarthy Family"},{"content":"Hospall Private Home Care has been a blessing for my family, and especially for our elderly parents. From the beginning the team has been professional, skillful, compassionate and consistent. Hospall allows our parents to remain in their home. Assistance is provided with bathing/dressing, home-made meals are prepared daily, and there is time for fun activities and shopping excursions. Hospall can escort them to medical appointments, provide in –home blood tests, and administer medication. Each team member has become part of our family. All this makes Hospall quite unique and provides quality time that has given our parents a new vitality.","client":"The Arnold Family"},{"content":"My mother has lived with my husband and I for the past ten years. In the last year there has been a noticeable decrease in her ability to walk on her own. She is 95 and dementia is also a big concern for us. We did not want her to go into a nursing home but rather to stay with us, her family and her beloved cat. I had to find a service that would give her the loving care her deserves and along with that, peace of mind for us. I find I get both with Hospall Private Homecare. The staff is kind and attentive to my mother. She smiles when they arrive and the conversations flow eagerly. I feel confident enough to do my errands while they are with her but most of all, my mother can stay in our home and live out her days with dignity.","client":"Betty D"},{"content":"HosPall has been a godsend…. not only do they provide our mother with the care and compassion that we expect for her, but they also provide us with the peace of mind in knowing that she is happy and in good hands. In turn, it provides us with worry-free time with our families.","client":"The Bianchi Family"},{"content":"I have had the opportunit<wbr>y to watch staff in action and without exception I have been impressed with the safe quality of life they provide to their clients.","client":"Marti M.C."},{"content":"Michelle and her team took on managing the palliative care of my father and since have undertaken the complete care of my mother who has advanced dementia and requires around the clock care. They have taken the load fully from the children, have provided timely reporting, my mother’s physical health couldn’t be better and in consideration of her state is as happy and comfortable as we could possibly wish for. Highly recommended.","client":"David H. Y."},{"content":"I had the good fortune of being with Michelle and her colleagues for a period of a month when she nursed my critically ill husband in the hospital. They showed me what compassion was and their caring for me and my family was outstanding. It made bearing my burden so much easier. I would highly recommend her and her staff as competent and totally reliable.","client":"Maxine O."},{"content":"Michelle is an expert in all things related to healthcare and nursing. She is a great judge of character her staff and colleagues are all first class. I would recommend Michelle or any service she chooses to provide to anyone.","client":"Bob Y."}]},"about":{"values":[{"name":"Integrity","description":["At Hospall, we believe integrity is honesty, sincerity and our strong ethics. Our word is our promise, and our goal is to earn your trust. Our team is comprised of dedicated caring individuals that want only the best for our clients. It is a common challenge that elderly clients have a difficult time adjusting to change. We will schedule consistency of caregivers for all our clients. This will provide the continuity of care."]},{"name":"Communication","description":["We strive to maintain open lines of communication with family, doctors, and friends. We believe that this is a integral part of building and maintaining trust, and ensuring our clients are receiving the best care possible that is tailored to their needs."]},{"name":"Professionalism","description":["We provide a high level of professionalism that allows for positive interactions with our clientele. Our team will integrate seamlessly into your family to work together on what is best for the client. All team members are bonded and maintain updated with current certifications."]},{"name":"Client Centricity","description":["We believe life is a gift. We are committed to create quality experiences that help our clients enjoy their lives to the fullest. Our clients are at the centre of what we do, and how we provide our services reflects this philosophy. We will build strong relationships, while respecting clients’ privacy and values."]},{"name":"Balance","description":["We help our clients and their loved ones navigate their health needs to create balance. We will include them in decisions and their goals of care. Our goal is to respect their wishes and support them in having quality of life. With consent, we will work with family physicians, specialty doctors and other health care providers to provide the best care possible."]},{"name":"Quality","description":["As a small private company, we will provide a higher standard of care which is reflected by positive client experiences. Our goal is to keep our clients living safely at home as long as possible. If our clients are admitted to hospital or a long term care facility we can provide additional care to help with the transition. With the proper supports our clients will have quality of life, peace of mind and body."]}],"team":[{"name":"Michelle Frauley","title":"CEO/Founder","image":"michelle-frauley.jpg","bio":["Michelle has over 3 decades of nursing experience, including in family medicine, palliative/end-of-life care, operating room nursing, women’s health, complex long-term care, and community nursing. Her experience has taught her that providing quality healthcare is built from a foundation of care and compassion.","Michelle is committed and caring, someone whose attention to detail fuels her passion and her success. In 2016 she received an award from the International Nurses Association as a Worldwide Leader in Healthcare for her overall achievements with Hospall and her position at King City Medical Associates Nurse Manager. She is highly respected by patients and colleagues, nominated 3x for the Toronto Star Florence Nightingale Award for Ontario nurses.","Michelle has loved King City from the moment she was asked to join the team at King City Medical Associates. She has never looked back at the relationships that she has gained and the ability to nurse in ways she could never have imagined. She is a member of the King Chamber of Commerce and Home Care Ontario.","Michelle founded Hospall Private Home Care in 2013 with the belief that she could lead an amazing group of caregivers into building something remarkable for residents in King and surrounding areas. Michelle has experience showing that interactive caregiving is a method of caring for seniors that promotes physical, mental, social, and emotional well-being.","Her group of caregivers all share Hospall’s vision and mission. They believe that trust and compassion are very important part of entrusting one’s healthcare needs into hiring care. The Hospall team that she has built provides caring and dependable assistance and reliability 24 hours a day, offering total peace of mind. Their objective never changes, providing the highest degree of care to all their patients and the utmost focus on quality of life for all.","She wants everyone to try our service and believe in the Hospall mission as much as she and her team. Michelle looks forward to meeting you and make a difference in you or your loved one’s life."]},{"name":"Erwin Delemos","title":"Home Care Manager","image":"erwin-delemos.jpg","bio":["Erwin Delemos has been a Registered Nurse for two decades. Prior to becoming a nurse he built his experience as a live in personal support worker. His nursing experience has primarily been in family medicine, palliative and long term complex care. Erwin was also a flight nurse, as a member of a critical care team he has experience caring for critically ill patients in an unstable environment.","We are fortunate that he has been the Home Care Manager with Hospall since 2014. Erwin has a strong passion for helping others and making a difference in our clients lives. Erwin’s other passions include traveling and spending time with his family."]}]},"careers":[{"position":"Personal Support Worker","description":"Personal Support Worker (PSW)","image":"personal-support-worker.jpg","responsibilities":["Assist clients with:",["personal and hygiene care","activities of daily living","transferring","feeding","standing, walking, and sitting"],"Meal Preparation","Light Housekeeping","Shopping for clients (grocery and errands)","Medication Reminders","Provide companionship to clients","Ability to follow established care plan, document and chart"],"requirements":[["PSW Certificate","Current CPR/First Aid training","Current Police Record Check or be willing to obtain one","Ability to travel throughout York Region and surrounding area","Access to internet/mobile phone","Ability to communicate verbally and in writing in English","Able to independently lift 23 kilograms","Able to assist clients with standing, walking, sitting and rolling in bed","Demonstrated ability to follow written and verbal instructions"]]},{"position":"Companion","image":"companion.jpg","responsibilities":[["Companionship and conversation with clients","Light housekeeping tasks","Meal preparation","Medication reminders","Laundry","Grocery Shopping/Errands"]],"requirements":["Current CPR/First Aid training","Current Police Record Check or be willing to obtain one","Ability to travel throughout York Region and surrounding area","Access to internet/mobile phone"]},{"position":"Home Care Supervisor","image":"home-care-supervisor.jpg","responsibilities":[["Respond to patient referrals within an appropriate timeline","Develop and document care plan for client","Ensure Patient and Care Providers are safe","Reassess patients at regular visits to ensure the care plan is appropriate","Be responsible for investigation, resolution and reporting of all customer related complaints","Ensure accurate and timely completion of appropriate documentation, including client charting","Actively identify and prevent potential risks with clients","Ensure policies and procedures are enforced and reflect best practices"]],"requirements":[["Current CPR/First Aid training","Current Police Record Check or be willing to obtain one","Ability to travel throughout York Region and surrounding area","Access to internet/mobile phone","Current registration with College of Nurses of Ontario (CNO) as a Registered Nurse or Registered Practical Nurse","2 years experience in the home health care","Be able to establish, build and maintain rapport with clients, their families and other members of our team","Reliable & self-motivated","Ability to work both independently and as a member of a team"]]}],"FAQ":[{"question":"What are the benefits of my loved one staying at home versus LTC?","answer":["We are a privately owned and operated company. Just like our company we want the care to be personalized to each individual not generic. We strive to help our clients lead safe, balanced lives while achieving peace of mind and body. Hospall encourages our clients to be physically, mentally, socially, and emotionally engaged. We believe we can help them retain better cognitive function, stay healthier, and live in-dependently longer all while living their own homes."]},{"question":"What services does Hospall provide?","answer":["We specialize but are not limited to provide live in support including palliative care. We can assist with short term postoperative care for clients of all ages. We provide medial and personal home care services by skilled professionals in our clients home. Home care services include helping with bathing, washing their hair and getting dressed. Medical services include bloodwork, medication administration, nail and foot care. We are also insured to accompany clients to appointments.","We can also organize and help clients with daily activities to help to stimulate their mind and enrich their interests. We are flexible to build a care plan that is best for our clients."]},{"question":"What area do you provide care?","answer":["Hospall Private Homecare provides peace of mind to families with the health and care needs of their loved ones in King Township, City of Vaughan, and the surrounding GTA."]},{"question":"Will I have the same caregiver? What if I do not like my assigned caregiver?","answer":["We will schedule consistency of caregivers for all our clients. This will provide the continuity of care they need and build trustful relationships. As a small private company, we will provide a higher standard of care which is reflected by positive client experiences. We provide a high level of professionalism that allows for positive interactions with our clientele. Our team will integrate seamlessly into your family to work together on what is best for the client."]},{"question":"Is there flexibility around hours I need and time?","answer":["Yes we are very flexible. Our caregivers live out but can provide up to 24 hour a day coverage offering total peace of mind. Just like our company we want the care to be personalized to each individual not generic."]},{"question":"What are the costs of homecare provided by Hospall?","answer":["The hourly rate depends on the caregiver’s skills, experience and location. We will present you with several caregiver options to choose from. Each care plan is customized to suit your needs. Rates differ based on the type of care required and the city where you live. Call us at <a href='tel:+18002088480' class='inline'>1 800 208 8480</a> to determine your needs, and we will be happy to provide all the details. We will help you determine the right care for you or your aging loved ones."]},{"question":"Is there a minimum number of hours per visit?","answer":["Yes, we have a minimum visit time of four hours."]},{"question":"Is the cost for services covered by my health plan or government program?","answer":["Under certain conditions, home care services are tax deductible. We recommend you check with your tax advisor or Revenue Canada to determine if you qualify for a tax deduction.","Every insurance policy is different, but we can help you to determine if our services are covered under your current plan. For more information, <a href='/contact' class='inline'>click here</a> or call our team at <a href='tel:+18002088480' class='inline'>1 800 208 8480</a>"]},{"question":"Are your employees insured?","answer":["To help ensure the safety and wellbeing of our clients, we perform a criminal history background clearance and then cover each caregiver with general liability and workers' compensation insurance."]}]};
 
 /***/ }),
 
@@ -45825,6 +45356,17 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJo
 /***/ (function(module, exports) {
 
 module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:#FFFFFF;}\n</style>\n<path class=\"st0\" d=\"M454.9,372.6c-0.2-5.2-4.8-9.7-10-9.5c-5.2,0.1-9.7,4.8-9.6,10c0.2,5.3,4.7,9.6,10,9.4\n\tC450.7,382.4,455.1,377.8,454.9,372.6z\"/>\n<path class=\"st0\" d=\"M133.8,124.6c-5.1,0.1-9.7,4.8-9.7,9.9c0.1,5.1,4.8,9.7,9.9,9.7c5.1-0.1,9.7-4.8,9.7-9.9\n\tC143.6,129.1,138.9,124.5,133.8,124.6z\"/>\n<path d=\"M508.4,501c-2.3,6.1-6.9,8-13.1,8c-159.9-0.1-319.7-0.1-479.6-0.1c-1.3,0-2.6,0-3.9-0.1c-5.4-0.7-9.2-5-9.1-10\n\tc0.1-4.8,3.8-9,9.1-9.5c3.6-0.4,7.2-0.2,10.9-0.2c10.9,0,21.7,0,33,0c0-74.3,0-148.5,0-223.1c-1.4-0.1-3-0.2-4.6-0.2\n\tc-12.3,0-24.7,0-37,0c-4.7,0-8.4-1.6-10.4-6c-2.1-4.6-0.5-8.4,2.8-11.6c30.9-31,61.9-62,92.9-92.9c5.1-5,10.6-5.3,14.9-1.1\n\tc4.5,4.4,4.1,10-1.5,15.6c-23.8,23.9-47.7,47.8-71.6,71.6c-1.3,1.2-2.9,2.1-4.4,3.1c0.3,0.6,0.6,1.1,1,1.7c8.1,0,16.3-0.6,24.4,0.2\n\tc9.7,1,16.3-2.6,23.1-9.4c53-53.6,106.5-106.8,159.8-160.1c8.9-8.9,12.6-8.9,21.3-0.2c55.2,55.2,110.4,110.3,165.5,165.6\n\tc2.9,3,5.8,4.1,9.9,4c10.6-0.3,21.3-0.1,31.5-0.1C400.7,173.6,328.1,101,255.1,28c-0.7,0.6-2.1,1.9-3.4,3.2\n\tc-26.2,26.2-52.4,52.4-78.6,78.5c-1.6,1.6-3.3,3.3-5.2,4.5c-3.9,2.5-8.5,1.8-11.7-1.5c-3.2-3.2-3.9-7.8-1.4-11.8\n\tc1.1-1.8,2.6-3.4,4.1-4.9c29.1-29.1,58.2-58.2,87.3-87.3c2.1-2.1,4.5-3.8,6.7-5.7c2,0,4,0,5.9,0c3.3,2.9,6.8,5.7,9.9,8.8\n\tC345.9,89.3,423.5,166.9,501,244.5c2.6,2.6,4.9,5.6,7.4,8.4c0,2,0,4,0,5.9c-2.9,5.4-7.4,7.1-13.5,7c-13.1-0.3-26.3-0.1-39.9-0.1\n\tc0,2.2,0,4,0,5.7c0,21.7,0,43.5,0,65.2c0,2.1-0.1,4.3-0.8,6.3c-1.3,4.2-4.6,6.5-8.9,6.6c-4.5,0.1-7.9-2.2-9.3-6.7\n\tc-0.6-2-0.7-4.2-0.7-6.3c0-21.7,0-43.5,0-65.2c0-1.8,0-3.6,0-5.8c-6.6,1.1-10.5-2.5-14.5-6.4C367.3,205.5,313.7,152,260.2,98.4\n\tc-1.4-1.4-2.5-3-4.1-5c-2,1.9-3.4,3.2-4.7,4.5c-54,54.1-108,107.9-161.8,161.9c-3.8,3.8-7.6,6.8-13.6,5.9c0,74.5,0,148.6,0,223.1\n\tc39.3,0,78.5,0,118.3,0c0-2,0-4,0-5.9c0-59.1,0-118.2,0-177.3c0-11.1,3-14.1,14.1-14.1c31.6,0,63.2,0,94.8,0\n\tc10.4,0,13.6,3.2,13.6,13.6c0,59.1,0,118.2,0,177.3c0,2,0,3.9,0,6.3c39.4,0,78.6,0,118.6,0c0-1.6,0-3.3,0-5.1c0-22.9,0-45.8,0-68.7\n\tc0-1.6-0.1-3.3,0.2-4.9c0.8-5.2,4.9-8.8,9.7-8.8c4.8,0,8.9,3.7,9.7,8.9c0.2,1.6,0.2,3.3,0.2,4.9c0,22.7,0,45.4,0,68.2\n\tc0,1.8,0,3.6,0,5.9c10.2,0,20,0,29.8,0c3.6,0,7.3,0.1,10.9,0c6.1-0.3,10.4,2.1,12.7,7.9C508.4,498.3,508.4,499.6,508.4,501z\n\t M214.3,311.5c0,59.4,0,118.4,0,177.2c27.7,0,55.1,0,82.4,0c0-59.3,0-118.1,0-177.2C269.2,311.5,241.9,311.5,214.3,311.5z\"/>\n<path d=\"M413.5,350.9c0,15.5,0,31,0,46.4c0,9.3-3.5,12.7-12.9,12.7c-16.5,0-32.9,0-49.4,0c-9.3,0-12.7-3.5-12.7-12.9\n\tc0-31,0-61.9,0-92.9c0-9.3,3.5-12.7,12.9-12.7c16.5,0,32.9,0,49.4,0c9.3,0,12.7,3.5,12.7,12.9C413.5,319.9,413.5,335.4,413.5,350.9z\n\t M358.4,389.9c12,0,23.5,0,35,0c0-26.4,0-52.5,0-78.4c-11.8,0-23.3,0-35,0C358.4,337.7,358.4,363.6,358.4,389.9z\"/>\n<path d=\"M97.4,350.8c0-15.5,0-31,0-46.4c0-9.4,3.4-12.8,12.8-12.8c16.5,0,32.9,0,49.4,0c9.4,0,12.8,3.4,12.8,12.8\n\tc0,31,0,61.9,0,92.9c0,9.4-3.4,12.8-12.8,12.8c-16.5,0-32.9,0-49.4,0c-9.4,0-12.8-3.4-12.8-12.8C97.4,381.7,97.4,366.3,97.4,350.8z\n\t M117.3,389.9c12,0,23.6,0,35,0c0-26.4,0-52.5,0-78.4c-11.9,0-23.3,0-35,0C117.3,337.7,117.3,363.7,117.3,389.9z\"/>\n<path d=\"M255.5,256.1c-24.8,0-45.3-20.3-45.5-45.1c-0.2-24.7,21-45.9,45.6-45.6c24.9,0.3,45.3,20.9,45.2,45.5\n\tC300.8,235.6,280.4,256,255.5,256.1z M255.6,236.3c14.2-0.1,25.7-11.7,25.5-25.8c-0.1-13.9-11.6-25.3-25.5-25.5\n\tc-13.9-0.1-25.8,11.7-25.8,25.7C229.8,224.9,241.4,236.4,255.6,236.3z\"/>\n<path d=\"M454.9,372.6c0.2,5.2-4.3,9.8-9.6,9.9c-5.3,0.1-9.9-4.2-10-9.4c-0.1-5.2,4.3-9.8,9.6-10C450.1,363,454.8,367.4,454.9,372.6z\n\t\"/>\n<path d=\"M133.8,124.6c5.1-0.1,9.8,4.5,9.9,9.7c0.1,5.1-4.5,9.8-9.7,9.9c-5.1,0.1-9.8-4.5-9.9-9.7C124,129.4,128.7,124.7,133.8,124.6\n\tz\"/>\n<path class=\"st0\" d=\"M246.5,400.2c0-5.1-4.6-9.8-9.7-9.8c-5.1,0-9.8,4.6-9.8,9.7s4.6,9.8,9.7,9.8C241.7,410,246.4,405.3,246.5,400.2\n\tz\"/>\n<path d=\"M246.5,400.2c0,5.1-4.7,9.8-9.8,9.7c-5.1,0-9.8-4.7-9.7-9.8c0-5.1,4.7-9.8,9.8-9.7C241.8,390.4,246.5,395.1,246.5,400.2z\"/>\n</svg>\n"
+
+/***/ }),
+
+/***/ "./static/svg/logo.svg?include":
+/*!*************************************!*\
+  !*** ./static/svg/logo.svg?include ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 1012.17 467.41\" style=\"enable-background:new 0 0 1012.17 467.41;\" xml:space=\"preserve\">\n    <title>hospall_logo</title>\n    <path style=\"fill:#4374ba;\" d=\"M6.49,391.66c16.09-39.39,46.25-60.16,96.43-42.17-1.06-.34-15.57-7.81-16.79-8.2-39.33-12.72-58.86-5.81-75,33.57-1.38,3.38-3.33,13.48-4.69,16.79Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M95.85,437.39c39.12,10.6,79.48,18.19,120,19.95,14.7.64,33.66,2.34,46.93-5.33,13.68-7.9,5.87-25.8-4.83-31.73-19.12-10.58-63.59-9-61.84-7.44-14.57-44.47-67.84-59.35-109.33-58.4-7.42.17,79.41,4.89,98.63,59,.82,2.32,2.69,4.48,5.25,4.82,18.19,2.45,37.71,3.08,55.49,7.53a36,36,0,0,1,6.24,2.44c8.79,4,6.1,14.68-2.06,17.1-7.44,2.21-16.66,1.63-24.34,1.79-22.52.44-45.11-2.56-67.29-6.22C135.23,437,119.11,427.18,89,425.2c-5.92-.39-16.07,11.28-19.53,14.28l-25,21.59C39.4,465.45,93.83,436.85,95.85,437.39Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M271.42,397c24.74-3.87,41.88-26.95,62.83-39,7.74-4.47,21.23-.94,14.53,9.93-1.55,2.5-6.81,4.9-9.46,6.76-9.09,6.41-17.56,13.81-26.1,20.92-15.81,13.17-27.79,28.39-49.52,29.48-4.54.22,3.25,8.39,6.33,8.23,23.32-1.16,35.19-16,52.24-30.29,9.3-7.78,18.62-16.59,29-22.89,11.86-7.16,11.4-17,2.88-26.63-18.67-21.08-51.27,12.53-65,22.88-22.91,17.34-52.21,15.94-79.81,12.78C205.27,388.63,253.13,399.83,271.42,397Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M327.14,340.34c4.62,1.06-5.75-3.66-7.33-4-22.8-5.25-39.26,17.37-53.72,31C266.45,367,307.12,335.73,327.14,340.34Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M283.47,334.66c2.12,0,8.73.29,9.39-2.06.7-2.57-3.36-2.66-4.81-2.63-10.44.23-18.83,7.67-26.07,16.13C259.06,349.5,277.47,334.79,283.47,334.66Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M236.46,155.36s-28.26-13-70.3,0L149.85,356.26,162,361.8l12.16-201.38,7.24-.72L178,372.31s54.85,9.33,72.19-10.43Zm-23.19,17.52c12.39,0,7.54,24.51,7.54,24.51H205.73S200.88,172.88,213.27,172.88ZM223.42,288.7h-20.3s-6.52-33,10.15-33S223.42,288.7,223.42,288.7Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M161.81,157.17s-24.27-16.77,37.69-16.77S243.34,155,243.34,155s58.29-25.72-41.87-25.72S161.81,157.17,161.81,157.17Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M167.25,94.12v40.94h69.57V94.12Zm5.79,5.8h26.1v29.35H173Zm58,29.35H204.93V99.92H231Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M201.31,39.41,150.95,86.87h99.28ZM167.25,82.89c8.33-11.59,30.43-29.35,30.43-29.35C182.47,86.15,167.25,82.89,167.25,82.89Z\"/>\n    <polygon style=\"fill:#4374ba;\" points=\"163.27 109.34 30.65 101 136.81 112.24 33.55 125.64 167.25 116.59 169.79 110.06 163.27 109.34\"/>\n    <path style=\"fill:#4374ba;\" d=\"M218.71,110.43l200-14.5L286.1,113.32l130.8,15.95S242.62,120.93,218.71,110.43Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M374.69,307.95a120,120,0,0,1-20-2V240.32H314.92v65.61a122.33,122.33,0,0,1-19.77,2,120,120,0,0,1-20-2V145.5q6.07-.9,11-1.35t8.76-.45q4,0,9.1.45t10.9,1.35V205h39.77V145.5q6.07-.9,10.9-1.35t8.88-.45q4,0,9.1.45t10.9,1.35V305.92A122.33,122.33,0,0,1,374.69,307.95Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M414.9,249.08A80.32,80.32,0,0,1,418.61,224a53.23,53.23,0,0,1,11-19.44,48.57,48.57,0,0,1,18.09-12.47q10.78-4.38,24.94-4.38,14.38,0,25.16,4.38a48.6,48.6,0,0,1,18.09,12.47,53.29,53.29,0,0,1,11,19.44,80.32,80.32,0,0,1,3.71,25.05,77.46,77.46,0,0,1-3.71,24.6,52.43,52.43,0,0,1-11,19.1A48.07,48.07,0,0,1,497.81,305q-10.78,4.26-25.16,4.27A67.53,67.53,0,0,1,447.71,305a48,48,0,0,1-18.09-12.25,52.37,52.37,0,0,1-11-19.1A77.46,77.46,0,0,1,414.9,249.08Zm77.29,0q0-14.38-4.83-22t-14.72-7.64q-9.89,0-14.61,7.64t-4.72,22q0,14.15,4.72,21.79t14.61,7.64q9.89,0,14.72-7.64T492.19,249.08Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M606.11,233.8a73.75,73.75,0,0,1,12.25,4.38,32,32,0,0,1,9.43,6.63,28.9,28.9,0,0,1,6.18,9.89,39.61,39.61,0,0,1,2.25,14.15,37.06,37.06,0,0,1-3.48,16,35.31,35.31,0,0,1-10.34,12.81,52.53,52.53,0,0,1-16.85,8.54,76.88,76.88,0,0,1-23,3.14,119.34,119.34,0,0,1-20-1.57A109.87,109.87,0,0,1,543,302.33a90.23,90.23,0,0,1,8.31-31,69.35,69.35,0,0,0,15.05,5.06,74.81,74.81,0,0,0,15.73,1.69c1.8,0,3.67-.07,5.62-.22a20.34,20.34,0,0,0,5.17-1,10.47,10.47,0,0,0,3.71-2.14,4.9,4.9,0,0,0-1.46-8,41.31,41.31,0,0,0-6.74-2.58l-15.28-4.27a43.45,43.45,0,0,1-19.77-11.46q-7.87-8.09-7.86-22a34.73,34.73,0,0,1,13.71-28.2,47.14,47.14,0,0,1,15.39-7.75,67.4,67.4,0,0,1,19.66-2.7,107.13,107.13,0,0,1,18.65,1.8,135.74,135.74,0,0,1,20,5.17,68.51,68.51,0,0,1-2.92,15.39,91.72,91.72,0,0,1-5.62,14.49,100.67,100.67,0,0,0-14.6-4.5,68.65,68.65,0,0,0-15.73-2q-10.56,0-10.56,5.84a4.18,4.18,0,0,0,2.47,3.82A27.42,27.42,0,0,0,591.5,230Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M656.66,145.5q5.17-.68,15.84-1.91a240.92,240.92,0,0,1,26.85-1.24,131.9,131.9,0,0,1,24,2.25A61.55,61.55,0,0,1,745.3,153a45.83,45.83,0,0,1,15.84,17.41q6.07,11.23,6.07,29.21,0,16-4.83,26.51A44.65,44.65,0,0,1,749.57,243a49.33,49.33,0,0,1-18.2,9,82.1,82.1,0,0,1-21,2.7q-4.28,0-8.65-.34a42,42,0,0,1-6.18-.79v52.35Q689.68,307,685,307.5t-8.76.45a118.27,118.27,0,0,1-19.55-2Zm38.87,75.94a14.39,14.39,0,0,0,3.82.68c1.8.15,3.67.22,5.62.22q9.66,0,15.73-5.62t6.07-17.08a29.76,29.76,0,0,0-1.91-11.35,18.87,18.87,0,0,0-5.28-7.41,19.54,19.54,0,0,0-7.86-3.93,38.76,38.76,0,0,0-9.44-1.12h-3.15a29,29,0,0,0-3.59.22Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M775.74,268.62q0-11,4.72-18.2A35.52,35.52,0,0,1,792.59,239a51.69,51.69,0,0,1,16.4-6,95,95,0,0,1,17.53-1.69h13.71a12.07,12.07,0,0,0-2.25-6.74,13.42,13.42,0,0,0-5.17-4.16,25.24,25.24,0,0,0-7-2,54.69,54.69,0,0,0-7.86-.56,75.73,75.73,0,0,0-12.58,1.24A90.68,90.68,0,0,0,790.57,223q-2-3.82-3.49-7a34.16,34.16,0,0,1-2.25-6.4,48.46,48.46,0,0,1-1.12-6.74q-.34-3.48-.34-8a143.69,143.69,0,0,1,21.46-5.39,116.79,116.79,0,0,1,19.21-1.8,73.88,73.88,0,0,1,21.12,2.81,42.1,42.1,0,0,1,16.06,8.65,38.29,38.29,0,0,1,10.22,14.94q3.59,9.1,3.6,21.68v65.83q-8.54,2.48-20.67,4.94a128.19,128.19,0,0,1-25.61,2.47,100.67,100.67,0,0,1-21.46-2.14,47.6,47.6,0,0,1-16.74-6.85,32.52,32.52,0,0,1-10.9-12.47Q775.74,279.86,775.74,268.62Zm53,12.59a53.55,53.55,0,0,0,5.84-.45,48.44,48.44,0,0,0,5.62-.9V255.15H827.42a24.57,24.57,0,0,0-13.26,3.37,10.56,10.56,0,0,0-5.39,9.44,11.21,11.21,0,0,0,2,7.08,13,13,0,0,0,5.06,3.93,23.19,23.19,0,0,0,6.51,1.8A49.9,49.9,0,0,0,828.77,281.21Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M920,307.95a120,120,0,0,1-20-2V145.5q6.07-.9,11-1.35t8.76-.45q4,0,9.1.45t10.89,1.35V305.92A122.31,122.31,0,0,1,920,307.95Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M986.72,307.95a120,120,0,0,1-20-2V145.5q6.07-.9,11-1.35t8.76-.45q4,0,9.1.45t10.9,1.35V305.92A122.33,122.33,0,0,1,986.72,307.95Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M392.24,342.51q3.19-.28,6.45-.45t6.59-.17a36.89,36.89,0,0,1,7,.69,17.58,17.58,0,0,1,6.45,2.6,14.19,14.19,0,0,1,4.68,5.3,18.76,18.76,0,0,1,1.8,8.8,18.55,18.55,0,0,1-1.8,8.77,14.67,14.67,0,0,1-4.65,5.3,17,17,0,0,1-6.34,2.63,35.26,35.26,0,0,1-6.9.7c-.6,0-1.17,0-1.7,0s-1-.05-1.49-.1v16q-1.32.21-2.56.28c-.83,0-1.64.07-2.43.07s-1.55,0-2.43-.07-1.78-.14-2.7-.28Zm10.12,25.65a9.24,9.24,0,0,0,1.56.14h1.77a13,13,0,0,0,3.4-.45,7.89,7.89,0,0,0,2.95-1.49,7.32,7.32,0,0,0,2-2.74,10.23,10.23,0,0,0,.76-4.19,10.94,10.94,0,0,0-.76-4.33,7.57,7.57,0,0,0-2-2.84,7.7,7.7,0,0,0-2.95-1.52,13,13,0,0,0-3.4-.45c-.51,0-1,0-1.42,0s-1.07.08-1.91.17Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M434,356.72c.69-.14,1.35-.24,2-.31a18.1,18.1,0,0,1,2-.1,15.08,15.08,0,0,1,2,.14q1,.14,2,.35a4,4,0,0,1,.38,1c.11.44.22.9.31,1.39s.17,1,.24,1.46l.17,1.22a17.79,17.79,0,0,1,3.74-3.85,8.87,8.87,0,0,1,5.55-1.7c.46,0,1,0,1.59.07a6.22,6.22,0,0,1,1.32.2,13.75,13.75,0,0,1,.21,1.6q.07.9.07,1.87,0,1.18-.1,2.56a18.5,18.5,0,0,1-.38,2.63,9.6,9.6,0,0,0-1.7-.14h-1.14a16,16,0,0,0-2.63.24,6,6,0,0,0-2.77,1.28,7.59,7.59,0,0,0-2.18,3.12,15.61,15.61,0,0,0-.87,5.82v17.05a23.14,23.14,0,0,1-2.5.28q-1.25.07-2.43.07t-2.39-.07q-1.21-.07-2.53-.28Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M465.23,364.21h-4.64a15.68,15.68,0,0,1-.31-1.91,18.42,18.42,0,0,1-.1-1.91,16.23,16.23,0,0,1,.42-3.67h14.28v35.84A29.38,29.38,0,0,1,470,393a29,29,0,0,1-4.78-.42Zm-1.46-13.52a26.75,26.75,0,0,1-.42-4.64,27.57,27.57,0,0,1,.42-4.64c.79-.14,1.63-.24,2.53-.31s1.72-.11,2.46-.11,1.64,0,2.56.11,1.78.17,2.56.31a20.68,20.68,0,0,1,.28,2.32c0,.76.07,1.54.07,2.32s0,1.5-.07,2.29a20.61,20.61,0,0,1-.28,2.36,20.81,20.81,0,0,1-2.53.28c-.9,0-1.75.07-2.53.07s-1.57,0-2.5-.07A20.87,20.87,0,0,1,463.77,350.69Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M481.45,356.79a19.72,19.72,0,0,1,3.08-.41q1.42-.07,2.46-.07,1.39,0,2.77.07a14.29,14.29,0,0,1,2.56.34l7.83,26.69,7.69-26.69q1.18-.21,2.5-.31t2.63-.1q1,0,2.39.07a21.34,21.34,0,0,1,3.09.41l-13.59,35.77a25.79,25.79,0,0,1-2.77.28c-1,0-1.78.07-2.43.07s-1.48,0-2.36-.07a14.42,14.42,0,0,1-2.5-.35Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M542.94,369a5.73,5.73,0,0,0-.56-2.7,4.16,4.16,0,0,0-1.52-1.63,6.4,6.4,0,0,0-2.39-.8,22.3,22.3,0,0,0-3.15-.21,24.52,24.52,0,0,0-8,1.46,18.47,18.47,0,0,1-1.45-3.4,13.18,13.18,0,0,1-.49-3.82,37.86,37.86,0,0,1,11.78-2q7.21,0,11.27,3.47t4.05,11.09v20.79a55.86,55.86,0,0,1-5.89,1.46,40.2,40.2,0,0,1-7.83.7,31.43,31.43,0,0,1-6.48-.62,13.89,13.89,0,0,1-5.06-2.08,9.74,9.74,0,0,1-3.26-3.74,12.43,12.43,0,0,1-1.14-5.61,10.25,10.25,0,0,1,1.42-5.58,10.94,10.94,0,0,1,3.67-3.6,16.12,16.12,0,0,1,5-1.94,26.53,26.53,0,0,1,5.54-.59q2,0,4.44.21Zm0,7.14q-.84-.14-1.8-.24a16.76,16.76,0,0,0-1.73-.1A10.19,10.19,0,0,0,534,377a4.24,4.24,0,0,0-2,3.91,4.39,4.39,0,0,0,.76,2.77,4.51,4.51,0,0,0,1.84,1.42,7.55,7.55,0,0,0,2.29.56q1.21.1,2.12.1a12.28,12.28,0,0,0,2.08-.17l1.8-.31Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M563.59,364.21h-4.51l-.35-1.39,13-16.57h1.6v10.47h8.39a17.35,17.35,0,0,1,.28,1.87q.07.83.07,1.73c0,.65,0,1.27-.07,1.87a19.56,19.56,0,0,1-.28,2H573.3v14.07a14,14,0,0,0,.35,3.47,5.14,5.14,0,0,0,1,2.08,3.28,3.28,0,0,0,1.63,1,8.29,8.29,0,0,0,2.29.28,12,12,0,0,0,2-.17l1.77-.31a13.69,13.69,0,0,1,.69,2.74,17.84,17.84,0,0,1,.21,2.53c0,.51,0,.94,0,1.28s-.06.68-.1,1a28.17,28.17,0,0,1-6.58.76q-6.31,0-9.64-2.95t-3.33-9.6Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M598.39,377.66q.27,4.16,2.91,6a11.7,11.7,0,0,0,6.93,1.87,26.6,26.6,0,0,0,4.82-.45,27.28,27.28,0,0,0,4.68-1.28,16.26,16.26,0,0,1,1.32,3.33,17.18,17.18,0,0,1,.62,4.16,33.81,33.81,0,0,1-12.2,2.08,23.68,23.68,0,0,1-8.56-1.39,15.17,15.17,0,0,1-5.82-3.85,15.4,15.4,0,0,1-3.33-5.86,24.48,24.48,0,0,1-1.07-7.42,24.19,24.19,0,0,1,1.11-7.42,17.33,17.33,0,0,1,3.29-6,15.6,15.6,0,0,1,5.41-4.06,17.79,17.79,0,0,1,7.52-1.49,16,16,0,0,1,6.65,1.32,14.71,14.71,0,0,1,5,3.61,15.21,15.21,0,0,1,3.08,5.44,21.47,21.47,0,0,1,1,6.76c0,.88,0,1.75-.11,2.6s-.15,1.54-.24,2Zm14.07-6.87a8.71,8.71,0,0,0-1.84-5.37,5.83,5.83,0,0,0-4.75-2,6.84,6.84,0,0,0-5.27,1.94,9.1,9.1,0,0,0-2.15,5.48Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M647.54,342.72a31.84,31.84,0,0,1,5.06-.42,33.17,33.17,0,0,1,5.13.42v19.55h16.71V342.72a31.84,31.84,0,0,1,5.06-.42,33.17,33.17,0,0,1,5.13.42v49.84a32.33,32.33,0,0,1-5.06.42,31.86,31.86,0,0,1-5.13-.42V371H657.73v21.56a32.34,32.34,0,0,1-5.06.42,31.87,31.87,0,0,1-5.13-.42Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M710.89,393.4A18.7,18.7,0,0,1,703.3,392a14.38,14.38,0,0,1-5.34-4,17.22,17.22,0,0,1-3.19-5.93,24.22,24.22,0,0,1-1.07-7.35,24.92,24.92,0,0,1,1.07-7.42,17.17,17.17,0,0,1,3.19-6,14.73,14.73,0,0,1,5.34-4,18.36,18.36,0,0,1,7.59-1.46,18.61,18.61,0,0,1,7.63,1.46,15,15,0,0,1,5.41,4,16.48,16.48,0,0,1,3.19,6,25.72,25.72,0,0,1,1,7.42,25,25,0,0,1-1,7.35,16.51,16.51,0,0,1-3.19,5.93,14.65,14.65,0,0,1-5.41,4A19,19,0,0,1,710.89,393.4Zm0-7.49a6,6,0,0,0,5.58-2.88q1.7-2.88,1.7-8.28t-1.7-8.28a6,6,0,0,0-5.58-2.88,5.9,5.9,0,0,0-5.51,2.88q-1.7,2.88-1.7,8.28t1.7,8.28A5.9,5.9,0,0,0,710.89,385.91Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M737.3,356.72a18.34,18.34,0,0,1,1.94-.31,19.73,19.73,0,0,1,2.15-.1,17.89,17.89,0,0,1,2.08.1q.9.1,1.87.31a4,4,0,0,1,.38,1c.12.44.22.9.31,1.39s.17,1,.24,1.42l.17,1.18a11.28,11.28,0,0,1,1.46-2.08,10.5,10.5,0,0,1,2.15-1.87,11.61,11.61,0,0,1,2.81-1.35,11,11,0,0,1,3.5-.52q8.38,0,10.75,6.38A13.72,13.72,0,0,1,771,357.8a10.36,10.36,0,0,1,6.41-1.91q6.1,0,9,3.36t2.88,10.5v22.8a29.22,29.22,0,0,1-9.84,0V372.32a14,14,0,0,0-.94-5.75q-.94-2-3.78-2a8,8,0,0,0-2.32.35,5,5,0,0,0-2.08,1.28,6.86,6.86,0,0,0-1.52,2.63,13.68,13.68,0,0,0-.59,4.4v19.34a29.21,29.21,0,0,1-9.84,0V372.32a14,14,0,0,0-.94-5.75q-.93-2-3.78-2a8.32,8.32,0,0,0-2.36.35,4.69,4.69,0,0,0-2.12,1.35,7.14,7.14,0,0,0-1.49,2.81,16.35,16.35,0,0,0-.56,4.71v18.78a29.21,29.21,0,0,1-9.84,0Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M807.46,377.66q.27,4.16,2.91,6a11.7,11.7,0,0,0,6.93,1.87,26.6,26.6,0,0,0,4.82-.45,27.27,27.27,0,0,0,4.68-1.28,16,16,0,0,1,1.32,3.33,17.1,17.1,0,0,1,.62,4.16,33.81,33.81,0,0,1-12.2,2.08A23.68,23.68,0,0,1,808,392a15.18,15.18,0,0,1-5.82-3.85,15.41,15.41,0,0,1-3.33-5.86,24.48,24.48,0,0,1-1.07-7.42,24.19,24.19,0,0,1,1.11-7.42,17.36,17.36,0,0,1,3.29-6,15.61,15.61,0,0,1,5.41-4.06,17.79,17.79,0,0,1,7.52-1.49,16,16,0,0,1,6.65,1.32,14.71,14.71,0,0,1,5,3.61,15.19,15.19,0,0,1,3.08,5.44,21.47,21.47,0,0,1,1,6.76c0,.88,0,1.75-.1,2.6s-.15,1.54-.24,2Zm14.07-6.87a8.72,8.72,0,0,0-1.84-5.37,5.83,5.83,0,0,0-4.75-2,6.84,6.84,0,0,0-5.27,1.94,9.1,9.1,0,0,0-2.15,5.48Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M889.53,383.14a27.41,27.41,0,0,1,1.49,4,28.75,28.75,0,0,1,.87,4.12A32.93,32.93,0,0,1,885.4,393a43.26,43.26,0,0,1-6.2.42,26,26,0,0,1-10.33-1.91,20.55,20.55,0,0,1-7.45-5.34,22.83,22.83,0,0,1-4.54-8.14,33.16,33.16,0,0,1-1.52-10.26,32.15,32.15,0,0,1,1.59-10.29,24,24,0,0,1,4.61-8.22,20.83,20.83,0,0,1,7.42-5.4,24.6,24.6,0,0,1,10-1.94,42.32,42.32,0,0,1,6.13.41,27,27,0,0,1,6.07,1.74,15.28,15.28,0,0,1-.83,4.05q-.69,2-1.53,4a31,31,0,0,0-4.3-1.18,24.72,24.72,0,0,0-4.44-.35q-6.65,0-10.22,4.33t-3.57,12.86q0,16.91,14.35,16.91a25.9,25.9,0,0,0,4.5-.35A30,30,0,0,0,889.53,383.14Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M918,369a5.73,5.73,0,0,0-.55-2.7,4.16,4.16,0,0,0-1.53-1.63,6.37,6.37,0,0,0-2.39-.8,22.32,22.32,0,0,0-3.15-.21,24.52,24.52,0,0,0-8,1.46,18.57,18.57,0,0,1-1.46-3.4,13.24,13.24,0,0,1-.48-3.82,37.86,37.86,0,0,1,11.78-2q7.21,0,11.27,3.47t4.05,11.09v20.79a55.85,55.85,0,0,1-5.89,1.46,40.21,40.21,0,0,1-7.84.7,31.4,31.4,0,0,1-6.48-.62,13.89,13.89,0,0,1-5.06-2.08,9.74,9.74,0,0,1-3.26-3.74,12.43,12.43,0,0,1-1.14-5.61,10.25,10.25,0,0,1,1.42-5.58,11,11,0,0,1,3.67-3.6,16.12,16.12,0,0,1,5-1.94,26.53,26.53,0,0,1,5.54-.59q2,0,4.44.21Zm0,7.14q-.83-.14-1.8-.24a16.77,16.77,0,0,0-1.74-.1,10.19,10.19,0,0,0-5.37,1.21,4.24,4.24,0,0,0-2,3.91,4.39,4.39,0,0,0,.76,2.77,4.51,4.51,0,0,0,1.84,1.42,7.55,7.55,0,0,0,2.29.56q1.21.1,2.12.1a12.29,12.29,0,0,0,2.08-.17l1.8-.31Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M937.7,356.72q1-.21,2-.31a18.07,18.07,0,0,1,2-.1,15.06,15.06,0,0,1,2,.14q1,.14,2,.35a3.91,3.91,0,0,1,.38,1c.12.44.22.9.31,1.39s.17,1,.24,1.46l.17,1.22A17.79,17.79,0,0,1,950.6,358a8.87,8.87,0,0,1,5.55-1.7q.69,0,1.59.07a6.17,6.17,0,0,1,1.32.2,13.73,13.73,0,0,1,.21,1.6q.07.9.07,1.87,0,1.18-.1,2.56a18.82,18.82,0,0,1-.38,2.63,9.6,9.6,0,0,0-1.7-.14H956a16,16,0,0,0-2.63.24,6,6,0,0,0-2.77,1.28,7.57,7.57,0,0,0-2.18,3.12,15.61,15.61,0,0,0-.87,5.82v17.05a23.1,23.1,0,0,1-2.5.28q-1.25.07-2.43.07t-2.39-.07c-.81,0-1.65-.14-2.53-.28Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M973.75,377.66q.27,4.16,2.91,6a11.71,11.71,0,0,0,6.93,1.87,26.61,26.61,0,0,0,4.82-.45,27.32,27.32,0,0,0,4.68-1.28,16.06,16.06,0,0,1,1.32,3.33,17.1,17.1,0,0,1,.62,4.16,33.82,33.82,0,0,1-12.2,2.08,23.66,23.66,0,0,1-8.56-1.39,15.19,15.19,0,0,1-5.83-3.85,15.42,15.42,0,0,1-3.33-5.86,24.48,24.48,0,0,1-1.07-7.42,24.19,24.19,0,0,1,1.11-7.42,17.36,17.36,0,0,1,3.29-6,15.6,15.6,0,0,1,5.41-4.06,17.79,17.79,0,0,1,7.52-1.49,16,16,0,0,1,6.65,1.32,14.68,14.68,0,0,1,5,3.61,15.16,15.16,0,0,1,3.09,5.44,21.47,21.47,0,0,1,1,6.76c0,.88,0,1.75-.11,2.6s-.15,1.54-.24,2Zm14.07-6.87a8.72,8.72,0,0,0-1.84-5.37,5.83,5.83,0,0,0-4.75-2,6.84,6.84,0,0,0-5.27,1.94,9.12,9.12,0,0,0-2.15,5.48Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M274.9,5.12c4.7,3.26,11.48,5.54,15.43,9.16,4.94,4.54,5.22,12.16,10.28,17.66,5.1-.27,8,.23,11.17,2.68-1.94,1-5,.84-6.26,2.46,2.62,3.44,6.65,4,9.39,7.38,3.94,4.8,4,12.53,6.93,18.78-5.28-1.88-9.21-5.1-11-10.51-4.89-3.67-10.32-6.81-15.2-10.5-2.41,1.17-2.64,4.51-4.24,6.48a9.68,9.68,0,0,1-8-11.63c2.72.17,6,.58,7.82-.67-2.64-6.29-6-11.89-8.27-18.55a17.19,17.19,0,0,1-8.26-11.17C274.81,6.22,274.4,5.22,274.9,5.12Z\"/>\n    <path style=\"fill:#4374ba;\" d=\"M280.46,72h-2.12a8.22,8.22,0,0,1-4.91-2.29c.86-1.69,2.73-2.38,2.78-4.9-4.84-1.21-10.38-1.72-14.71-3.43-3,1.77-9.11,1.4-11.28-.82,4.78-1.24,7.57-4.34,13.08-4.9,3.25-.33,5.42.54,8.33,1.14,1.85.39,4.46,1.5,6,.82,1.2-.52,1.64-2.82,2.62-3.6,1.32-1,2.5-.76,3.92-1.47-.37,1.55-1.64,2.84-1.31,4.57,3-.16,5-1.86,7.85-2.12,5.48-.51,10.46,3.13,15,4.08a12.27,12.27,0,0,1-8.66,2.29c-.86-.1-1.8-.69-2.61-.66s-2.06.8-3.11,1.15c-3.39,1.12-6.91,1.86-9.64,3.27,0,1.72,1.62,3.16,2.12,4.9C283.22,71.16,281.53,71.26,280.46,72Z\"/>\n</svg>\n"
 
 /***/ }),
 
@@ -46445,7 +45987,7 @@ module.exports = function () {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -46470,5 +46012,5 @@ module.exports = dll_78b63e6e9b9fc7e50dfb;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map
