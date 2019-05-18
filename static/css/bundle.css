@@ -1225,6 +1225,9 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
         padding-top: 45vw; }
       #About .ContentContainer.mobile-no-padding {
         padding-top: 0; } }
+    @media only screen and (max-width: 767px) {
+      #About .ContentContainer.tablet-no-padding {
+        padding-top: 0; } }
   #About #about-main-image {
     position: absolute;
     max-width: 150%; }

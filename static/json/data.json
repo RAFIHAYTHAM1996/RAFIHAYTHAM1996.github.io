@@ -60,7 +60,7 @@
       "description": "Our clients are the center of what we do, and our team integrates seamlessly into your family. We can be with you and your loved ones as often as needed, working together on what is best for the client today and tomorrow. We build personal rapport with every client while respecting their privacy."
     },
     { "name": "Breadth of Expertise",
-      "description": "Our team is comprised of caring registered nurses, personal support workers, registered massage therapists, nail technicians, companions, chefs, housekeepers, and activity planners. They are bonded and have appropriate certifications."
+      "description": "Our team is comprised of caring registered nurses, personal support workers, registered massage therapists, diabetic foot nurses, physiotherapists, dental hygienists, dentists, companions, housekeepers, and activity planners. They are bonded and have appropriate certifications."
     },
     { "name": "Improving Quality of Life",
       "description": "We are determined to create quality experiences that help our clients enjoy their lives to the fullest. Some activities include: casual or fine dining, ballet and theatre, beauty care, transportation, exercise programs/personal training, and daily activities to allow clients to maintain their interests."
@@ -78,6 +78,12 @@
         "relationship": "Daughter of Ivan",
         "review": "We never had to worry what caregiver would come, if his care would be thoughtful and caring, how medication or supplies would be ordered, when the doctor should be called and what to do at the end of his life. I would recommend Hospall to anyone who requires palliative care for a loved one.",
         "url": "becky",
+        "image": "mildred.jpg"
+      },
+      { "name": "Christine",
+        "relationship": "Daughter of Ryan & Sandra",
+        "review": "Hospall Private Home Care has been a blessing for my family, and especially for our elderly parents. From the beginning the team has been professional, skillful, compassionate and consistent... We feel very supported with the plans in place as our parents age and their needs change. Hospall is a source of security and comfort for everyone.",
+        "url": "christine",
         "image": "mildred.jpg"
       }
     ],
@@ -274,7 +280,7 @@
     },
     { "question": "What area do you provide care?",
       "answer": [
-        "Hospall Private Homecare provides peace of mind to families with the health and care needs of their loved ones in King Township, City of Vaughan, and the surrounding GTA."
+        "Hospall Private Homecare provides peace of mind to families with the health and care needs of their loved ones in King Township and the surrounding York and Simcoe regions."
       ]
     },
     { "question": "Will I have the same caregiver? What if I do not like my assigned caregiver?",
