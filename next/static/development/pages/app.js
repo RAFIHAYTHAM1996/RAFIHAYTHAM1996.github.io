@@ -210,7 +210,7 @@ module.exports = _assertThisInitialized;
 
 var _Promise = __webpack_require__(/*! ../core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+function asyncGeneratorStep(gen, resolve, reject, next, _throw, key, arg) {
   try {
     var info = gen[key](arg);
     var value = info.value;
@@ -222,7 +222,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
   if (info.done) {
     resolve(value);
   } else {
-    _Promise.resolve(value).then(_next, _throw);
+    _Promise.resolve(value).then(next, _throw);
   }
 }
 
@@ -233,15 +233,15 @@ function _asyncToGenerator(fn) {
     return new _Promise(function (resolve, reject) {
       var gen = fn.apply(self, args);
 
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      function next(value) {
+        asyncGeneratorStep(gen, resolve, reject, next, _throw, "next", value);
       }
 
       function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+        asyncGeneratorStep(gen, resolve, reject, next, _throw, "throw", err);
       }
 
-      _next(undefined);
+      next(undefined);
     });
   };
 }
@@ -5537,8 +5537,8 @@ function () {
   }
 
   (0, _createClass2.default)(PQueue, [{
-    key: "_next",
-    value: function _next() {
+    key: "next",
+    value: function next() {
       this._pendingCount--;
 
       if (this.queue.size > 0) {
@@ -5558,11 +5558,11 @@ function () {
           fn().then(function (val) {
             resolve(val);
 
-            _this._next();
+            _this.next();
           }, function (err) {
             reject(err);
 
-            _this._next();
+            _this.next();
           });
         };
 
@@ -9155,4 +9155,4 @@ module.exports = dll_78b63e6e9b9fc7e50dfb;
 /***/ })
 
 },[[1,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=_app.js.map
+//# sourceMappingURL=app.js.map

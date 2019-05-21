@@ -266,7 +266,7 @@ module.exports = _assertThisInitialized;
 
 var _Promise = __webpack_require__(/*! ../core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+function asyncGeneratorStep(gen, resolve, reject, next, _throw, key, arg) {
   try {
     var info = gen[key](arg);
     var value = info.value;
@@ -278,7 +278,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
   if (info.done) {
     resolve(value);
   } else {
-    _Promise.resolve(value).then(_next, _throw);
+    _Promise.resolve(value).then(next, _throw);
   }
 }
 
@@ -289,15 +289,15 @@ function _asyncToGenerator(fn) {
     return new _Promise(function (resolve, reject) {
       var gen = fn.apply(self, args);
 
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      function next(value) {
+        asyncGeneratorStep(gen, resolve, reject, next, _throw, "next", value);
       }
 
       function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+        asyncGeneratorStep(gen, resolve, reject, next, _throw, "throw", err);
       }
 
-      _next(undefined);
+      next(undefined);
     });
   };
 }
@@ -6959,7 +6959,7 @@ var asset = _interopRequireWildcard(__webpack_require__(/*! ../lib/asset */ "./n
 
 var envConfig = _interopRequireWildcard(__webpack_require__(/*! ../lib/runtime-config */ "./node_modules/next/dist/lib/runtime-config.js"));
 
-var _errorBoundary = _interopRequireDefault(__webpack_require__(/*! ./error-boundary */ "./node_modules/next/dist/client/error-boundary.js"));
+var errorBoundary = _interopRequireDefault(__webpack_require__(/*! ./error-boundary */ "./node_modules/next/dist/client/error-boundary.js"));
 
 var _loadable = _interopRequireDefault(__webpack_require__(/*! ../lib/loadable */ "./node_modules/next/dist/lib/loadable.js"));
 
@@ -7008,7 +7008,7 @@ window.__NEXT_LOADED_PAGES__.forEach(function (_ref) {
 delete window.__NEXT_LOADED_PAGES__;
 window.__NEXT_REGISTER_PAGE = pageLoader.registerPage.bind(pageLoader);
 var headManager = new _headManager.default();
-var appContainer = document.getElementById('__next');
+var appContainer = document.getElementById('_next');
 var lastAppProps;
 var webpackHMR;
 var router;
@@ -8304,8 +8304,8 @@ function () {
   }
 
   (0, _createClass2.default)(PQueue, [{
-    key: "_next",
-    value: function _next() {
+    key: "next",
+    value: function next() {
       this._pendingCount--;
 
       if (this.queue.size > 0) {
@@ -8325,11 +8325,11 @@ function () {
           fn().then(function (val) {
             resolve(val);
 
-            _this._next();
+            _this.next();
           }, function (err) {
             reject(err);
 
-            _this._next();
+            _this.next();
           });
         };
 
@@ -11700,7 +11700,7 @@ SourceMapGenerator.prototype.setSourceContent =
  *        relative to the SourceMapGenerator.
  */
 SourceMapGenerator.prototype.applySourceMap =
-  function SourceMapGenerator_applySourceMap(aSourceMapConsumer, aSourceFile, aSourceMapPath) {
+  function SourceMapGeneratorapplySourceMap(aSourceMapConsumer, aSourceFile, aSourceMapPath) {
     var sourceFile = aSourceFile;
     // If aSourceFile is omitted, we will use the file property of the SourceMap
     if (aSourceFile == null) {
