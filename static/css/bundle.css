@@ -464,7 +464,7 @@ template {
   font-weight: normal;
   font-style: normal; }
 
-.Lato, h5, a.cta, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, .InlineQuestion .chevron, #Menu a.mainlink, .section-contact .contact-details h6, .job-application .contact-details h6, #Home .intro-content, #Privacy > .ContentContainer > div > ol {
+.Lato, h5, a.cta, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, .InlineQuestion .chevron, #Menu a.mainlink, .section-contact .contact-details h6, .job-application .contact-details h6, #Home .intro-content, #Privacy > .ContentContainer > div > ol, #TermsOfUse > .ContentContainer > div > ol, #TermsOfUse > .ContentContainer > div > ul {
   font-family: 'lato'; }
 
 @font-face {
@@ -568,19 +568,19 @@ body, html {
 h1 {
   color: #ffffff;
   font-size: 2.7rem; }
-  h1.dark, #About h1.values-list-name, #Careers .ContentContainer h1.position-detail, #FAQ h1.extra-help, #Privacy > .ContentContainer > div h1.extra-help {
+  h1.dark, #About h1.values-list-name, #Careers .ContentContainer h1.position-detail, #FAQ h1.extra-help, #Privacy > .ContentContainer > div h1.extra-help, #TermsOfUse > .ContentContainer > div h1.extra-help {
     color: #4473b3; }
 
 h2 {
   color: #ffffff;
   font-size: 2.5rem; }
-  h2.dark, #About h2.values-list-name, #Careers .ContentContainer h2.position-detail, #FAQ h2.extra-help, #Privacy > .ContentContainer > div h2.extra-help {
+  h2.dark, #About h2.values-list-name, #Careers .ContentContainer h2.position-detail, #FAQ h2.extra-help, #Privacy > .ContentContainer > div h2.extra-help, #TermsOfUse > .ContentContainer > div h2.extra-help {
     color: #4473b3; }
 
 h3 {
   color: #ffffff;
   font-size: 2rem; }
-  h3.dark, #About h3.values-list-name, #Careers .ContentContainer h3.position-detail, #FAQ h3.extra-help, #Privacy > .ContentContainer > div h3.extra-help {
+  h3.dark, #About h3.values-list-name, #Careers .ContentContainer h3.position-detail, #FAQ h3.extra-help, #Privacy > .ContentContainer > div h3.extra-help, #TermsOfUse > .ContentContainer > div h3.extra-help {
     color: #4473b3; }
 
 h4 {
@@ -588,36 +588,36 @@ h4 {
   font-size: 1.6rem;
   line-height: 2rem;
   margin-bottom: 20px; }
-  h4.dark, #About h4.values-list-name, #Careers .ContentContainer h4.position-detail, #FAQ h4.extra-help, #Privacy > .ContentContainer > div h4.extra-help {
+  h4.dark, #About h4.values-list-name, #Careers .ContentContainer h4.position-detail, #FAQ h4.extra-help, #Privacy > .ContentContainer > div h4.extra-help, #TermsOfUse > .ContentContainer > div h4.extra-help {
     color: #4473b3; }
 
 h5 {
   color: #ffffff;
   font-size: 1.3rem;
   line-height: 2rem; }
-  h5.dark, #About h5.values-list-name, #Careers .ContentContainer h5.position-detail, #FAQ h5.extra-help, #Privacy > .ContentContainer > div h5.extra-help {
+  h5.dark, #About h5.values-list-name, #Careers .ContentContainer h5.position-detail, #FAQ h5.extra-help, #Privacy > .ContentContainer > div h5.extra-help, #TermsOfUse > .ContentContainer > div h5.extra-help {
     color: #4473b3; }
 
 h6 {
   color: #ffffff;
   font-size: 1rem; }
-  h6.dark, .section-contact .contact-details h6, .job-application .contact-details h6, #About h6.values-list-name, #Careers .ContentContainer h6.position-detail, #FAQ h6.extra-help, #Privacy > .ContentContainer > div h6.extra-help {
+  h6.dark, .section-contact .contact-details h6, .job-application .contact-details h6, #About h6.values-list-name, #Careers .ContentContainer h6.position-detail, #FAQ h6.extra-help, #Privacy > .ContentContainer > div h6.extra-help, #TermsOfUse > .ContentContainer > div h6.extra-help {
     color: #4473b3; }
 
 p {
   color: #ffffff;
   font-size: 1rem;
   line-height: 1.8rem; }
-  p.dark, .section-contact .contact-details p, .job-application .contact-details p, #About p.values-list-name, #Careers .ContentContainer p.position-detail, #Careers .ContentContainer .position-detail li p, #FAQ p.extra-help, #Privacy > .ContentContainer > div > ol li p, #Privacy > .ContentContainer > div p.extra-help {
+  p.dark, .section-contact .contact-details p, .job-application .contact-details p, #About p.values-list-name, #Careers .ContentContainer p.position-detail, #Careers .ContentContainer .position-detail li p, #FAQ p.extra-help, #Privacy > .ContentContainer > div > ol li p, #Privacy > .ContentContainer > div p.extra-help, #TermsOfUse > .ContentContainer > div > ol li p, #TermsOfUse > .ContentContainer > div > ul li p, #TermsOfUse > .ContentContainer > div p.extra-help {
     color: #555555; }
   p.cta {
     font-size: 1.3rem;
     color: #ffffff;
     cursor: pointer; }
-    p.cta.dark, .section-contact .contact-details p.cta, .job-application .contact-details p.cta, #About p.cta.values-list-name, #Careers .ContentContainer p.cta.position-detail, #Careers .ContentContainer .position-detail li p.cta, #FAQ p.cta.extra-help, #Privacy > .ContentContainer > div > ol li p.cta, #Privacy > .ContentContainer > div p.cta.extra-help {
+    p.cta.dark, .section-contact .contact-details p.cta, .job-application .contact-details p.cta, #About p.cta.values-list-name, #Careers .ContentContainer p.cta.position-detail, #Careers .ContentContainer .position-detail li p.cta, #FAQ p.cta.extra-help, #Privacy > .ContentContainer > div > ol li p.cta, #Privacy > .ContentContainer > div p.cta.extra-help, #TermsOfUse > .ContentContainer > div > ol li p.cta, #TermsOfUse > .ContentContainer > div > ul li p.cta, #TermsOfUse > .ContentContainer > div p.cta.extra-help {
       color: #4473b3; }
 
-.mini, .InlineQuestion .answer, .section-contact .contact-details p, .section-contact .contact-details p a, .section-contact .delivery-info > p, .job-application .contact-details p, .job-application .contact-details p a, .job-application .delivery-info > p, #FAQ .extra-help, #Privacy > .ContentContainer > div .extra-help {
+.mini, .InlineQuestion .answer, .section-contact .contact-details p, .section-contact .contact-details p a, .section-contact .delivery-info > p, .job-application .contact-details p, .job-application .contact-details p a, .job-application .delivery-info > p, #FAQ .extra-help, #Privacy > .ContentContainer > div .extra-help, #TermsOfUse > .ContentContainer > div .extra-help {
   font-size: 0.9rem; }
 
 a.inline {
@@ -646,14 +646,14 @@ a.cta {
     background-color: #ffffff;
     color: #4473b3;
     text-decoration: none; }
-  a.cta.dark, #About a.cta.values-list-name, #Careers .ContentContainer a.cta.position-detail, #FAQ a.cta.extra-help, #Privacy > .ContentContainer > div a.cta.extra-help {
+  a.cta.dark, #About a.cta.values-list-name, #Careers .ContentContainer a.cta.position-detail, #FAQ a.cta.extra-help, #Privacy > .ContentContainer > div a.cta.extra-help, #TermsOfUse > .ContentContainer > div a.cta.extra-help {
     color: #4473b3;
     border-color: #4473b3; }
-    a.cta.dark:hover, #About a.cta.values-list-name:hover, #Careers .ContentContainer a.cta.position-detail:hover, #FAQ a.cta.extra-help:hover, #Privacy > .ContentContainer > div a.cta.extra-help:hover {
+    a.cta.dark:hover, #About a.cta.values-list-name:hover, #Careers .ContentContainer a.cta.position-detail:hover, #FAQ a.cta.extra-help:hover, #Privacy > .ContentContainer > div a.cta.extra-help:hover, #TermsOfUse > .ContentContainer > div a.cta.extra-help:hover {
       background-color: #4473b3;
       color: #ffffff; }
 
-div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-detail, #FAQ div.extra-help, #Privacy > .ContentContainer > div div.extra-help {
+div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-detail, #FAQ div.extra-help, #Privacy > .ContentContainer > div div.extra-help, #TermsOfUse > .ContentContainer > div div.extra-help {
   background-color: #305691; }
 
 .disable-selection, #Services .benefits-of-hospall > .ContentContainer .benefit-container .benefit-number {
@@ -920,7 +920,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   background-color: #284469 !important; }
 
 #Menu {
-  height: 60px;
+  height: 70px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -933,7 +933,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   padding: 0; }
   #Menu .container {
     position: relative;
-    height: 40px;
+    height: 50px;
     max-width: calc(100% - 60px); }
     @media only screen and (max-width: 767px) {
       #Menu .container {
@@ -987,7 +987,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   #Menu #subcontainer {
     position: absolute;
     right: 0;
-    top: 8px;
+    top: 13px;
     -webkit-overflow-scrolling: touch; }
     @media only screen and (max-width: 767px) {
       #Menu #subcontainer {
@@ -1006,8 +1006,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
       filter: brightness(10) saturate(0);
       transition: all 0.3s ease-in-out; }
   #Menu .menu-logo {
-    max-height: 41px;
-    width: 80px;
+    width: 100px;
     position: absolute;
     top: -3px;
     opacity: 0; }
@@ -1051,7 +1050,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   position: fixed;
   z-index: 1;
   background-color: #f7f7f7;
-  top: 60px;
+  top: 70px;
   padding: 15px 80px;
   font-size: 1.2rem; }
   @media only screen and (max-width: 575px) {
@@ -1211,7 +1210,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
           max-width: 950px; } }
 
 .Page {
-  margin-top: calc(60px + 50px);
+  margin-top: calc(70px + 50px);
   overflow-x: hidden; }
 
 #About {
@@ -1441,9 +1440,6 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   #Home .logo-over-image {
     position: absolute;
     top: 10vw; }
-    @media only screen and (max-width: 575px) {
-      #Home .logo-over-image {
-        top: 5vw; } }
   #Home .intro-content {
     width: 100%;
     color: #ffffff;
@@ -1618,6 +1614,52 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
           #Services .benefits-of-hospall > .ContentContainer .benefit-container .benefit-number {
             right: 0;
             font-size: 120px; } }
+
+#TermsOfUse {
+  counter-reset: list-counter; }
+  #TermsOfUse > .ContentContainer {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    @media only screen and (max-width: 767px) {
+      #TermsOfUse > .ContentContainer {
+        padding-top: 50px;
+        padding-bottom: 50px; } }
+    #TermsOfUse > .ContentContainer > div h5.padding {
+      margin-bottom: 20px; }
+    #TermsOfUse > .ContentContainer > div h2.padding, #TermsOfUse > .ContentContainer > div p.padding, #TermsOfUse > .ContentContainer > div ol.padding, #TermsOfUse > .ContentContainer > div ul.padding {
+      margin-bottom: 50px; }
+    #TermsOfUse > .ContentContainer > div > ol, #TermsOfUse > .ContentContainer > div > ul {
+      padding: 0;
+      list-style: none; }
+      #TermsOfUse > .ContentContainer > div > ol li, #TermsOfUse > .ContentContainer > div > ul li {
+        margin-left: 2em;
+        margin-bottom: 10px; }
+        #TermsOfUse > .ContentContainer > div > ol li:before, #TermsOfUse > .ContentContainer > div > ul li:before {
+          margin-right: 10px;
+          font-size: 90%; }
+        #TermsOfUse > .ContentContainer > div > ol li p, #TermsOfUse > .ContentContainer > div > ul li p {
+          display: inline-block;
+          max-width: calc(100% - 30px);
+          vertical-align: text-top;
+          font-size: 90%; }
+    #TermsOfUse > .ContentContainer > div > ol li {
+      text-indent: -1.7em; }
+      #TermsOfUse > .ContentContainer > div > ol li:before {
+        counter-increment: list-counter;
+        content: counter(list-counter) ". "; }
+    #TermsOfUse > .ContentContainer > div > ul li {
+      text-indent: -1.4em; }
+      #TermsOfUse > .ContentContainer > div > ul li:before {
+        content: '\2022'; }
+    #TermsOfUse > .ContentContainer > div .extra-help {
+      margin-top: 30px;
+      margin-bottom: 50px; }
+      #TermsOfUse > .ContentContainer > div .extra-help > a {
+        color: #4473b3;
+        font-weight: 400; }
+        #TermsOfUse > .ContentContainer > div .extra-help > a:hover {
+          color: #284469;
+          text-decoration: none; }
 
 #Testimonials {
   counter-reset: list-counter; }
