@@ -24241,8 +24241,8 @@ function _defineProperty(obj, key, value) {
 
 var TermsOfUse =
 /*#__PURE__*/
-function (_Component) {
-  _inherits(TermsOfUse, _Component);
+function (_PureComponent) {
+  _inherits(TermsOfUse, _PureComponent);
 
   function TermsOfUse(props) {
     var _this;
@@ -24251,20 +24251,28 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(TermsOfUse).call(this, props));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleHashChange", function () {
-      console.log('offest ' + window.pageYOffset);
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "interceptClickEvent", function (e) {
+      var href;
+      var target = e.target || e.srcElement;
 
-      _gsap.TweenLite.set(window, {
-        scrollTo: window.pageYOffset - 180
-      });
+      if (target.tagName === 'A') {
+        href = target.getAttribute('href');
 
-      console.log('scrollTop ' + window.pageYOffset);
+        if (href && href[0] === "#") {
+          e.preventDefault();
+
+          _gsap.TweenLite.to(window, 0.5, {
+            scrollTo: window.pageYOffset + document.getElementById(href.substr(1)).getBoundingClientRect().top - 160,
+            ease: _gsap.Power4.easeOut
+          });
+        }
+      }
     });
 
     _this.sections = ['YOUR ACCEPTANCE OF THIS AGREEMENT', 'CHANGES TO THIS AGREEMENT', 'PERMITTED USERS AND ACCESS', 'MISPRINTS AND ERRORS, PRICES AND PURCHASES', 'NO ADVICE OR SOLICITATION', ['DISCLAIMER, LIABILITY EXCLUSION, LIABILITY LIMITATION, RELEASE AND INDEMNITY', ['DISCLAIMER', 'LIABILITY EXCLUSION', 'LIMITATION OF LIABILITY', 'RELEASE', 'INDEMNITY']], 'LOGIN NAMES AND PASSWORDS', 'TERMINATION OF THIS AGREEMENT AND THE WEB SITE', 'INFORMATION SUBMISSIONS', 'OWNERSHIP AND PERMITTED USE OF THE WEB SITE', 'PERSONAL INFORMATION PRIVACY', 'TRADE-MARK INFORMATION', 'OTHER SITES', 'LINKING AND FRAMING THE WEB SITE', 'POSTINGS AND UNSOLICITED SUBMISSIONS', 'GOVERNING LAW AND DISPUTE RESOLUTION', 'OTHER MATTERS'];
 
     if (!_settings.default.isServer()) {
-      window.addEventListener('hashchange', _this.handleHashChange);
+      window.addEventListener('click', _this.interceptClickEvent);
     }
 
     return _this;
@@ -24273,7 +24281,7 @@ function (_Component) {
   _createClass(TermsOfUse, [{
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      window.removeEventListener('hashchange', this.handleHashChange);
+      window.removeEventListener('click', this.interceptClickEvent);
     }
   }, {
     key: "render",
@@ -24318,17 +24326,17 @@ function (_Component) {
             }
           }, prefix), _react.default.createElement("a", {
             className: "inline",
-            href: "/terms-of-use#".concat((0, _makePath.default)(title))
+            href: "#".concat((0, _makePath.default)(title))
           }, title));
         };
 
         if (typeof section === 'string') {
           return _react.default.createElement("li", null, renderLink(section));
         } else {
-          var result = section[1].map(function (sec, idx) {
+          var sublinks = section[1].map(function (sec, idx) {
             return _react.default.createElement(_react.Fragment, null, renderLink(sec, "".concat(index + 1, ".").concat(idx + 1)), _react.default.createElement("br", null));
           });
-          return _react.default.createElement(_react.Fragment, null, _react.default.createElement("li", null, renderLink(section[0])), result, _react.default.createElement("br", null));
+          return _react.default.createElement(_react.Fragment, null, _react.default.createElement("li", null, renderLink(section[0])), sublinks, _react.default.createElement("br", null));
         }
       })), _react.default.createElement("br", null), _react.default.createElement("h5", {
         id: (0, _makePath.default)(this.sections[0]),
@@ -24515,7 +24523,7 @@ function (_Component) {
   }]);
 
   return TermsOfUse;
-}(_react.Component);
+}(_react.PureComponent);
 
 var _default = TermsOfUse;
 exports.default = _default;
