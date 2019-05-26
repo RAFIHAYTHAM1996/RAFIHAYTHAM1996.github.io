@@ -920,7 +920,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   background-color: #284469 !important; }
 
 #Menu {
-  height: 70px;
+  height: 85px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -933,7 +933,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   padding: 0; }
   #Menu .container {
     position: relative;
-    height: 50px;
+    height: 65px;
     max-width: calc(100% - 60px); }
     @media only screen and (max-width: 767px) {
       #Menu .container {
@@ -987,14 +987,15 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   #Menu #subcontainer {
     position: absolute;
     right: 0;
-    top: 13px;
+    top: 23px;
     -webkit-overflow-scrolling: touch; }
     @media only screen and (max-width: 767px) {
       #Menu #subcontainer {
         position: relative;
         width: 100%;
         margin: auto;
-        padding-bottom: 100px; } }
+        padding-bottom: 100px;
+        top: 20px; } }
   #Menu #collapsedLogo-container {
     position: absolute;
     top: 0;
@@ -1006,7 +1007,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
       filter: brightness(10) saturate(0);
       transition: all 0.3s ease-in-out; }
   #Menu .menu-logo {
-    width: 100px;
+    width: 130px;
     position: absolute;
     top: -3px;
     opacity: 0; }
@@ -1050,7 +1051,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   position: fixed;
   z-index: 1;
   background-color: #f7f7f7;
-  top: 70px;
+  top: 85px;
   padding: 15px 80px;
   font-size: 1.2rem; }
   @media only screen and (max-width: 575px) {
@@ -1210,7 +1211,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
           max-width: 950px; } }
 
 .Page {
-  margin-top: calc(70px + 50px);
+  margin-top: calc(85px + 50px);
   overflow-x: hidden; }
 
 #About {
