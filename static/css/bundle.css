@@ -934,10 +934,9 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   #Menu .container {
     position: relative;
     height: 65px;
-    max-width: calc(100% - 60px); }
+    max-width: 84.3333%; }
     @media only screen and (max-width: 767px) {
       #Menu .container {
-        max-width: calc(100% - 20px);
         margin-top: 10px; } }
   @media only screen and (max-width: 767px) {
     #Menu {
@@ -967,7 +966,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
     margin-right: 60px;
     font-weight: 400; }
     #Menu a.mainlink:last-child {
-      margin-right: 20px; }
+      margin-right: 0; }
     @media only screen and (min-width: 767px) {
       #Menu a.mainlink.active, #Menu a.mainlink:hover {
         padding-bottom: 7px;
@@ -1052,22 +1051,14 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   z-index: 1;
   background-color: #f7f7f7;
   top: 85px;
-  padding: 15px 80px;
+  padding: 15px 8.333333%;
   font-size: 1.2rem; }
-  @media only screen and (max-width: 575px) {
-    .Ribbon {
-      padding: 15px 20px; } }
-  .Ribbon .left-side {
-    padding: 0; }
-    @media only screen and (max-width: 575px) {
-      .Ribbon .left-side {
-        text-align: center; } }
-    .Ribbon .left-side .phone-number {
-      color: #4473b3; }
-      .Ribbon .left-side .phone-number:hover {
-        transition: all 0.3s ease-in-out;
-        text-decoration: none;
-        color: #284469; }
+  .Ribbon .left-side .phone-number {
+    color: #4473b3; }
+    .Ribbon .left-side .phone-number:hover {
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      color: #284469; }
 
 .Social .icon {
   display: inline-block;
@@ -1445,6 +1436,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
     width: 100%;
     color: #ffffff;
     margin-top: -150px;
+    margin-left: 0;
     padding-bottom: 8vw; }
     @media only screen and (max-width: 1199px) {
       #Home .intro-content {
@@ -1452,6 +1444,10 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
     @media only screen and (max-width: 991px) {
       #Home .intro-content {
         margin-top: 0; } }
+    @media only screen and (max-width: 767px) {
+      #Home .intro-content {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem; } }
     #Home .intro-content p {
       margin-bottom: 2rem; }
   #Home a#free-assessment {
@@ -1492,16 +1488,14 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
         #Home .services-briefly > div.row {
           padding-bottom: 3rem; } }
     @media only screen and (max-width: 575px) {
-      #Home .services-briefly {
-        padding: 2rem 2rem 0 2rem; }
-        #Home .services-briefly > div.row {
-          padding-bottom: 1rem; }
-        #Home .services-briefly-intro-img {
-          order: 1;
-          margin-top: 2rem;
-          margin-bottom: 2rem; }
-        #Home .services-briefly-intro-info {
-          order: 0; } }
+      #Home .services-briefly > div.row {
+        padding-bottom: 1rem; }
+      #Home .services-briefly-intro-img {
+        order: 1;
+        margin-top: 2rem;
+        margin-bottom: 2rem; }
+      #Home .services-briefly-intro-info {
+        order: 0; } }
 
 #Privacy {
   counter-reset: list-counter; }

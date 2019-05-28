@@ -1638,9 +1638,10 @@ function (_Component) {
         var responsive = window.innerWidth < _this.MIN_SCREEN_WIDTH;
 
         if (responsive != _this.state.responsive) {
+          if (!responsive && !_this.state.collapsed) _this.toggleMenu('close');
+
           _this.setState({
-            responsive: responsive,
-            collapsed: true
+            responsive: responsive
           });
         }
       }
@@ -1800,8 +1801,8 @@ function (_Component) {
             return _this.links[page] = el;
           }
         }, _react.default.createElement("a", {
-          className: "mainlink col-12 " + (_this.state.responsive ? "responsive" : "")
-        }, title)), _this.getSubLinks(_this.sublinks[page]));
+          className: "mainlink col-12"
+        }, title)), _this.state.responsive && _this.getSubLinks(_this.sublinks[page]));
       }
     });
 
@@ -1821,7 +1822,6 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "getMenuClasses", function () {
       var classes = [];
-      if (_this.state.responsive) classes.push("responsive");
       if (_this.props.solidStyle) classes.push("solidStyle");
       return " " + classes.join(" ");
     });
@@ -1844,7 +1844,7 @@ function (_Component) {
     };
     _this.MIN_SCREEN_WIDTH = 768;
     _this.links = [];
-    _this.MENU_HEIGHT = 70;
+    _this.MENU_HEIGHT = 85;
     _this.menuHeight = 0;
     _this.animOn = false;
     _this.pages = ["home", "about", "services", "testimonials", "contact"]; // Add sublinks for mobile view
@@ -1916,7 +1916,7 @@ function (_Component) {
           return _this2.Menu = el;
         }
       }, _react.default.createElement("div", {
-        className: "container" + (this.state.responsive ? " responsive" : "")
+        className: "container p-0"
       }, _react.default.createElement("a", {
         href: "/",
         id: "collapsedLogo-container"
@@ -1930,7 +1930,7 @@ function (_Component) {
         }
       })), !_settings.default.isServer() && (this.state.responsive ? _react.default.createElement("div", {
         id: "subcontainer",
-        className: "row" + (this.state.responsive ? " responsive" : "")
+        className: "row"
       }, _react.default.createElement("div", {
         className: "col-12",
         style: {
@@ -1992,7 +1992,7 @@ function (_Component) {
         }, _this2.getLink(item, index));
       }))) : _react.default.createElement(_react.Fragment, null, _react.default.createElement("div", {
         id: "subcontainer",
-        className: "row" + (this.state.responsive ? " responsive" : "")
+        className: "row"
       }, _react.default.createElement("div", {
         className: "col-12"
       }, _react.default.createElement("span", {
@@ -2174,14 +2174,14 @@ function (_PureComponent) {
       return _react.default.createElement("div", {
         className: "Ribbon"
       }, _react.default.createElement("div", {
-        className: "row"
+        className: "row m-0"
       }, _react.default.createElement("div", {
         className: "col-12 col-sm-7 left-side"
       }, "Questions?\xA0", _react.default.createElement("a", {
         className: "phone-number",
         href: "tel:+18002088480"
       }, "Call 1-800-208-8480")), _react.default.createElement("div", {
-        className: "d-none d-sm-block col-sm-5 ribbon-social"
+        className: "d-none d-sm-block col-sm-5 p-0 ribbon-social"
       }, _react.default.createElement(_Social.default, {
         align: "right"
       }))));
@@ -43246,7 +43246,7 @@ function (_Component) {
       }), _react.default.createElement("div", {
         className: "row intro-content"
       }, _react.default.createElement("div", {
-        className: "offset-1 col-10 col-md-8 col-lg-6 col-xl-4"
+        className: "col-12 offset-md-1 col-md-8 col-lg-6 col-xl-4 pl-0"
       }, _react.default.createElement("h1", null, "Providing Families", _react.default.createElement("br", null), "with Peace of Mind"), _react.default.createElement("p", null, "We believe life is a gift. Hospall Private Homecare provides peace of mind to families with the health and care needs of their loved ones in King Township and the surrounding York and Simcoe regions. Our commitment is to maintain open lines of communication within our multi disciplinary team to ensure the care is being provided consistent to the client. Our word is our promise."), _react.default.createElement("a", {
         className: "cta",
         href: "/about"
@@ -43406,25 +43406,6 @@ function _typeof(obj) {
   return _typeof(obj);
 }
 
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
-
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
-    }
-
-    ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
-  }
-
-  return target;
-}
-
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -43524,12 +43505,6 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleInputChange", function (e, item) {});
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleScroll", function (e) {
-      if (_this.container.getBoundingClientRect().top < window.innerHeight && !_this.state.analyticsSubmitted.scroll) {
-        ReactGA.modalview('contact');
-
-        _this.setAnalyticSubmission('scroll');
-      }
-
       if (_this.props.isResponsive) {
         if (_this.container.getBoundingClientRect().top <= window.innerHeight / 2) {
           _this.animateIn();
@@ -43542,14 +43517,6 @@ function (_Component) {
 
           window.removeEventListener('scroll', _this.handleScroll);
         }
-      }
-    });
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setAnalyticSubmission", function (name) {
-      if (name) {
-        _this.setState({
-          analyticsSubmitted: _objectSpread({}, _this.state.analyticsSubmitted, _defineProperty({}, name, true))
-        });
       }
     });
 
@@ -43627,11 +43594,6 @@ function (_Component) {
             });
           }
 
-          ReactGA.event({
-            category: 'Contact',
-            action: 'Submit',
-            label: response.ok ? 'Succeeded' : 'Failed'
-          });
           return response.json();
         }).then(function (data) {
           if (_settings.default.isDev) {
@@ -43686,10 +43648,6 @@ function (_Component) {
         sent: false,
         failed: false,
         formError: ''
-      },
-      analyticsSubmitted: {
-        scroll: false,
-        form: false
       }
     };
     _this.AnimationElements = [];
@@ -44098,14 +44056,6 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Testimonials).call(this, props));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setAnalyticSubmission", function (name) {
-      if (name) {
-        _this.setState({
-          analyticsSubmitted: _objectSpread({}, _this.state.analyticsSubmitted, _defineProperty({}, name, true))
-        });
-      }
-    });
-
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "animateIn", function () {
       var tl = new _gsap.TimelineMax({
         paused: true
@@ -44160,10 +44110,6 @@ function (_React$Component) {
     });
 
     _this.state = {
-      analyticsSubmitted: {
-        scroll: false,
-        form: false
-      },
       current: 0
     };
     _this.AnimationElements = [];
