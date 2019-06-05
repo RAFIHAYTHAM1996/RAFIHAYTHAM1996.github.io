@@ -1132,10 +1132,12 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
       opacity: 1; }
       .job-application .contact-details p a:hover {
         color: #4473b3; }
-  .job-application .delivery-info > p {
-    color: #4473b3;
-    line-height: 1rem;
-    margin-bottom: 0; }
+  .job-application .delivery-info {
+    margin-bottom: 25px; }
+    .job-application .delivery-info > p {
+      color: #4473b3;
+      line-height: 1rem;
+      margin-bottom: 0; }
 
 .section-testimonials {
   width: 100%;
