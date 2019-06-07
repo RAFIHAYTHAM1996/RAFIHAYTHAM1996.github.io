@@ -940,8 +940,9 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
         margin-top: 10px; } }
   @media only screen and (max-width: 767px) {
     #Menu {
-      display: block;
-      overflow: auto; } }
+      display: block; }
+      #Menu.expanded {
+        overflow: auto; } }
   #Menu.solidStyle {
     background-color: #ffffff; }
     #Menu.solidStyle a.mainlink {
@@ -1430,7 +1431,7 @@ div.dark, #About div.values-list-name, #Careers .ContentContainer div.position-d
   position: relative;
   width: 100%; }
   #Home #landing-image {
-    max-width: 100%; }
+    width: 100%; }
   #Home .logo-over-image {
     position: absolute;
     top: 10vw; }
