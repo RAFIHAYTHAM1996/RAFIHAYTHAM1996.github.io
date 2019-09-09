@@ -4,7 +4,8 @@
       "image": "tool-steel.jpg",
       "url": "metals",
       "subproducts": [
-        "HR", "CR", "ALUMINUM", "STAINLESS", "TOOL STEEL",
+        "HOT ROLLED (HR)", "COLD ROLLED (CR)",
+        "ALUMINUM", "STAINLESS", "TOOL STEEL",
         "FLAT BARS / ROUND BARS",
         "HEX BARS / ANGLES",
         "SQ / REC & ROUND TUBES",
@@ -31,7 +32,7 @@
         "BRASS",
         "COPPER",
         "UHMW",
-        "DELRN",
+        "DELRIN",
         "TEFLON",
         "NYLON & MORE"
       ]
@@ -39,28 +40,36 @@
   ],
   "services": [
     { "name": "Saw Cutting (Production)",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "image": "services/saw-cutting.png"
     }, {
-      "name": "Sheering",
-      "description": "Our shearing service is known for producing straight, clean cut metals"
+      "name": "Shearing",
+      "description": "Our shearing service is known for producing straight, clean cut metals",
+      "image": "services/shearing.png"
     }, {
       "name": "Welding",
-      "description": "We offer various welding services (MIG, TIG and more)"
+      "description": "We offer various welding services (MIG, TIG and more)",
+      "image": "services/welding.jpg"
     }, {
       "name": "Punching",
-      "description": "High precision metal punching sizes"
+      "description": "High precision metal punching sizes",
+      "image": "services/punching.png"
     }, {
       "name": "Notching",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "image": "services/notching.png"
     }, {
       "name": "Flame Cutting",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "image": "services/flame-cutting.jpg"
     }, {
       "name": "Bending",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "image": "services/bending.jpg"
     }, {
       "name": "Manual Machining",
-      "description": "To satisfy all your metal needs, we also offer lathe and milling machining services"
+      "description": "To satisfy all your metal needs, we also offer lathe and milling machining services",
+      "image": "services/manual-machining.jpg"
     }
   ]
 }
