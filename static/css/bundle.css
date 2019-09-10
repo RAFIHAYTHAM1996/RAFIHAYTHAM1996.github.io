@@ -11979,8 +11979,10 @@ h1 {
       .Feature .feature-img {
         width: 100px;
         height: 100px; } }
-    .Feature .feature-img.non-clickable:before {
-      border: 1px solid #a5b2b5; }
+    .Feature .feature-img.non-clickable {
+      opacity: 1 !important; }
+      .Feature .feature-img.non-clickable:before {
+        border: 1px solid #ededed; }
     .Feature .feature-img:before {
       content: ' ';
       height: 210px;
