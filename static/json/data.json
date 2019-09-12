@@ -40,7 +40,7 @@
   ],
   "services": [
     { "name": "Saw Cutting (Production)",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "For all cut sizes, our production saws are always ready for action",
       "image": "services/saw-cutting.png"
     }, {
       "name": "Shearing",
@@ -56,15 +56,15 @@
       "image": "services/punching.png"
     }, {
       "name": "Notching",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "High precision notching is, yet, another one of our specialties",
       "image": "services/notching.png"
     }, {
       "name": "Flame Cutting",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "If saw cutting doesn't suit your application, we also offer flame cutting",
       "image": "services/flame-cutting.jpg"
     }, {
       "name": "Bending",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "Smooth bends for all your sheet metal bending needs",
       "image": "services/bending.jpg"
     }, {
       "name": "Manual Machining",
