@@ -1,40 +1,153 @@
 {
   "products": [
-    { "name": "Metals",
+    { "name": "Carbon Steel",
       "image": "tool-steel.jpg",
-      "url": "metals",
-      "subproducts": [
-        "HOT ROLLED (HR)", "COLD ROLLED (CR)",
-        "ALUMINUM", "STAINLESS", "TOOL STEEL",
-        "FLAT BARS / ROUND BARS",
-        "HEX BARS / ANGLES",
-        "SQ / REC & ROUND TUBES",
-        "THREADED RODS / DRILL RODS",
-        "DOM TUBING / BLACK PIPES",
-        "SHEET METAL / PLATES",
-        "PERFORATED SHEETS / WIRE MESH",
-        "FLAT GROUND, 01-A1-D2"
+      "url": "carbon-steel",
+      "subcategories": [
+        { "name": "Cold Finished (CR)",
+          "subproducts": [
+            "Steel Rounds",
+            "Steel Hexagons",
+            "Steel Squares",
+            "C1080 Flats",
+            "Turned Ground and Polished Shafted"
+          ]
+        },{ "name": "Hold Rolled (HR)",
+          "subproducts": [
+            "Carbon Steel Rounds",
+            "Carbon Steel Flats",
+            "Carbon Steel Squares",
+            "Reinforcing Bars"
+          ]
+        },{ "name": "Steel Plates",
+          "subproducts": [
+            "Floor Plate"
+          ]
+        },{ "name": "Steel Sheets",
+          "subproducts": [
+            "Hot Rolled",
+            "Hot Rolled Pickled & Oiled",
+            "Cold Rolled",
+            "Galvanized"
+          ]
+        }
       ]
     }, {
-      "name": "Metric & Imperial Shafts",
+      "name": "Structural Steel & Pipes/Tubes",
       "image": "products-structural.jpg",
-      "url": "shafts",
-      "subproducts": [
-        "C1018 / C1144",
-        "1045 PGS / C12L14",
-        "SS 304 TGP / HEX BARS"
+      "url": "structural-steel-pipes-tubes",
+      "subcategories": [
+        { "name": "Steel Structurals",
+          "subproducts": [
+            "Channels",
+            "Wide Flange/H-Beams",
+            "Standard S Beams",
+            "Junior Beams"
+          ]
+        },{ "name": "Steel Tubing & Pipe",
+          "subproducts": [
+            "Round Seamless & Welded",
+            "Hydraulic Line Tube",
+            "Round Structural",
+            "Squares",
+            "Rectangluar",
+            "Pipe"
+          ]
+        }
       ]
     }, {
-      "name": "Exotics & Plastics",
+      "name": "Aluminum & Stainless Steel",
       "image": "multiple-metals.jpg",
-      "url": "exotics-and-plastics",
-      "subproducts": [
-        "BRASS",
-        "COPPER",
-        "UHMW",
-        "DELRIN",
-        "TEFLON",
-        "NYLON & MORE"
+      "url": "aluminum-stainless-steel",
+      "subcategories": [
+        { "name": "Aluminum",
+          "subproducts": [
+            "Rounds",
+            "Squares",
+            "Hexagons",
+            "Rectangles",
+            "Angles",
+            "Channels",
+            "Beams",
+            "Tubing & Pipe",
+            "Sheet & Plate"
+          ]
+        },{ "name": "Stainless Steel",
+          "subproducts": [
+            "Rounds",
+            "Squares",
+            "Hexagons",
+            "Flats",
+            "Angles",
+            "Tubing & Pipe",
+            "Sheet",
+            "Plate"
+          ]
+        }
+      ]
+    }, {
+      "name": "Brass & Copper",
+      "image": "multiple-metals.jpg",
+      "url": "brass-copper",
+      "subcategories": [
+        { "name": "Brass",
+          "subproducts": [
+            "Brass Rounds",
+            "Brass Squares",
+            "Brass Hexagons",
+            "Brass Flats",
+            "Brass Tubing"
+          ]
+        },{ "name": "Copper",
+          "subproducts": [
+            "Copper Rounds",
+            "Copper Squares",
+            "Copper Flats",
+            "Copper Tubing & Pipe"
+          ]
+        },{ "name": "Other",
+          "subproducts": [
+            "Bronze Angles",
+            "Bearing Bronze"
+          ]
+        }
+      ]
+    }, {
+      "name": "Specialty Products & Plastics",
+      "image": "multiple-metals.jpg",
+      "url": "specialty-products-plastics",
+      "subcategories": [
+        { "name": "Specialty Products",
+          "subproducts": [
+            "Perforated Sheets",
+            "Expanded Sheets"
+          ]
+        },{ "name": "Plastics",
+          "subproducts": [
+            "UHMW",
+            "Delrin",
+            "Nylon",
+            "Teflon"
+          ]
+        }
+      ]
+    }, {
+      "name": "Alloys & Tool Steel",
+      "image": "multiple-metals.jpg",
+      "url": "alloys-tool-steel",
+      "subcategories": [
+        { "name": "Alloy Steel Bars",
+          "subproducts": [
+            "Steel Rounds",
+            "Forged & Rough Turned Bars"
+          ]
+        },{ "name": "Tool Steel",
+          "subproducts": [
+            "Precision Ground Drill Rod",
+            "Precision Ground Flat Stock",
+            "Rounds & Plates"
+          ]
+        }
       ]
     }
   ],
@@ -58,14 +171,6 @@
       "name": "Notching",
       "description": "High precision notching is, yet, another one of our specialties",
       "image": "services/notching.png"
-    }, {
-      "name": "Flame Cutting",
-      "description": "If saw cutting doesn't suit your application, we also offer flame cutting",
-      "image": "services/flame-cutting.jpg"
-    }, {
-      "name": "Bending",
-      "description": "Smooth bends for all your sheet metal bending needs",
-      "image": "services/bending.jpg"
     }, {
       "name": "Manual Machining",
       "description": "To satisfy all your metal needs, we also offer lathe and milling machining services",
