@@ -12197,6 +12197,8 @@ h1 {
     transition: all 0.25s cubic-bezier(0.15, 0.54, 0.15, 0.98);
     margin-right: 40px;
     cursor: pointer; }
+    #Menu a:last-child {
+      margin-right: 0px; }
     #Menu a.active, #Menu a:hover {
       color: #bb2026; }
     .phone #Menu a, #Menu a.responsive {
@@ -12338,9 +12340,7 @@ h1 {
     vertical-align: middle; }
     @media only screen and (max-width: 575px) {
       .section-title .divider {
-        width: 1px;
-        height: 20px;
-        margin: 0 10px; } }
+        display: none; } }
     .section-title .divider.light {
       background-color: #ffffff; }
   .section-title .subtitle {
@@ -12353,9 +12353,9 @@ h1 {
     margin: 0; }
     @media only screen and (max-width: 575px) {
       .section-title .subtitle {
-        max-width: calc(100% - 120px);
-        font-size: 0.5rem;
-        line-height: 0.6rem; } }
+        display: block;
+        font-size: 0.7rem;
+        line-height: 0.7rem; } }
     .section-title .subtitle.light {
       color: #cccccc !important; }
     .section-title .subtitle.altTheme {
