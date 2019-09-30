@@ -6,22 +6,23 @@
       "subcategories": [
         { "name": "Cold Finished (CR)",
           "subproducts": [
-            "Steel Rounds",
-            "Steel Hexagons",
-            "Steel Squares",
-            "C1080 Flats",
-            "Turned Ground and Polished Shafted"
+            "Round Bars",
+            "Hexagon Bars",
+            "Square Bars",
+            "Flat Bars",
+            "Turned Ground and Polished Shafts (TG & P)"
           ]
-        },{ "name": "Hold Rolled (HR)",
+        },{ "name": "Hot Rolled (HR)",
           "subproducts": [
-            "Carbon Steel Rounds",
-            "Carbon Steel Flats",
-            "Carbon Steel Squares",
-            "Reinforcing Bars"
+            "Round Bars",
+            "Flat Bars",
+            "Square Bars",
+            "Reinforcing Bars (Rebars)"
           ]
         },{ "name": "Steel Plates",
           "subproducts": [
-            "Floor Plate"
+            "Steel Plates",
+            "Floor/Checker Plate"
           ]
         },{ "name": "Steel Sheets",
           "subproducts": [
@@ -48,10 +49,12 @@
           "subproducts": [
             "Round Seamless & Welded",
             "Hydraulic Line Tube",
-            "Round Structural",
-            "Squares",
-            "Rectangluar",
-            "Pipe"
+            "HSS Round Structural Tube",
+            "HSS Square Tube",
+            "HSS Rectangluar Tube",
+            "Blk Pipe",
+            "CREW - ERW Steel Tube",
+            "Drawn Over Mandrel (DOM) Tubing"
           ]
         }
       ]
