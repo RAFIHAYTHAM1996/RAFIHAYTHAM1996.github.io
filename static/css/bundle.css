@@ -11847,10 +11847,10 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 50vh; }
+    height: 60vh; }
     #Product .prod-img-container .product-name {
       color: #ffffff;
-      text-shadow: 0 5px 15px #293032;
+      text-shadow: 0 5px 8px #293032;
       text-transform: uppercase;
       max-width: 80%;
       text-align: center;
@@ -11871,10 +11871,10 @@ h1 {
     border-radius: 15px; }
   #Product .category-image {
     position: absolute;
-    top: -210px;
-    left: -50%;
-    width: 200%;
-    height: 400px;
+    top: -450px;
+    left: -140px;
+    width: 640px;
+    height: 640px;
     border-radius: 100%;
     z-index: 0; }
   #Product .category-name {
@@ -11885,8 +11885,8 @@ h1 {
     margin: auto;
     margin-top: 162px;
     color: #FFF;
-    background-color: #6004c0;
-    background: linear-gradient(90deg, #47038e, #6004c0 100%);
+    background-color: #d67781;
+    background: linear-gradient(90deg, #ca505d, #d67781 100%);
     border-radius: 15px;
     z-index: 1;
     font-size: 18px;
@@ -11902,9 +11902,9 @@ h1 {
       padding: 0; }
       #Product .category-subproducts ul li {
         padding: 20px 0;
-        border-bottom: 1px solid rgba(46, 2, 92, 0.15);
+        border-bottom: 1px solid rgba(177, 54, 67, 0.15);
         letter-spacing: 1px;
-        color: #2E025C; }
+        color: #b13643; }
         #Product .category-subproducts ul li:last-child {
           border-bottom: none; }
   #Product .subproduct-container {
@@ -11966,7 +11966,7 @@ h1 {
   align-items: center;
   padding: 50px;
   transition: all 0.2s ease-in-out;
-  background: rgba(245, 245, 245, 0.75);
+  background-color: rgba(230, 230, 230, 0.75);
   cursor: pointer; }
   @media only screen and (max-width: 991px) {
     .Feature {
@@ -11979,9 +11979,10 @@ h1 {
     margin-bottom: 60px;
     cursor: default; }
   .Feature.clickable:hover {
-    background: #ededed; }
+    background-color: #d9d9d9; }
     .Feature.clickable:hover .feature-img {
-      opacity: 1 !important; }
+      opacity: 1 !important;
+      filter: none; }
       .Feature.clickable:hover .feature-img:before {
         border: 1px solid #bb2026; }
     .Feature.clickable:hover .feature-title {
@@ -12025,7 +12026,7 @@ h1 {
       width: 210px;
       background-color: transparent;
       border-radius: 500px;
-      border: 1px solid #e6e6e6;
+      border: 1px solid #a5b2b5;
       transition: all 0.2s ease-in-out;
       transform: translateX(-5px); }
       @media only screen and (max-width: 1199px) {
@@ -12132,7 +12133,7 @@ h1 {
     background-color: #293032; }
     .InputField:hover .Label, .InputField.focused .Label {
       color: #89999e; }
-    .InputField:hover .input-icon, .InputField.focused .input-icon {
+    .InputField:hover .input-icon, .InputField:hover .TextField, .InputField.focused .input-icon, .InputField.focused .TextField {
       color: #ffffff; }
   .InputField label {
     position: relative;
@@ -12161,7 +12162,7 @@ h1 {
     width: 100%;
     border: none;
     background: none;
-    color: #ffffff; }
+    color: #293032; }
     .InputField .TextField:focus {
       outline: none; }
 
@@ -12259,7 +12260,7 @@ h1 {
     background-color: #293032; }
     .TextArea:hover .Label, .TextArea.focused .Label {
       color: #89999e; }
-    .TextArea:hover .input-icon, .TextArea.focused .input-icon {
+    .TextArea:hover .input-icon, .TextArea:hover .TextField, .TextArea.focused .input-icon, .TextArea.focused .TextField {
       color: #ffffff; }
   .TextArea .Label {
     position: absolute;
@@ -12287,7 +12288,7 @@ h1 {
     resize: none;
     overflow: auto;
     background-color: transparent;
-    color: #ffffff; }
+    color: #293032; }
     .TextArea .TextField:focus {
       outline: none; }
 
@@ -12412,6 +12413,7 @@ h1 {
     #section-contact .contact-info .info {
       font-size: 1rem;
       line-height: 1.3rem;
+      max-width: calc(100% - 50px);
       color: #293032; }
       #section-contact .contact-info .info > .days {
         margin-bottom: 0; }
@@ -12420,7 +12422,8 @@ h1 {
       #section-contact .contact-info .info > a {
         color: #293032 !important;
         text-decoration: none;
-        transition: all 0.2s ease-in-out; }
+        transition: all 0.2s ease-in-out;
+        word-break: break-all; }
         #section-contact .contact-info .info > a:hover {
           color: #bb2026 !important; }
   #section-contact .submit {
@@ -12460,7 +12463,7 @@ h1 {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-image: url("/static/images/welding.jpg");
+  background-image: url("/static/images/background.jpg");
   background-size: cover;
   background-position: center center; }
   #section-home #landing-gradient {

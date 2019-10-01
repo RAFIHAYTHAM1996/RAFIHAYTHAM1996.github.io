@@ -1,7 +1,7 @@
 {
   "products": [
     { "name": "Carbon Steel",
-      "image": "tool-steel.jpg",
+      "image": "products/hot-cold_rolled.jpg",
       "url": "carbon-steel",
       "subcategories": [
         { "name": "Cold Finished (CR)",
@@ -35,7 +35,7 @@
       ]
     }, {
       "name": "Structural Steel & Pipes/Tubes",
-      "image": "products-structural.jpg",
+      "image": "products/steelstructurals_pipes.jpg",
       "url": "structural-steel-pipes-tubes",
       "subcategories": [
         { "name": "Steel Structurals",
@@ -60,7 +60,7 @@
       ]
     }, {
       "name": "Aluminum & Stainless Steel",
-      "image": "multiple-metals.jpg",
+      "image": "products/aluminum_stainless.jpg",
       "url": "aluminum-stainless-steel",
       "subcategories": [
         { "name": "Aluminum",
@@ -90,7 +90,7 @@
       ]
     }, {
       "name": "Brass & Copper",
-      "image": "multiple-metals.jpg",
+      "image": "products/brass-copper.jpg",
       "url": "brass-copper",
       "subcategories": [
         { "name": "Brass",
@@ -117,7 +117,7 @@
       ]
     }, {
       "name": "Specialty Products & Plastics",
-      "image": "multiple-metals.jpg",
+      "image": "products/specialty-products.jpg",
       "url": "specialty-products-plastics",
       "subcategories": [
         { "name": "Specialty Products",
@@ -136,7 +136,7 @@
       ]
     }, {
       "name": "Alloys & Tool Steel",
-      "image": "multiple-metals.jpg",
+      "image": "products/alloys_tool-steel.jpg",
       "url": "alloys-tool-steel",
       "subcategories": [
         { "name": "Alloy Steel Bars",
@@ -157,7 +157,7 @@
   "services": [
     { "name": "Saw Cutting (Production)",
       "description": "For all cut sizes, our production saws are always ready for action",
-      "image": "services/saw-cutting.png"
+      "image": "services/saw-cutting.jpg"
     }, {
       "name": "Shearing",
       "description": "Our shearing service is known for producing straight, clean cut metals",
