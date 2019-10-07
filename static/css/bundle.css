@@ -321,8 +321,16 @@ template {
   font-weight: normal;
   font-style: normal; }
 
-.Lato, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, #Menu a.mainlink {
+.Lato, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, #Menu a.mainlink, #Services .service-name-list li {
   font-family: 'lato'; }
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url("/static/fonts/generated/lato-bold.woff2") format("woff2"), url("/static/fonts/generated/lato-bold.woff") format("woff"), url("/static/fonts/generated/lato-bold.ttf") format("truetype");
+  font-style: normal; }
+
+.LatoBold, h1, .Navigation a, #Services .service-name-list li:hover, #Services .service-name-list li.selected {
+  font-family: 'lato-bold'; }
 
 @font-face {
   font-family: 'charter';
@@ -411,9 +419,16 @@ body, html {
     .ContentContainer {
       width: 85%; } }
 
+p {
+  font-size: 1.3rem;
+  color: #798293;
+  margin-bottom: 1.5rem; }
+
 h1 {
   font-size: 3.125rem;
   color: #FFFFFF; }
+  h1.primary {
+    color: #536EC4; }
 
 .disable-selection {
   -moz-user-select: none;
@@ -433,6 +448,18 @@ h1 {
   justify-content: center;
   align-items: center;
   align-content: center; }
+
+.Brand {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  cursor: pointer; }
+  @media only screen and (max-width: 575px) {
+    .Brand {
+      top: 15px;
+      left: 15px; } }
+  .Brand.primary svg path {
+    fill: #536EC4; }
 
 .FormInput {
   display: inline-block;
@@ -650,25 +677,62 @@ h1 {
     #Menu #hamburger-menu:hover line {
       transform-origin: center center; }
 
-.section-landing {
+.Navigation {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 80px);
+  bottom: 40px;
+  left: 40px;
+  margin: auto;
+  cursor: pointer; }
+  @media only screen and (max-width: 575px) {
+    .Navigation {
+      width: calc(100% - 30px);
+      bottom: 15px;
+      left: 15px; } }
+  .Navigation.primary a {
+    color: #536EC4; }
+    .Navigation.primary a:hover {
+      -webkit-text-stroke: 1px #536EC4; }
+  .Navigation a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    transition: 0.2s all ease-in-out; }
+    .Navigation a:hover {
+      -webkit-text-stroke: 1px #FFFFFF;
+      color: transparent; }
+
+.Page {
+  overflow-x: hidden; }
+
+#Contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #2F2F2F; }
+
+#Home {
+  position: relative;
+  width: 100%;
   padding-top: calc(85px + 50px);
   background-color: #536EC4;
   min-height: 100vh; }
-  .section-landing .brand-logo {
-    position: fixed;
-    top: 40px;
-    left: 40px; }
-  .section-landing .brand-logo-outline {
+  #Home .brand-logo-outline {
     display: block;
     position: absolute;
     width: 80%;
     top: 50vh;
     right: -3%; }
     @media only screen and (max-width: 991px) {
-      .section-landing .brand-logo-outline {
+      #Home .brand-logo-outline {
         top: 60vh; } }
     @media only screen and (max-width: 767px) {
-      .section-landing .brand-logo-outline {
+      #Home .brand-logo-outline {
         width: 120%;
         top: 65vh;
         right: -30%; } }
@@ -676,12 +740,23 @@ h1 {
 .section-projects {
   background-color: #536EC4; }
 
-.Page {
-  overflow-x: hidden; }
-
-#Home {
-  position: relative;
-  width: 100%; }
+#Services {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+  #Services .service-name-list {
+    list-style: none;
+    padding: 0; }
+    #Services .service-name-list li {
+      font-size: 1.6rem;
+      line-height: 3.2rem;
+      color: #536EC4;
+      cursor: pointer; }
+  #Services .service-description {
+    padding-top: 0.7rem; }
 
 
 /*# sourceMappingURL=bundle.css.map*/

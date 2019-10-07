@@ -1,5 +1,30 @@
 {
   "services": [
-    
+    { "name": "Content Strategy",
+      "description": [
+        
+      ]
+    },
+    { "name": "Brand Identity",
+      "description": [
+        "It’s a lot more than just a pretty logo. We believe in the importance of first impressions. Better brands mean better business.",
+        "We create fresh, full brand packages for a more cohesive identity. Perhaps your brand just needs an update: we promise every addition we make will strengthen brand’s story."
+      ]
+    },
+    { "name": "UX & UI Design",
+      "description": [
+        
+      ]
+    },
+    { "name": "Web Development",
+      "description": [
+        
+      ]
+    },
+    { "name": "Marketing",
+      "description": [
+        
+      ]
+    }
   ]
 }
