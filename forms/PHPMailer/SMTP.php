@@ -316,7 +316,7 @@ class SMTP
         $errstr = '';
         if ($streamok) {
             $socket_context = stream_context_create($options);
-            seterror_handler([$this, 'errorHandler']);
+            set_error_handler([$this, 'errorHandler']);
             $this->smtp_conn = stream_socket_client(
                 $host . ':' . $port,
                 $errno,
@@ -325,14 +325,14 @@ class SMTP
                 STREAM_CLIENT_CONNECT,
                 $socket_context
             );
-            restoreerror_handler();
+            restore_error_handler();
         } else {
             //Fall back to fsockopen which should work in more places, but is missing some features
             $this->edebug(
                 'Connection: stream_socket_client not available, falling back to fsockopen',
                 self::DEBUG_CONNECTION
             );
-            seterror_handler([$this, 'errorHandler']);
+            set_error_handler([$this, 'errorHandler']);
             $this->smtp_conn = fsockopen(
                 $host,
                 $port,
@@ -340,7 +340,7 @@ class SMTP
                 $errstr,
                 $timeout
             );
-            restoreerror_handler();
+            restore_error_handler();
         }
         // Verify we connected properly
         if (!is_resource($this->smtp_conn)) {
@@ -398,13 +398,13 @@ class SMTP
         }
 
         // Begin encrypted connection
-        seterror_handler([$this, 'errorHandler']);
+        set_error_handler([$this, 'errorHandler']);
         $crypto_ok = stream_socket_enable_crypto(
             $this->smtp_conn,
             true,
             $crypto_method
         );
-        restoreerror_handler();
+        restore_error_handler();
 
         return (bool) $crypto_ok;
     }
@@ -827,18 +827,18 @@ class SMTP
 
     /**
      * Send an SMTP QUIT command.
-     * Closes the socket if there is no error or the $close_onerror argument is true.
+     * Closes the socket if there is no error or the $close_on_error argument is true.
      * Implements from RFC 821: QUIT <CRLF>.
      *
-     * @param bool $close_onerror Should the connection close if an error occurs?
+     * @param bool $close_on_error Should the connection close if an error occurs?
      *
      * @return bool
      */
-    public function quit($close_onerror = true)
+    public function quit($close_on_error = true)
     {
         $noerror = $this->sendCommand('QUIT', 'QUIT', 221);
         $err = $this->error; //Save any error
-        if ($noerror or $close_onerror) {
+        if ($noerror or $close_on_error) {
             $this->close();
             $this->error = $err; //Restore any error from the quit command
         }
@@ -1041,9 +1041,9 @@ class SMTP
         } else {
             $this->edebug('CLIENT -> SERVER: ' . $data, self::DEBUG_CLIENT);
         }
-        seterror_handler([$this, 'errorHandler']);
+        set_error_handler([$this, 'errorHandler']);
         $result = fwrite($this->smtp_conn, $data);
-        restoreerror_handler();
+        restore_error_handler();
 
         return $result;
     }

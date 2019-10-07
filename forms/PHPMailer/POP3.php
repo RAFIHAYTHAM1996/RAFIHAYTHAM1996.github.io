@@ -223,7 +223,7 @@ class POP3
 
         //On Windows this will raise a PHP Warning error if the hostname doesn't exist.
         //Rather than suppress it with @fsockopen, capture it cleanly instead
-        seterror_handler([$this, 'catchWarning']);
+        set_error_handler([$this, 'catchWarning']);
 
         if (false === $port) {
             $port = static::DEFAULT_PORT;
@@ -238,7 +238,7 @@ class POP3
             $tval
         ); //  Timeout (seconds)
         //  Restore the error handler
-        restoreerror_handler();
+        restore_error_handler();
 
         //  Did we connect?
         if (false === $this->pop_conn) {

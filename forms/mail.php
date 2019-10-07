@@ -11,12 +11,11 @@
   require './PHPMailer/PHPMailer.php';
   require './PHPMailer/SMTP.php';
 
-  $protocol = "http";
-  $host = "metalsalloyscentre.com";
-  $recipient = "test@" . $host;
+  $host = "hospall.com";
+  $recipient = "info@" . $host;
 
-  $SMTP_HOST = 'mail.' . $host;
-  $SMTP_PORT = 465;
+  $SMTP_HOST = 'relay-hosting.secureserver.net';
+  $SMTP_PORT = 25;
   
   if ($_SERVER['REQUEST_METHOD'] !== 'POST' && !$DEBUG) {
     header('Location: ' . getFullURLFromHost($host));
@@ -26,10 +25,12 @@
     
     $data->name = check_input($data->fname) . ' ' . check_input($data->lname);
     $data->email = urldecode(check_input($data->email));
+    $data->preferredcontact = check_input($data->preferredcontact);
+    $data->postalcode = check_input($data->postalcode);
     $data->phone = check_input($data->phone);
-    $data->message = check_input($data->message);
     $email_to = $recipient;
     $email_subject = "Contact Form";
+    $data->message = check_input($data->message);
 
     $email_title = "Hello, I'm " . $data->name . ".";
 
@@ -59,8 +60,7 @@
       $mail->SMTPAuth   = false;
 
       //Recipients
-      $mail->setFrom('rafi_haytham@yahoo.com', $data->name);
-      // $mail->setFrom('forms@' . $host, $data->name);
+      $mail->setFrom('forms@' . $host, $data->name);
       $mail->addAddress($recipient, $data->name);                 // Add a recipient
       $mail->addReplyTo($data->email, $data->name);
 
@@ -100,67 +100,70 @@
   function getFullURLFromHost($host) {
     $h = $host;
     if (!preg_match('/https?:\/\//', $host)) {
-      $h = $protocol . "://www." . $host;
+      $h = "https://www." . $host;
     }
     return $h;
   }
 
   function create_email($data, $email_title) {
-    $html =
-      '<html><head>'
-        . '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">'
-        . '</head><body><center>'
-        . '<div style="display: none; max-height: 0px; overflow: hidden;">'
-          . $data->message
-        . '</div>'
-        . '<style>'
-          . 'h4 { font-weight: normal; margin: 0; color:#b13643 !important; }'
-          . 'tr { width: 450px; }'
-          . 'td { padding: 0; }'
-          . 'p { line-height: 1.5; }'
-        . '</style>'
-        . '<div style="display: none; max-height: 0px; overflow: hidden;">'
-          . '&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;'
-        . '</div>'
-        . '<table cellpadding="0" cellspacing="0" width="auto" style="width: 100%; max-width: 550px; min-width: 400px; min-height: 550px; background-color: #F9F9F9; color: #444; font-size: 13px; font-family: \'Trebuchet MS\', Helvetica, sans-serif; text-align: justify; text-justify: inter-word; padding: 50px;">'
-        . '<tr>'
-          . '<td colspan="2" style="padding-bottom: 10px; border-bottom: 1px solid #DDD; color: #b13643; display: table-cell; font-size: 20px; height: 25px;">'
-            . $email_title
-          . '</td>'
-        . '</tr>'
-        // Email
-        . '<tr>'
-          . '<td>'
-            . '<h4>E-mail</h4>'
-            . '<p>'
-              . '<a style="color:#444; text-decoration: none;" href="mailto:' . $data->email . '">' . $data->email . '</a>'
-            . '</p>'
-          . '</td>';
+    return '<html><head>'
+          . '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">'
+          . '</head><body><center>'
+          . '<div style="display: none; max-height: 0px; overflow: hidden;">'
+            . $data->message
+          . '</div>'
+          . '<style>'
+            . 'h4 { font-weight: normal; margin: 0; color:#4473b3 !important; }'
+            . 'tr { width: 450px; }'
+            . 'td { padding: 0; }'
+            . 'p { line-height: 1.5; }'
+          . '</style>'
+          . '<div style="display: none; max-height: 0px; overflow: hidden;">'
+            . '&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;'
+          . '</div>'
+          . '<table cellpadding="0" cellspacing="0" width="auto" style="width: 100%; max-width: 550px; min-width: 400px; min-height: 550px; background-color: #F9F9F9; color: #444; font-size: 13px; font-family: \'Trebuchet MS\', Helvetica, sans-serif; text-align: justify; text-justify: inter-word; padding: 50px;">'
+          . '<tr>'
+            . '<td colspan="2" style="padding-bottom: 10px; border-bottom: 1px solid #DDD; color: #4473b3; display: table-cell; font-size: 20px; height: 25px;">'
+              . $email_title
+            . '</td>'
+          . '</tr>'
+          // Email, Phone
+          . '<tr>'
+            . '<td>'
+              . '<h4>E-mail</h4>'
+              . '<p>'
+                . '<a style="color:#444; text-decoration: none;" href="mailto:' . $data->email . '">' . $data->email . '</a>'
+              . '</p>'
+            . '</td>'
+            . '<td>'
+              . '<h4>Phone</h4>'
+              . '<p>'
+                . '<a style="color:#444; text-decoration: none;" href="tel:' . $data->phone . '">' . $data->phone . '</a>'
+              . '</p>'
+            . '</td>'
+          . '</tr>'
 
-    if ($data->phone != "") {
-      $html = $html .
-        // Phone
-        '<td>'
-          . '<h4>Phone</h4>'
-          . '<p>'
-            . '<a style="color:#444; text-decoration: none;" href="tel:' . $data->phone . '">' . $data->phone . '</a>'
-          . '</p>'
-        . '</td>';
-    }
+          // Preferred Contact, Postal Code
+          . '<tr>'
+            . '<td>'
+              . '<h4>Preferred Contact</h4>'
+              . '<p>' . $data->preferredcontact . '</p>'
+            . '</td>'
+            . '<td>'
+              . '<h4>Postal Code</h4>'
+              . '<p>' . $data->postalcode . '</p>'
+            . '</td>'
+          . '</tr>'
 
-    $html = $html .
-    '</tr>'
-        // Message
-        . '<tr>'
-          . '<td colspan="2">'
-            . '<h4>Message</h4>'
-            . '<p>' . $data->message . '</p>'
-            . '<br/>'
-          . '</td>'
-        . '</tr>'
-      . '</table>'
-    . '</center></body></html>';
-
-    return $html;
+          // Message
+          . '<tr>'
+            . '<td colspan="2">'
+              . '<h4>Message</h4>'
+              . '<p>' . $data->message . '</p>'
+              . '<br/>'
+             . '</td>'
+          . '</tr>'
+         . '</table>'
+       . '</center></body></html>';
   }
 ?>
