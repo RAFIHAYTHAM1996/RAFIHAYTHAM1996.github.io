@@ -1410,7 +1410,7 @@ class PHPMailer
                 or (version_compare(PHP_VERSION, '7.1.0', '>=')
                     and version_compare(PHP_VERSION, '7.1.3', '<')))
         ) {
-            trigger_error(
+            triggererror(
                 'Your version of PHP is affected by a bug that may result in corrupted messages.' .
                 ' To fix it, switch to sending using SMTP, disable the mail.add_x_header option in' .
                 ' your php.ini, switch to MacOS or Linux, or upgrade your PHP to version 7.0.17+ or 7.1.3+.',
@@ -2059,7 +2059,7 @@ class PHPMailer
             'recipients_failed' => 'SMTP Error: The following recipients failed: ',
             'signing' => 'Signing Error: ',
             'smtp_connect_failed' => 'SMTP connect() failed.',
-            'smtp_error' => 'SMTP server error: ',
+            'smtperror' => 'SMTP server error: ',
             'variable_set' => 'Cannot set or reset variable: ',
             'extension_missing' => 'Extension missing: ',
         ];
@@ -2701,7 +2701,7 @@ class PHPMailer
                     $body = $parts[1];
                 } else {
                     fclose($signed);
-                    throw new Exception($this->lang('signing') . openssl_error_string());
+                    throw new Exception($this->lang('signing') . opensslerror_string());
                 }
             } catch (Exception $exc) {
                 $body = '';
@@ -3586,7 +3586,7 @@ class PHPMailer
         if ('smtp' == $this->Mailer and null !== $this->smtp) {
             $lasterror = $this->smtp->getError();
             if (!empty($lasterror['error'])) {
-                $msg .= $this->lang('smtp_error') . $lasterror['error'];
+                $msg .= $this->lang('smtperror') . $lasterror['error'];
                 if (!empty($lasterror['detail'])) {
                     $msg .= ' Detail: ' . $lasterror['detail'];
                 }
