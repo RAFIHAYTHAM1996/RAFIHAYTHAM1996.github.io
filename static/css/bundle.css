@@ -423,6 +423,8 @@ p {
   font-size: 1.3rem;
   color: #798293;
   margin-bottom: 1.5rem; }
+  p.primary {
+    color: #536EC4; }
 
 h1 {
   font-size: 3.125rem;
@@ -466,45 +468,46 @@ h1 {
   position: relative;
   width: 100%;
   margin-top: 25px;
-  border-radius: 5px;
-  border: 1px solid #c5ceeb;
+  border-bottom: 1px solid #FFFFFF;
   transition: all 0.25s ease-in-out;
   margin-bottom: 20px; }
   .FormInput:hover, .FormInput.focused, .FormInput.error {
-    border-color: #536EC4; }
+    border-color: gray; }
   .FormInput.error label {
-    font-weight: bold; }
+    color: #ff3333; }
   .FormInput ::-webkit-input-placeholder {
     font-style: italic;
     font-size: 1rem;
-    color: #ced1d7; }
+    color: white; }
   .FormInput :-moz-placeholder {
     font-style: italic;
     font-size: 1rem;
-    color: #ced1d7; }
+    color: white; }
   .FormInput ::-moz-placeholder {
     font-style: italic;
     font-size: 1rem;
-    color: #ced1d7; }
+    color: white; }
   .FormInput :-ms-input-placeholder {
     font-style: italic;
     font-size: 1rem;
-    color: #ced1d7; }
+    color: white; }
   .FormInput label {
     position: absolute;
     cursor: pointer;
     width: 80%;
     top: -30px;
     left: 0px;
-    font-size: 1rem;
-    color: #536EC4;
+    font-size: 1.2rem;
+    color: #FFFFFF;
     margin-bottom: 0;
     font-weight: 500; }
   .FormInput .error {
     transform: translateY(40px);
     position: absolute;
     left: 0;
-    color: #2F2F2F; }
+    color: #ff3333;
+    font-weight: 500;
+    font-size: 1.2rem; }
     @media only screen and (max-width: 575px) {
       .FormInput .error {
         transform: translateY(45px); } }
@@ -512,7 +515,7 @@ h1 {
 .TextField {
   cursor: pointer; }
   .TextField .secondaryTitle {
-    color: #536EC4;
+    color: #FFFFFF;
     padding: 10px;
     margin: 0;
     line-height: 1rem; }
@@ -520,8 +523,8 @@ h1 {
     width: 100%;
     border: none;
     background: none;
-    padding: 10px;
-    color: #536EC4; }
+    padding: 10px 10px 10px 0;
+    color: #FFFFFF; }
     .TextField input[type="file"] {
       opacity: 0;
       position: absolute; }
@@ -563,7 +566,7 @@ h1 {
   resize: vertical;
   overflow: auto;
   background-color: transparent;
-  color: #536EC4;
+  color: #FFFFFF;
   line-height: 1.8rem; }
   .TextArea textarea:focus {
     outline: none; }
@@ -715,6 +718,24 @@ h1 {
   align-content: center;
   align-items: center;
   background-color: #2F2F2F; }
+  #Contact .progress-indicator {
+    display: block;
+    text-align: right; }
+  #Contact .inline-button {
+    background: none;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    font-size: 1.2rem;
+    color: #536EC4; }
+    #Contact .inline-button#back {
+      color: #344b97; }
+    #Contact .inline-button:focus, #Contact .inline-button:active {
+      outline: none; }
+    #Contact .inline-button:focus#back, #Contact .inline-button:active#back, #Contact .inline-button:hover#back {
+      color: #536EC4; }
 
 #Home {
   position: relative;
@@ -736,9 +757,6 @@ h1 {
         width: 120%;
         top: 65vh;
         right: -30%; } }
-
-.section-projects {
-  background-color: #536EC4; }
 
 #Services {
   width: 100%;
