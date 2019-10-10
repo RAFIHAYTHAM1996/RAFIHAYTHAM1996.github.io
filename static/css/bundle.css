@@ -317,7 +317,7 @@ template {
  */
 @font-face {
   font-family: 'overpass';
-  src: url("/static/fonts/generated/overpass/overpass-regular.otf") format("otf");
+  src: url("/static/fonts/overpass/overpass-regular.otf");
   font-weight: normal;
   font-style: normal; }
 
@@ -326,7 +326,7 @@ template {
 
 @font-face {
   font-family: 'overpass-bold';
-  src: url("/static/fonts/generated/overpass/overpass-bold.otf") format("otf");
+  src: url("/static/fonts/overpass/overpass-bold.otf");
   font-style: normal; }
 
 .OverpassBold, h1, .Navigation a, #Services .service-name-list li:hover, #Services .service-name-list li.selected {
@@ -442,6 +442,21 @@ h1 {
       left: 15px; } }
   .Brand.primary svg path {
     fill: #536EC4; }
+
+.BrandOutline {
+  display: block;
+  position: absolute;
+  width: 80%;
+  top: 50vh;
+  right: -3%; }
+  @media only screen and (max-width: 991px) {
+    .BrandOutline {
+      top: 60vh; } }
+  @media only screen and (max-width: 767px) {
+    .BrandOutline {
+      width: 120%;
+      top: 65vh;
+      right: -30%; } }
 
 .FormInput {
   display: inline-block;
@@ -745,20 +760,6 @@ h1 {
   padding-top: calc(85px + 50px);
   background-color: #536EC4;
   min-height: 100vh; }
-  #Home .brand-logo-outline {
-    display: block;
-    position: absolute;
-    width: 80%;
-    top: 50vh;
-    right: -3%; }
-    @media only screen and (max-width: 991px) {
-      #Home .brand-logo-outline {
-        top: 60vh; } }
-    @media only screen and (max-width: 767px) {
-      #Home .brand-logo-outline {
-        width: 120%;
-        top: 65vh;
-        right: -30%; } }
 
 #Services {
   width: 100%;
