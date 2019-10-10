@@ -120,7 +120,7 @@
         . '<div style="display: none; max-height: 0px; overflow: hidden;">'
           . '&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;'
         . '</div>'
-        . '<table cellpadding="0" cellspacing="0" width="auto" style="width: 100%; max-width: 550px; min-width: 400px; min-height: 550px; background-color: #536EC4; color: #FFFFFF; font-size: 13px; font-family: \'Trebuchet MS\', Helvetica, sans-serif; text-align: justify; text-justify: inter-word; padding: 50px;">'
+        . '<table cellpadding="0" cellspacing="0" width="auto" style="width: 100%; max-width: 550px; min-width: 400px; min-height: 550px; background-color: #536EC4; color: #FFFFFF; font-size: 13px; font-family: \'Trebuchet MS\', Helvetica, sans-serif; padding: 50px;">'
         . '<tr>'
           . '<td colspan="2" style="padding-bottom: 10px; border-bottom: 1px solid #DDD; color: #FFFFFF; display: table-cell; font-size: 20px; height: 25px;">'
             . $email_title

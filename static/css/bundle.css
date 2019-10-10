@@ -316,40 +316,21 @@ template {
  * ====================================================================
  */
 @font-face {
-  font-family: 'lato';
-  src: url("/static/fonts/generated/lato-regular.woff2") format("woff2"), url("/static/fonts/generated/lato-regular.woff") format("woff"), url("/static/fonts/generated/lato-regular.ttf") format("truetype");
+  font-family: 'overpass';
+  src: url("/static/fonts/generated/overpass/overpass-regular.otf") format("otf");
   font-weight: normal;
   font-style: normal; }
 
-.Lato, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, #Menu a.mainlink, #Services .service-name-list li {
-  font-family: 'lato'; }
+.Overpass, body, html, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, #Menu a.mainlink, #Services .service-name-list li {
+  font-family: 'overpass'; }
 
 @font-face {
-  font-family: 'lato-bold';
-  src: url("/static/fonts/generated/lato-bold.woff2") format("woff2"), url("/static/fonts/generated/lato-bold.woff") format("woff"), url("/static/fonts/generated/lato-bold.ttf") format("truetype");
+  font-family: 'overpass-bold';
+  src: url("/static/fonts/generated/overpass/overpass-bold.otf") format("otf");
   font-style: normal; }
 
-.LatoBold, h1, .Navigation a, #Services .service-name-list li:hover, #Services .service-name-list li.selected {
-  font-family: 'lato-bold'; }
-
-@font-face {
-  font-family: 'charter';
-  src: url("/static/fonts/generated/charter-roman.woff2") format("woff2"), url("/static/fonts/generated/charter-roman.woff") format("woff"), url("/static/fonts/generated/charter-roman.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'charter';
-  src: url("/static/fonts/generated/charter-bold.woff2") format("woff2"), url("/static/fonts/generated/charter-bold.woff") format("woff"), url("/static/fonts/generated/charter-bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
-
-.Charter {
-  font-family: 'charter'; }
-
-.Charter-Bold {
-  font-family: 'charter';
-  font-weight: bold; }
+.OverpassBold, h1, .Navigation a, #Services .service-name-list li:hover, #Services .service-name-list li.selected {
+  font-family: 'overpass-bold'; }
 
 /*
  * ====================================================================
@@ -381,24 +362,23 @@ template {
   scrollbar-track-color: transparent; }
 
 body, html {
-  font-family: Helvetica, Arial, sans-serif;
   width: 100%;
   min-height: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #FFFFFF; }
   @media only screen and (max-width: 991px) {
     body, html {
-      font-size: 14px; } }
+      font-size: 16px; } }
   @media only screen and (max-width: 767px) {
     body, html {
-      font-size: 12px; } }
+      font-size: 14px; } }
   @media only screen and (max-width: 575px) {
     body, html {
-      font-size: 12px; } }
+      font-size: 14px; } }
 
 .absolute-center {
   position: absolute;
@@ -736,6 +716,28 @@ h1 {
       outline: none; }
     #Contact .inline-button:focus#back, #Contact .inline-button:active#back, #Contact .inline-button:hover#back {
       color: #536EC4; }
+    #Contact .inline-button:hover .ArrowRightSVG svg path:nth-child(1) {
+      animation: ArrowRightSVG-anim 1s linear 0s infinite; }
+    #Contact .inline-button .ArrowRightSVG {
+      margin-left: 20px; }
+      @media only screen and (max-width: 767px) {
+        #Contact .inline-button .ArrowRightSVG svg {
+          max-width: 40px; } }
+      #Contact .inline-button .ArrowRightSVG svg path {
+        stroke-dasharray: 78;
+        stroke-dashoffset: 0; }
+
+@keyframes ArrowRightSVG-anim {
+  0% {
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dashoffset: -78; }
+  75% {
+    stroke-dashoffset: -78; }
+  100% {
+    stroke-dashoffset: -156; } }
+  #Contact .review p {
+    color: #FFFFFF; }
 
 #Home {
   position: relative;
