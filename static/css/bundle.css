@@ -319,7 +319,8 @@ template {
   font-family: 'overpass';
   src: url("/static/fonts/overpass/overpass-regular.otf");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: fallback; }
 
 .Overpass, body, html, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, #Menu a.mainlink, #Services .service-name-list li {
   font-family: 'overpass'; }
@@ -327,7 +328,8 @@ template {
 @font-face {
   font-family: 'overpass-bold';
   src: url("/static/fonts/overpass/overpass-bold.otf");
-  font-style: normal; }
+  font-style: normal;
+  font-display: fallback; }
 
 .OverpassBold, h1, .Navigation a {
   font-family: 'overpass-bold'; }
@@ -447,6 +449,30 @@ h1 {
   .Brand.primary svg path {
     fill: #536EC4; }
 
+.BrandA {
+  display: inline-block; }
+  .BrandA.size-xs {
+    height: 20px;
+    width: 20px; }
+  .BrandA.size-sm {
+    height: 25px;
+    width: 25px; }
+  .BrandA.size-md {
+    height: 60px;
+    width: 60px; }
+  .BrandA.size-lg {
+    height: 80px;
+    width: 80px; }
+  .BrandA.size-xl {
+    height: 100px;
+    width: 100px; }
+  .BrandA.primary svg path {
+    fill: #536EC4; }
+  .BrandA.primaryLight svg path {
+    fill: #FFFFFF; }
+  .BrandA.secondary svg path {
+    fill: #2F2F2F; }
+
 .BrandOutline {
   display: block;
   position: absolute;
@@ -461,6 +487,20 @@ h1 {
       width: 120%;
       top: 65vh;
       right: -30%; } }
+  .BrandOutline svg path {
+    stroke-dasharray: 670;
+    stroke-dashoffset: 670;
+    opacity: 0; }
+
+.Brand-Pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  opacity: 0.08;
+  pointer-events: none; }
+  .Brand-Pattern .BrandA {
+    margin: 20px 40px; }
 
 .FormInput {
   display: inline-block;
@@ -506,7 +546,7 @@ h1 {
     left: 0;
     color: #ff3333;
     font-weight: 500;
-    font-size: 1.2rem; }
+    font-size: 1rem; }
     @media only screen and (max-width: 575px) {
       .FormInput .error {
         transform: translateY(45px); } }
@@ -721,11 +761,17 @@ h1 {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-content: center;
-  align-items: center; }
+  align-content: center; }
+  @media only screen and (min-width: 575px) {
+    #Contact {
+      align-items: center; } }
+  @media only screen and (max-width: 575px) {
+    #Contact {
+      padding-top: 10vh; } }
   #Contact .progress-indicator {
     display: block;
-    text-align: right; }
+    text-align: right;
+    font-size: 1rem; }
   #Contact .inline-button {
     background: none;
     border: none;
@@ -735,12 +781,12 @@ h1 {
     transition: 0.3s all ease-in-out;
     font-size: 1.2rem;
     color: #2F2F2F; }
-    #Contact .inline-button#back {
-      color: #090909; }
     #Contact .inline-button:focus, #Contact .inline-button:active {
       outline: none; }
-    #Contact .inline-button:focus#back, #Contact .inline-button:active#back, #Contact .inline-button:hover#back {
-      color: #2F2F2F; }
+    #Contact .inline-button:focus, #Contact .inline-button:active, #Contact .inline-button:hover {
+      color: #6a84d4; }
+      #Contact .inline-button:focus .ArrowRightSVG svg path, #Contact .inline-button:active .ArrowRightSVG svg path, #Contact .inline-button:hover .ArrowRightSVG svg path {
+        stroke: #536EC4; }
     #Contact .inline-button:hover .ArrowRightSVG svg path:nth-child(1) {
       animation: ArrowRightSVG-anim 1s linear 0s infinite; }
     #Contact .inline-button .ArrowRightSVG {
@@ -776,8 +822,13 @@ h1 {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-content: center;
-  align-items: center; }
+  align-content: center; }
+  @media only screen and (min-width: 575px) {
+    #Services {
+      align-items: center; } }
+  @media only screen and (max-width: 575px) {
+    #Services {
+      padding-top: 10vh; } }
   #Services .service-name-list {
     list-style: none;
     padding: 0; }
@@ -785,7 +836,8 @@ h1 {
       font-size: 1.6rem;
       line-height: 3.2rem;
       color: #6a84d4;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all .2s ease-in-out; }
       #Services .service-name-list li:hover, #Services .service-name-list li.selected {
         color: #2F2F2F; }
   #Services .service-description {
