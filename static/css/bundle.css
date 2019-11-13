@@ -322,7 +322,7 @@ template {
   font-style: normal;
   font-display: fallback; }
 
-.Overpass, body, html, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, #Menu a.mainlink, #Services .service-name-list li {
+.Overpass, body, html, .FormInput label, .FormInput .error, .TextField .secondaryTitle, .TextField input, .TextArea textarea, #Menu a.mainlink {
   font-family: 'overpass'; }
 
 @font-face {
@@ -331,7 +331,7 @@ template {
   font-style: normal;
   font-display: fallback; }
 
-.OverpassBold, h1, .Navigation a {
+.OverpassBold, h1, .Navigation a, #Services .service-name-list li {
   font-family: 'overpass-bold'; }
 
 /*
@@ -414,7 +414,7 @@ h1 {
   font-size: 3.125rem;
   color: #FFFFFF; }
   h1.primary {
-    color: #6a84d4; }
+    color: #546FCF; }
   h1.dark {
     color: #2F2F2F; }
 
@@ -637,7 +637,7 @@ h1 {
       color: #536EC4; }
       @media only screen and (min-width: 767px) {
         #Menu.solidStyle a.mainlink.active, #Menu.solidStyle a.mainlink:hover {
-          border-color: #6a84d4; } }
+          border-color: #546FCF; } }
     #Menu.solidStyle #collapsedLogo-container #collapsedLogo {
       filter: brightness(1) saturate(1); }
   #Menu .sublinks {
@@ -665,7 +665,7 @@ h1 {
         height: 0;
         line-height: 0;
         padding: 5vh 0 5vh 10px;
-        color: #6a84d4;
+        color: #546FCF;
         font-size: 2rem; } }
   #Menu a.sublink {
     color: #626262;
@@ -737,7 +737,7 @@ h1 {
     background-repeat: repeat-x;
     background-size: 4px 2px;
     color: #536EC4; }
-    .Navigation.primary a:hover {
+    .Navigation.primary a:hover, .Navigation.primary a:focus {
       color: #FFFFFF; }
   .Navigation a {
     text-decoration: none;
@@ -749,9 +749,10 @@ h1 {
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 4px 2px; }
-    .Navigation a:hover {
+    .Navigation a:hover, .Navigation a:focus {
       background-size: 4px 50px;
-      color: #536EC4; }
+      color: #536EC4;
+      outline: none; }
 
 .Page {
   overflow-x: hidden; }
@@ -784,7 +785,7 @@ h1 {
     #Contact .inline-button:focus, #Contact .inline-button:active {
       outline: none; }
     #Contact .inline-button:focus, #Contact .inline-button:active, #Contact .inline-button:hover {
-      color: #6a84d4; }
+      color: #546FCF; }
       #Contact .inline-button:focus .ArrowRightSVG svg path, #Contact .inline-button:active .ArrowRightSVG svg path, #Contact .inline-button:hover .ArrowRightSVG svg path {
         stroke: #536EC4; }
     #Contact .inline-button:hover .ArrowRightSVG svg path:nth-child(1) {
@@ -835,11 +836,12 @@ h1 {
     #Services .service-name-list li {
       font-size: 1.6rem;
       line-height: 3.2rem;
-      color: #6a84d4;
+      color: #546FCF;
       cursor: pointer;
       transition: all .2s ease-in-out; }
-      #Services .service-name-list li:hover, #Services .service-name-list li.selected {
-        color: #2F2F2F; }
+      #Services .service-name-list li:hover, #Services .service-name-list li:focus, #Services .service-name-list li.selected {
+        color: #2F2F2F;
+        outline: none; }
   #Services .service-description {
     padding-top: 0.7rem; }
     #Services .service-description p {
