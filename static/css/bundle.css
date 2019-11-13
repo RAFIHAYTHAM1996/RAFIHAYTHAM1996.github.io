@@ -329,7 +329,7 @@ template {
   src: url("/static/fonts/overpass/overpass-bold.otf");
   font-style: normal; }
 
-.OverpassBold, h1, .Navigation a, #Services .service-name-list li:hover, #Services .service-name-list li.selected {
+.OverpassBold, h1, .Navigation a {
   font-family: 'overpass-bold'; }
 
 /*
@@ -401,16 +401,20 @@ body, html {
 
 p {
   font-size: 1.3rem;
-  color: #798293;
+  color: #FFFFFF;
   margin-bottom: 1.5rem; }
   p.primary {
     color: #536EC4; }
+  p.dark {
+    color: #2F2F2F; }
 
 h1 {
   font-size: 3.125rem;
   color: #FFFFFF; }
   h1.primary {
-    color: #536EC4; }
+    color: #6a84d4; }
+  h1.dark {
+    color: #2F2F2F; }
 
 .disable-selection {
   -moz-user-select: none;
@@ -463,29 +467,29 @@ h1 {
   position: relative;
   width: 100%;
   margin-top: 25px;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #2F2F2F;
   transition: all 0.25s ease-in-out;
   margin-bottom: 20px; }
   .FormInput:hover, .FormInput.focused, .FormInput.error {
-    border-color: gray; }
+    border-color: #afafaf; }
   .FormInput.error label {
     color: #ff3333; }
   .FormInput ::-webkit-input-placeholder {
     font-style: italic;
     font-size: 1rem;
-    color: white; }
+    color: #7c7c7c; }
   .FormInput :-moz-placeholder {
     font-style: italic;
     font-size: 1rem;
-    color: white; }
+    color: #7c7c7c; }
   .FormInput ::-moz-placeholder {
     font-style: italic;
     font-size: 1rem;
-    color: white; }
+    color: #7c7c7c; }
   .FormInput :-ms-input-placeholder {
     font-style: italic;
     font-size: 1rem;
-    color: white; }
+    color: #7c7c7c; }
   .FormInput label {
     position: absolute;
     cursor: pointer;
@@ -493,7 +497,7 @@ h1 {
     top: -30px;
     left: 0px;
     font-size: 1.2rem;
-    color: #FFFFFF;
+    color: #2F2F2F;
     margin-bottom: 0;
     font-weight: 500; }
   .FormInput .error {
@@ -518,8 +522,7 @@ h1 {
     width: 100%;
     border: none;
     background: none;
-    padding: 10px 10px 10px 0;
-    color: #FFFFFF; }
+    padding: 10px 10px 10px 0; }
     .TextField input[type="file"] {
       opacity: 0;
       position: absolute; }
@@ -561,7 +564,6 @@ h1 {
   resize: vertical;
   overflow: auto;
   background-color: transparent;
-  color: #FFFFFF;
   line-height: 1.8rem; }
   .TextArea textarea:focus {
     outline: none; }
@@ -595,7 +597,7 @@ h1 {
       color: #536EC4; }
       @media only screen and (min-width: 767px) {
         #Menu.solidStyle a.mainlink.active, #Menu.solidStyle a.mainlink:hover {
-          border-color: #536EC4; } }
+          border-color: #6a84d4; } }
     #Menu.solidStyle #collapsedLogo-container #collapsedLogo {
       filter: brightness(1) saturate(1); }
   #Menu .sublinks {
@@ -623,10 +625,10 @@ h1 {
         height: 0;
         line-height: 0;
         padding: 5vh 0 5vh 10px;
-        color: #536EC4;
+        color: #6a84d4;
         font-size: 2rem; } }
   #Menu a.sublink {
-    color: #b1b7c1;
+    color: #626262;
     display: block;
     margin-bottom: 10px;
     font-size: 1.2rem; }
@@ -690,17 +692,26 @@ h1 {
       bottom: 15px;
       left: 15px; } }
   .Navigation.primary a {
+    background: linear-gradient(to bottom, #536EC4 0%, #536EC4 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 2px;
     color: #536EC4; }
     .Navigation.primary a:hover {
-      -webkit-text-stroke: 1px #536EC4; }
+      color: #FFFFFF; }
   .Navigation a {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 1.6rem;
-    transition: 0.2s all ease-in-out; }
+    transition: 0.2s all ease-out;
+    padding: 0 10px;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 2px; }
     .Navigation a:hover {
-      -webkit-text-stroke: 1px #FFFFFF;
-      color: transparent; }
+      background-size: 4px 50px;
+      color: #536EC4; }
 
 .Page {
   overflow-x: hidden; }
@@ -711,8 +722,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-content: center;
-  align-items: center;
-  background-color: #2F2F2F; }
+  align-items: center; }
   #Contact .progress-indicator {
     display: block;
     text-align: right; }
@@ -724,13 +734,13 @@ h1 {
     cursor: pointer;
     transition: 0.3s all ease-in-out;
     font-size: 1.2rem;
-    color: #536EC4; }
+    color: #2F2F2F; }
     #Contact .inline-button#back {
-      color: #344b97; }
+      color: #090909; }
     #Contact .inline-button:focus, #Contact .inline-button:active {
       outline: none; }
     #Contact .inline-button:focus#back, #Contact .inline-button:active#back, #Contact .inline-button:hover#back {
-      color: #536EC4; }
+      color: #2F2F2F; }
     #Contact .inline-button:hover .ArrowRightSVG svg path:nth-child(1) {
       animation: ArrowRightSVG-anim 1s linear 0s infinite; }
     #Contact .inline-button .ArrowRightSVG {
@@ -752,7 +762,7 @@ h1 {
   100% {
     stroke-dashoffset: -156; } }
   #Contact .review p {
-    color: #FFFFFF; }
+    color: #2F2F2F; }
 
 #Home {
   position: relative;
@@ -774,10 +784,14 @@ h1 {
     #Services .service-name-list li {
       font-size: 1.6rem;
       line-height: 3.2rem;
-      color: #536EC4;
+      color: #6a84d4;
       cursor: pointer; }
+      #Services .service-name-list li:hover, #Services .service-name-list li.selected {
+        color: #2F2F2F; }
   #Services .service-description {
     padding-top: 0.7rem; }
+    #Services .service-description p {
+      color: #2F2F2F; }
 
 
 /*# sourceMappingURL=bundle.css.map*/
