@@ -562,7 +562,8 @@ h1 {
     width: 100%;
     border: none;
     background: none;
-    padding: 10px 10px 10px 0; }
+    padding: 10px 10px 10px 0;
+    font-size: 1.2rem; }
     .TextField input[type="file"] {
       opacity: 0;
       position: absolute; }
@@ -604,7 +605,8 @@ h1 {
   resize: vertical;
   overflow: auto;
   background-color: transparent;
-  line-height: 1.8rem; }
+  line-height: 1.8rem;
+  font-size: 1.2rem; }
   .TextArea textarea:focus {
     outline: none; }
 
