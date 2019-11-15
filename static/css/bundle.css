@@ -788,7 +788,7 @@ h1 {
       color: #546FCF; }
       #Contact .inline-button:focus .ArrowRightSVG svg path, #Contact .inline-button:active .ArrowRightSVG svg path, #Contact .inline-button:hover .ArrowRightSVG svg path {
         stroke: #536EC4; }
-    #Contact .inline-button:hover .ArrowRightSVG svg path:nth-child(1) {
+    .desktop #Contact .inline-button:hover .ArrowRightSVG svg path:nth-child(1) {
       animation: ArrowRightSVG-anim 1s linear 0s infinite; }
     #Contact .inline-button .ArrowRightSVG {
       margin-left: 20px; }
