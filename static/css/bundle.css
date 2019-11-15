@@ -794,7 +794,7 @@ h1 {
       margin-left: 20px; }
       @media only screen and (max-width: 767px) {
         #Contact .inline-button .ArrowRightSVG svg {
-          max-width: 40px; } }
+          max-width: 45px; } }
       #Contact .inline-button .ArrowRightSVG svg path {
         stroke-dasharray: 78;
         stroke-dashoffset: 0; }
