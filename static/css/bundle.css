@@ -792,12 +792,14 @@ h1 {
       animation: ArrowRightSVG-anim 1s linear 0s infinite; }
     #Contact .inline-button .ArrowRightSVG {
       margin-left: 20px; }
-      @media only screen and (max-width: 767px) {
-        #Contact .inline-button .ArrowRightSVG svg {
-          max-width: 45px; } }
-      #Contact .inline-button .ArrowRightSVG svg path {
-        stroke-dasharray: 78;
-        stroke-dashoffset: 0; }
+      #Contact .inline-button .ArrowRightSVG svg {
+        width: 100%; }
+        @media only screen and (max-width: 767px) {
+          #Contact .inline-button .ArrowRightSVG svg {
+            max-width: 45px; } }
+        #Contact .inline-button .ArrowRightSVG svg path {
+          stroke-dasharray: 78;
+          stroke-dashoffset: 0; }
 
 @keyframes ArrowRightSVG-anim {
   0% {
