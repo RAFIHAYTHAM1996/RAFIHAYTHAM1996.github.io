@@ -793,7 +793,8 @@ h1 {
     #Contact .inline-button .ArrowRightSVG {
       margin-left: 20px; }
       #Contact .inline-button .ArrowRightSVG svg {
-        width: 100%; }
+        width: 100%;
+        max-width: 68px; }
         @media only screen and (max-width: 767px) {
           #Contact .inline-button .ArrowRightSVG svg {
             max-width: 45px; } }
