@@ -474,6 +474,12 @@ h1 {
   .BrandA.size-xl {
     height: 100px;
     width: 100px; }
+  .BrandA.size-match-parent {
+    height: 100%;
+    width: 100%; }
+  .BrandA.fill-none svg path {
+    stroke: #535353;
+    stroke-width: 0.05px; }
   .BrandA.primary svg path {
     fill: #536EC4; }
   .BrandA.primaryLight svg path {
