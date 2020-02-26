@@ -331,7 +331,7 @@ template {
   font-style: normal;
   font-display: fallback; }
 
-.OverpassBold, h1, #Menu a.mainlink, .Navigation a, #Services .service-name-list li {
+.OverpassBold, h1, h2, #Menu a.mainlink, .Navigation a, #Projects button.next-project, #Projects .project-index, #Services .service-name-list li {
   font-family: 'overpass-bold'; }
 
 /*
@@ -418,6 +418,14 @@ h1 {
   h1.dark {
     color: #2F2F2F; }
 
+h2 {
+  font-size: 2.9rem;
+  color: #FFFFFF; }
+  h2.primary {
+    color: #858585; }
+  h2.dark {
+    color: #2F2F2F; }
+
 .disable-selection {
   -moz-user-select: none;
   /* Firefox */
@@ -445,7 +453,7 @@ h1 {
   z-index: 1000; }
   .Brand.clickable {
     cursor: pointer; }
-  @media only screen and (max-width: 575px) {
+  @media only screen and (max-width: 767px) {
     .Brand {
       top: auto;
       left: auto; } }
@@ -478,6 +486,7 @@ h1 {
     height: 100%;
     width: 100%; }
   .BrandA.fill-none svg path {
+    opacity: 0.2;
     stroke: #535353;
     stroke-width: 0.05px; }
   .BrandA.primary svg path {
@@ -632,11 +641,11 @@ h1 {
     height: 65px;
     max-width: 84.3333%;
     padding: 0; }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 575px) {
       #Menu .container {
         padding: 0 15px;
         max-width: 100%; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 575px) {
     #Menu {
       display: block; }
       #Menu.expanded {
@@ -645,7 +654,7 @@ h1 {
     background-color: #FFFFFF; }
     #Menu.solidStyle a.mainlink {
       color: #2F2F2F; }
-      @media only screen and (min-width: 767px) {
+      @media only screen and (min-width: 575px) {
         #Menu.solidStyle a.mainlink.active, #Menu.solidStyle a.mainlink:hover {
           border-color: #2F2F2F; } }
     #Menu.solidStyle #collapsedLogo-container #collapsedLogo {
@@ -667,11 +676,11 @@ h1 {
     font-weight: 400; }
     #Menu a.mainlink:last-child {
       margin-right: 0; }
-    @media only screen and (min-width: 767px) {
+    @media only screen and (min-width: 575px) {
       #Menu a.mainlink.active, #Menu a.mainlink:hover {
         padding-bottom: 7px;
         border-bottom: 1px solid #FFFFFF; } }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 575px) {
       #Menu a.mainlink {
         text-align: center;
         height: 0;
@@ -689,13 +698,13 @@ h1 {
     right: 0;
     top: 23px;
     -webkit-overflow-scrolling: touch; }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 575px) {
       #Menu #subcontainer {
         position: relative;
         width: 100%;
         margin: auto;
-        padding-bottom: 100px;
-        top: 20px; } }
+        margin-top: 0 !important;
+        top: 8px; } }
   #Menu #collapsedLogo-container {
     position: absolute;
     top: 0;
@@ -718,7 +727,7 @@ h1 {
     width: 25px;
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 10px;
     cursor: pointer; }
     #Menu #hamburger-menu line {
       stroke-width: 3;
@@ -767,6 +776,7 @@ h1 {
       outline: none; }
 
 .Page {
+  position: relative;
   overflow-x: hidden; }
 
 #Contact {
@@ -847,6 +857,76 @@ h1 {
         width: 120%;
         top: 65vh;
         right: -30%; } }
+
+#Projects {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: #2F2F2F;
+  padding-top: 25vh; }
+  @media only screen and (max-width: 767px) {
+    #Projects {
+      padding-top: 10vh; } }
+  #Projects button.next-project {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #858585;
+    transition: all .2s ease-in-out;
+    float: right; }
+    #Projects button.next-project:hover, #Projects button.next-project:focus, #Projects button.next-project.selected {
+      color: #FFFFFF; }
+    @media only screen and (max-width: 767px) {
+      #Projects button.next-project {
+        font-size: 1.4rem;
+        line-height: 2.2rem; } }
+  #Projects .project-container > div {
+    vertical-align: top; }
+  #Projects .project-nav {
+    border-bottom: 1px solid #858585;
+    margin-bottom: 1rem; }
+  #Projects .project-index {
+    display: inline;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #858585; }
+    @media only screen and (max-width: 767px) {
+      #Projects .project-index {
+        font-size: 1.4rem;
+        line-height: 2.2rem; } }
+  #Projects .project-name {
+    margin-bottom: 20px; }
+  #Projects .project-service {
+    color: #858585;
+    margin: 0; }
+    #Projects .project-service:last-child {
+      margin-bottom: 20px; }
+  #Projects .project-thumbnail {
+    max-width: 100%; }
+  #Projects .project-thumbnail-container {
+    transform: translateX(5vw);
+    padding: 0; }
+    @media only screen and (max-width: 767px) {
+      #Projects .project-thumbnail-container {
+        margin-top: 1rem; } }
+  #Projects .brand-outline-position {
+    display: block;
+    position: absolute;
+    width: 80%;
+    top: 60vh;
+    left: -30%;
+    opacity: 0.5; }
+    @media only screen and (max-width: 991px) {
+      #Projects .brand-outline-position {
+        top: 60vh; } }
+    @media only screen and (max-width: 767px) {
+      #Projects .brand-outline-position {
+        width: 120%;
+        top: 30vh;
+        left: -50%; } }
 
 #Services {
   width: 100%;

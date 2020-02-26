@@ -30,5 +30,33 @@
         "From social media strategy to SEO optimization, and through the creation of both print and digital marketing content, we’ll make sure everything you put out into the market is on-brand and drives success for your business."
       ]
     }
+  ],
+  "projects": [
+    { "name": "Auto Network Community",
+      "services": [
+          "user research",
+          "branding",
+          "ux & ui Design",
+          "app development"
+      ],
+      "thumbnail": "auto-network-community/thumbnail.png"
+    },
+    { "name": "Hospall Private Homecare",
+      "services": [
+        "content strategy",
+        "ux & ui design",
+        "web development",
+        "marketing strategy"        
+      ],
+      "thumbnail": "hospall/thumbnail.png"
+    },
+    { "name": "Metals & Alloys Centre",
+      "services": [
+        "branding",
+        "ux & ui design",
+        "web development"      
+      ],
+      "thumbnail": "mac/thumbnail.png"
+    }
   ]
 }
