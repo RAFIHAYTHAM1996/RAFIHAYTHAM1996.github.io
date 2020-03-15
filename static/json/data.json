@@ -32,15 +32,6 @@
     }
   ],
   "projects": [
-    { "name": "Auto Network Community",
-      "services": [
-          "user research",
-          "branding",
-          "ux & ui Design",
-          "app development"
-      ],
-      "thumbnail": "auto-network-community/thumbnail.png"
-    },
     { "name": "Hospall Private Homecare",
       "services": [
         "content strategy",
@@ -49,6 +40,15 @@
         "marketing strategy"        
       ],
       "thumbnail": "hospall/thumbnail.png"
+    },
+    { "name": "Auto Network Community",
+      "services": [
+          "user research",
+          "branding",
+          "ux & ui Design",
+          "app development"
+      ],
+      "thumbnail": "auto-network-community/thumbnail.png"
     },
     { "name": "Metals & Alloys Centre",
       "services": [
