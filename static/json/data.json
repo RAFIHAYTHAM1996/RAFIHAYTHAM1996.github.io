@@ -41,15 +41,6 @@
       ],
       "thumbnail": "hospall/thumbnail.png"
     },
-    { "name": "Auto Network Community",
-      "services": [
-          "user research",
-          "branding",
-          "ux & ui Design",
-          "app development"
-      ],
-      "thumbnail": "auto-network-community/thumbnail.png"
-    },
     { "name": "Metals & Alloys Centre",
       "services": [
         "branding",
@@ -57,6 +48,14 @@
         "web development"      
       ],
       "thumbnail": "mac/thumbnail.png"
+    },
+    { "name": "King City Physiotherapy",
+      "services": [
+          "content strategy",
+          "ux & ui design",
+          "web development"
+      ],
+      "thumbnail": "king-city-physiotherapy/thumbnail.png"
     }
   ]
 }
