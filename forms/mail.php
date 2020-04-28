@@ -12,11 +12,14 @@
   require './PHPMailer/SMTP.php';
 
   $protocol = "https";
-  $host = "amandapape.com";
-  $recipient = "artezan.ca@" . $host;
+  $host = "gmail.com";
+  $recipient = "rafihgeorge@" . $host;
 
-  $SMTP_HOST = 'mail.' . $host;
-  $SMTP_PORT = 465;
+  $SMTP_USERNAME = "rafi@addmeup.co.cc";
+  $SMTP_PASSWORD = "CARS1996";
+
+  $SMTP_HOST = 'free.mboxhosting.com';
+  $SMTP_PORT = 587;
   
   if ($_SERVER['REQUEST_METHOD'] !== 'POST' && !$DEBUG) {
     header('Location: ' . getFullURLFromHost($host));
@@ -49,18 +52,17 @@
       if ($DEBUG) {
         $mail->SMTPDebug = 2;                                     // Enable verbose debug output
       }
-      // $mail->isSMTP();                                         // Set mailer to use SMTP
       $mail->Host       = $SMTP_HOST;                             // Specify main and backup SMTP servers
       $mail->Port       = $SMTP_PORT;                             // TCP port to connect to
-      // $mail->SMTPAuth   = true;                                // Enable SMTP authentication
-      // $mail->Username   = $SMTP_USERNAME;                      // SMTP username
-      // $mail->Password   = $SMTP_PASSWORD;                      // SMTP password
+      // $mail->isSMTP();                                         // Set mailer to use SMTP
+      $mail->SMTPAuth   = true;                                // Enable SMTP authentication
+      $mail->Username   = $SMTP_USERNAME;                      // SMTP username
+      $mail->Password   = $SMTP_PASSWORD;                      // SMTP password
       $mail->SMTPSecure = 'none';                                 // Enable TLS encryption, `ssl` also accepted
       $mail->SMTPAuth   = false;
 
       //Recipients
       $mail->setFrom('forms@' . $host, $data->name);
-      // $mail->setFrom('forms@' . $host, $data->name);
       $mail->addAddress($recipient, $data->name);                 // Add a recipient
       $mail->addReplyTo($data->email, $data->name);
 
